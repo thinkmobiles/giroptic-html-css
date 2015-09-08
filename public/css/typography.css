@@ -1,0 +1,33 @@
+html {
+  font-family: sans-serif;
+}
+body {
+  font-size: 100%;
+  line-height: 1.42857143;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Zona-Light", sans-serif;
+  font-weight: 300;
+  line-height: 1.42857143;
+}
+a {
+  font-size: 1.4em;
+  font-family: "Zona-Light", sans-serif;
+  font-weight: 300;
+  line-height: 24px;
+}
+p {
+  font-size: 1.2em;
+  font-family: "Zona-Light", sans-serif;
+  line-height: 1.42857143;
+  font-weight: 300;
+}
+input[type='text'],
+button {
+  font-family: "Zona Pro SemiBold", sans-serif;
+}
