@@ -444,7 +444,7 @@
             </section>
             <section id="appSlider" class="section">
                 <div class="row">
-                    <div class="app-desc col-lg-offset-3 col-md-offset-3 col-lg-6 col-md-6">
+                    <div class="app-desc col-lg-offset-3 col-md-offset-3 col-sm-offset-2 col-xs-offset-1 col-lg-6 col-md-6 col-sm-8 col-xs-10">
                         <h4>The 360cam app allows you to:</h4>
                         <p>Remote control your camera and preview your footages</p>
                     </div>
@@ -452,21 +452,6 @@
                         <div class="slider">
                             <div class="iphone-mockup"></div>
                             <figure class="owl-carousel">
-                                <div class="item">
-                                    <img src="./public/img/app/slide1.png" alt="" />
-                                </div>
-                                <div class="item">
-                                    <img src="./public/img/app/slide5.png" alt="" />
-                                </div>
-                                <div class="item">
-                                    <img src="./public/img/app/slide4.png" alt="" />
-                                </div>
-                                <div class="item">
-                                    <img src="./public/img/app/slide3.png" alt="" />
-                                </div>
-                                <div class="item">
-                                    <img src="./public/img/app/slide2.png" alt="" />
-                                </div>
                                 <div class="item">
                                     <img src="./public/img/app/slide1.png" alt="" />
                                 </div>
@@ -490,7 +475,7 @@
             <section id="paveOs" class="section">
                 <div class="counters container-fluid">
                     <div  class="row">
-                        <div class="counter col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="counter col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div>
                                 <span class="title">iOs</span>
                                 <span class="count">
@@ -510,7 +495,7 @@
                                 <span class="download">Download</span>
                             </div>
                         </div>
-                        <div class="counter col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="counter col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div>
                                 <span class="title">Android</span>
                                 <span class="count">
@@ -530,7 +515,7 @@
                                 <span class="download">Download</span>
                             </div>
                         </div>
-                        <div class="counter col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                        <div class="counter col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div>
                                 <span class="title">Windows Phone</span>
                                 <span class="count">
@@ -554,10 +539,19 @@
                 </div>
             </section>
             <section id="sendApp" class="section">
-                <div class="sendApp">
-                    <p>Get the GIROPTIC 360cam and experience 360°<br>videos and photos like never before
-                    </p>
-                    <button class="btn-gallery">Send me the app</button>
+                <div class="sendApp container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-lg-offset-3 col-md-offset-3">
+                            <p>
+                                Get the GIROPTIC 360cam and experience 360°<br>videos and photos like never before
+                            </p>
+                            <button id="sendAppBtn" class="btn-sendApp">Send me the app</button>
+                            <form action="" method="post" id="sendForm" class="sendForm hidden">
+                                <input class="input-sm" type="text" value="" placeholder="Saissisez votre Adresse mail" onfocus="this.placeholder='';" onblur="this.placeholder='Saissisez votre Adresse mail'" />
+                                <button class="btn-send" type="submit">Send</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="speTech" class="section">
