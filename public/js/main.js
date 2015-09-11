@@ -1,3 +1,4 @@
+// --- App Carousel Section
 $(document).ready(function() {
     $(".owl-carousel").owlCarousel({
         items: 5,
@@ -29,11 +30,7 @@ $(document).ready(function() {
     });
 });
 
-var txt = $('.writer').text();
-var timeOut;
-var txtLen = txt.length;
-var char = 0;
-
+// --- Send App Section
 $('#sendAppBtn').click(function(){
     $('#sendAppBtn').addClass('hidden');
     $('#sendForm').removeClass('hidden');
@@ -50,6 +47,18 @@ $('#sendAppBtn').click(function(){
     });
 });
 
+// --- Spec Tech Section
+$('#speTech').click(function(){
+    $('.speTech .icons').addClass('iconsClick');
+    setTimeout(function(){
+        $('.speTech .description').animate({
+            top: "0",
+            opacity: "1"
+        }, 200);
+    }, 800);
+});
+
+// --- Search Section
 $('#search-btn').bind('click', function(){
     $('#search-block').animate({
         opacity: '1',

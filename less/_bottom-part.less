@@ -1,3 +1,6 @@
+//.section {
+//  width: ~"calc(100vw - 17px)";
+//}
 #appSlider {
   background-color: @appSlider-bg;
   height: 100vh;
@@ -524,7 +527,139 @@
     }
   }
 }
+#speTech {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  background-image: url('../img/speTech-bg.jpg');
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 160px 0;
+  overflow: hidden;
 
+  .row {
+    &> div {
+      height: 100%;
+    }
+  }
+
+  .speTech {
+    height: 33.3333%;
+    padding-bottom: 40px;
+    color: @speTech-text;
+    .pxToEm(12);
+    font-family: "Zona Pro", sans-serif;
+
+    h4 {
+      font-family: "Zona Pro Bold", sans-serif;
+      margin: 0;
+    }
+
+    .icons {
+      width: 49px;
+      height: 49px;
+      display: block;
+      margin-bottom: 10px;
+      position: relative;
+      background-position: top left;
+      background-repeat: no-repeat;
+
+      &.icon1 {
+        background-image: url('../img/speTech-icon1.png');
+      }
+      &.icon2 {
+        background-image: url('../img/speTech-icon2.png');
+      }
+      &.icon3 {
+        background-image: url('../img/speTech-icon3.png');
+      }
+      &.icon4 {
+        background-image: url('../img/speTech-icon4.png');
+      }
+      &.icon5 {
+        background-image: url('../img/speTech-icon5.png');
+      }
+      &.icon6 {
+        background-image: url('../img/speTech-icon6.png');
+      }
+      &.icon7 {
+        background-image: url('../img/speTech-icon7.png');
+      }
+      &.icon8 {
+        background-image: url('../img/speTech-icon8.png');
+      }
+
+      &:after {
+        width: 49px;
+        height: 49px;
+        display: block;
+        content: '';
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &.iconsClick:after {
+        border: 2px solid rgba(111,148,182,0.5);
+        -webkit-animation: anim-icons 0.8s ease-out forwards;
+        animation: anim-icons 0.8s ease-out forwards;
+      }
+
+      @-webkit-keyframes anim-icons {
+        0% {
+          opacity: 1;
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+        to {
+          opacity: 0;
+          -webkit-transform: scale3d(1.4, 1.4, 1);
+          transform: scale3d(1.4, 1.4, 1);
+        }
+      }
+
+      @keyframes anim-icons {
+        0% {
+          opacity: 1;
+          -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+        }
+        to {
+          opacity: 0;
+          -webkit-transform: scale3d(1.4, 1.4, 1);
+          transform: scale3d(1.4, 1.4, 1);
+        }
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding: 0 0 0 15px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: '-';
+          left: -1px;
+        }
+      }
+    }
+
+    .description {
+      position: relative;
+      top: 10%;
+      opacity: 0;
+      transition: all 0.2s ease 0s;
+    }
+  }
+}
 
 
 
@@ -566,6 +701,9 @@
       width: 100vw !important;
     }
   }
+  #speTech {
+    padding: 60px 0;
+  }
 }
 @media (min-width:769px) and (max-width:1024px) {
   #appSlider {
@@ -584,6 +722,9 @@
         box-shadow: none;
       }
     }
+  }
+  #speTech {
+    padding: 60px 0;
   }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -604,6 +745,9 @@
      }
     }
   }
+  #speTech {
+    padding: 100px 0;
+  }
 }
 @media (min-width: 1281px) {
   #appSlider {
@@ -620,24 +764,28 @@
       }
     }
   }
+  #speTech {
+    padding: 160px 0;
+  }
 }
 
-//.giroptic-header {
-//   display: none;
-// }
-//.section {
-//  display: none !important;
-//}
-//#appSlider, #paveOs, #sendApp {
-//  &.section {
-//    display: block !important;
-//  }
-//}
+
+.giroptic-header {
+   display: none;
+ }
+.section {
+  display: none !important;
+}
+/*#appSlider, #paveOs, #sendApp, */ #speTech {
+  &.section {
+    display: block !important;
+  }
+}
 //#sendApp {
 //  &.section {
 //    display: table !important;
 //  }
 //}
-//#main {
-//  padding: 0;
-//}
+#main {
+  padding: 0;
+}
