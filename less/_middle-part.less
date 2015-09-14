@@ -9,8 +9,12 @@
     overflow: hidden;
     //height: 985px;
     height: 470px;
-    .border-radius-bottom-right(50%, 94px);
-    .border-radius-bottom-left(50%, 94px);
+    .border-radius-bottom-right(50%);
+    .border-radius-bottom-left(50%);
+    position: relative;
+    width: 126%;
+    left: -13%;
+    z-index: 1;
   }
   .accessories-caption {
     text-align: center;
@@ -20,15 +24,64 @@
     h4 {
       .pxToEm(32);
     }
-
     p {
       .pxToEm(22);
       font-family: "Zona Pro";
     }
   }
+  .accessories-topImage{
+    position: relative;
+    top: -300px;
+    left: 50%;
+    margin-left: -126px;
+    width: 262px;
+    height: 400px;
+    text-align: center;
+    z-index: 111;
+    img{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -100px;
+      &:first-child{
+        top: 0;
+        margin-left: -126px;
+      }
+    }
+    a{
+      text-transform: uppercase;
+      position: absolute;
+      right: -137px;
+      top: 115px;
+      .border-radius(17px);
+      border: 1px solid @accessories-link-h;
+      color: @accessories-link-h;
+      display: block;
+      width: 195px;
+      height: 38px;
+      line-height: 38px;
+      &:before{
+        content: "\2b";
+        font-size: 25px;
+        background: url("../img/playStopButton.png") no-repeat left top;
+        height: 62px;
+        line-height: 62px;
+        width: 63px;
+        left: -31px;
+        top: -14px;
+        position: absolute;
+        font-family: 'Glyphicons Halflings';
+      }
+      &:active{
+        &:before{
+          content: "\e072";
+        }
+      }
+    }
+  }
   .accessories-carousel{
     text-align: center;
-    margin-top: 170px;
+    margin-top: -170px;
     ul{
       list-style: none;
       li{
@@ -42,7 +95,7 @@
           padding: 0 42px 0 17px;
           font-family: "Zona Pro SemiBold", sans-serif;
           .cls-1{
-            color: @accessories-link;
+            fill: @accessories-link;
           }
           &:hover,
           &.active{
@@ -64,12 +117,36 @@
             margin-right: 17px;
           }
         }
+        &.current{
+          a{
+            color: @accessories-link-h;
+            border: 2px solid @accessories-link-h;
+            .cls-1{
+              fill: @accessories-link-h;
+            }
+          }
+        }
       }
     }
-    p{
-      color: @accessories-p;
-      .pxToEm(16);
-      font-family: "Zona Pro", sans-serif;
+    div {
+      display: none;
+      &.current{
+        display: block;
+      }
+      p {
+        color: @accessories-p;
+        .pxToEm(16);
+        font-family: "Zona Pro", sans-serif;
+        margin: 31px 0 41px;
+      }
+      a {
+        color: @accessories-link-h;
+        text-decoration: underline;
+        .pxToEm(16);
+        &:hover{
+          color: @accessories-link;
+        }
+      }
     }
   }
 }
