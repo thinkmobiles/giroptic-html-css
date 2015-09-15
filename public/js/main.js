@@ -28,6 +28,8 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
+
+    // --- Accessories block
     $('ul.tabs li').click(function(){
         var tab_id = $(this).attr('data-tab');
 
@@ -36,11 +38,24 @@ $(document).ready(function() {
 
         $(this).addClass('current');
         $("#"+tab_id).addClass('current');
-    })
+    });
     $('.bxslider').bxSlider({
         auto: true,
         autoControls: true
     });
+});
+$('#app .row').click(function(){
+    $(".phone-style").addClass('down');
+    $(".down").addClass('animate');
+    //$('.animate').(8000, function(){
+    //    $('.animate').addClass('circle');
+    //});
+    setTimeout(function(){
+        $('.animate').addClass('circle');
+        $('.circle').animate({
+            scale:'1'
+        }, 300);
+    }, 3000);
 });
 
 // --- Send App Section

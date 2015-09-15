@@ -71,7 +71,6 @@
         top: -14px;
         position: absolute;
         font-family: 'Glyphicons Halflings';
-        width: 63px;
       }
       &:active{
         &:before{
@@ -82,7 +81,7 @@
   }
   .accessories-carousel{
     text-align: center;
-    margin-top: -170px;
+    margin-top: -240px;
     ul{
       list-style: none;
       li{
@@ -146,6 +145,210 @@
         .pxToEm(16);
         &:hover{
           color: @accessories-link;
+        }
+      }
+    }
+  }
+}
+
+#slideImg {
+  height: 100vh;
+  position: relative;
+  .clearfix;
+
+  & > div {
+    width: 20%;
+    float: left;
+    height: 1121px;
+    position: relative;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.2);
+      position: absolute;
+      top: 0;
+      opacity: 1;
+      z-index: 1;
+    }
+    &:hover:before {
+      opacity: 0.1;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .slide-ico {
+      width: 64px;
+      height: 64px;
+      background-color: @accessories-bg;
+      position: absolute;
+      top: 50%;
+      left: 43%;
+      .border-radius(50%);
+      cursor: pointer;
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s;
+      z-index: 2;
+      &:after{
+        content: '';
+        width: 95px;
+        height: 95px;
+        position: absolute;
+        top: -16px;
+        left: -16px;
+        .border-radius(50%);
+        border: 16px solid rgba(255, 255, 255, 0.4);
+        display: block;
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+        transition: transform 0.2s, opacity 0.2s;
+      }
+      &:hover:after{
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.4s, opacity 0.2s;
+        transition: transform 0.4s, opacity 0.2s;
+      }
+      &:hover:before{
+        content: '';
+        width: 95px;
+        height: 95px;
+        position: absolute;
+        top: -16px;
+        left: -16px;
+        .border-radius(50%);
+        display: block;
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+        transition: transform 0.2s, opacity 0.2s;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}
+#app {
+  background-color: @app-bg;
+  //height: 763px;
+  height: 100vh;
+
+  .row {
+    margin: 0;
+  }
+
+  .app-desc {
+    margin-top: 110px;
+    overflow: hidden;
+
+    .app-devices {
+      margin: 0 auto;
+      width: 114px;
+      .clearfix;
+    }
+    .dev-ico {
+      background: url("../img/app/dev-sprite.png");
+      width: 38px;
+      height: 32px;
+      display: block;
+      float: left;
+      margin: 0 auto;
+      .clearfix;
+    }
+    .mob {
+      background-position: 0 0;
+    }
+    .tab {
+      background-position: -42px 0;
+    }
+    .desc {
+      background-position: -86px 0;
+      width: 32px;
+    }
+
+    h4 {
+      .pxToEm(36);
+      color: @app-font-color;
+      text-align: center;
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona-Light", sans-serif;
+      color: @app-font-color;
+      text-align: center;
+    }
+
+  }
+  .phone-style{
+    position: absolute;
+    bottom: -584px;
+    left: calc(~'50% - 170px');
+    transition: bottom 3s;
+    &.down{
+      bottom: 0;
+      &.animate{
+        &:before{
+          content: '';
+          //transition: width 6s ease-out 6s, height 6s ease-out 6s, border 6s ease-out 6s;
+          transition: all 3s ease-out 3s;
+          position: absolute;
+          bottom: -60%;
+          left: -120px;
+          z-index: -1;
+          width: 564px;
+          height: 564px;
+          background: #fff;
+          border-radius: 50%;
+          box-shadow: 0px 0px 0px 121px rgba(255,255,255,0.3);
+        }
+        &.circle{
+          //opacity: 0;
+          &:after{
+            content: "";
+            position: absolute;
+            width: 1079px;
+            height: 1079px;
+            top: 60px;
+            left: -110%;
+            z-index: -2;
+            background: url("../img/app-phone/round-bgr.png") no-repeat center bottom;
+            -webkit-transition: all 6s ease-in-out;
+            -moz-transition: all 6s ease-in-out;
+            -ms-transition: all 6s ease-in-out;
+            -o-transition: all 6s ease-in-out;
+            transition: all 6s ease-in-out;
+            transition-delay: 6s;
+            -moz-animation: spin 16s infinite linear;
+            -webkit-animation: spin 16s infinite linear;
+            animation: spin 16s infinite linear;
+          }
+          @-moz-keyframes spin {
+            0% {
+              -moz-transform: rotate(0deg);
+            }
+
+            100% {
+              -moz-transform: rotate(360deg);
+            }
+          }
+          @-webkit-keyframes spin {
+            0% {
+              -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+              -webkit-transform: rotate(360deg);
+            }
+          }
         }
       }
     }
