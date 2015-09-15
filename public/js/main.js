@@ -44,18 +44,44 @@ $(document).ready(function() {
         autoControls: true
     });
 });
+
+// --- Application Section
 $('#app .row').click(function(){
     $(".phone-style").addClass('down');
-    $(".down").addClass('animate');
-    //$('.animate').(8000, function(){
-    //    $('.animate').addClass('circle');
-    //});
     setTimeout(function(){
-        $('.animate').addClass('circle');
-        $('.circle').animate({
-            scale:'1'
-        }, 300);
+        $('.animate').animate(3000, function(){
+            $('.animate').addClass('scale');
+        });
     }, 3000);
+    setTimeout(function(){
+        $('.circle').animate(3000, function(){
+            $('.circle').addClass('scale');
+        });
+    }, 3000);
+});
+// --- How to use Section
+$('#moveDev').click(function(){
+    setTimeout(function(){
+        $('.rightHand').animate(3000, function(){
+            $('.rightHand').addClass('move');
+        });
+    }, 3000);
+    setTimeout(function(){
+        $('.circle').animate(3000, function(){
+            $('.circle').addClass('move');
+        });
+    }, 3500);
+    setTimeout(function(){
+        $('.oculus').animate(3000, function(){
+            $('.oculus').addClass('move');
+        });
+    }, 4500);
+    setTimeout(function(){
+        $('#moveDev').animate(3000, function(){
+            $('.howToUse').hide();
+            $('.moveDev').hide();
+        });
+    }, 5000);
 });
 
 // --- Send App Section

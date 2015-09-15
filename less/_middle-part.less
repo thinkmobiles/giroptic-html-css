@@ -295,62 +295,170 @@
     transition: bottom 3s;
     &.down{
       bottom: 0;
-      &.animate{
-        &:before{
-          content: '';
-          //transition: width 6s ease-out 6s, height 6s ease-out 6s, border 6s ease-out 6s;
-          transition: all 3s ease-out 3s;
-          position: absolute;
-          bottom: -60%;
-          left: -120px;
-          z-index: -1;
-          width: 564px;
-          height: 564px;
-          background: #fff;
-          border-radius: 50%;
-          box-shadow: 0px 0px 0px 121px rgba(255,255,255,0.3);
+      .animate {
+        -ms-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        position: absolute;
+        bottom: -60%;
+        left: -110px;
+        z-index: -1;
+        opacity: 1;
+        width: 564px;
+        height: 564px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 0 121px rgba(255, 255, 255, 0.3);
+        &.scale {
+          transition: all 3s ease-in-out;
+          transform: scale(1);
+          -ms-transform: scale(1);
+          -webkit-transform: scale(1);
         }
-        &.circle{
-          //opacity: 0;
-          &:after{
-            content: "";
-            position: absolute;
-            width: 1079px;
-            height: 1079px;
-            top: 60px;
-            left: -110%;
-            z-index: -2;
-            background: url("../img/app-phone/round-bgr.png") no-repeat center bottom;
-            -webkit-transition: all 6s ease-in-out;
-            -moz-transition: all 6s ease-in-out;
-            -ms-transition: all 6s ease-in-out;
-            -o-transition: all 6s ease-in-out;
-            transition: all 6s ease-in-out;
-            transition-delay: 6s;
-            -moz-animation: spin 16s infinite linear;
-            -webkit-animation: spin 16s infinite linear;
-            animation: spin 16s infinite linear;
+      }
+      .circle{
+        position: absolute;
+        width: 1079px;
+        height: 1079px;
+        top: 60px;
+        left: -110%;
+        z-index: -2;
+        background: url("../img/app-phone/round-bgr.png") no-repeat center center;
+        -moz-animation: spin 16s infinite linear;
+        -webkit-animation: spin 16s infinite linear;
+        animation: spin 16s infinite linear;
+        background-size: 0;
+        &.scale {
+          transition: all 3s ease-in-out;
+          background-size: 100%;
+        }
+        @-moz-keyframes spin {
+          0% {
+            -moz-transform: rotate(0deg);
           }
-          @-moz-keyframes spin {
-            0% {
-              -moz-transform: rotate(0deg);
-            }
 
-            100% {
-              -moz-transform: rotate(360deg);
-            }
+          100% {
+            -moz-transform: rotate(360deg);
           }
-          @-webkit-keyframes spin {
-            0% {
-              -webkit-transform: rotate(0deg);
-            }
+        }
+        @-webkit-keyframes spin {
+          0% {
+            -webkit-transform: rotate(0deg);
+          }
 
-            100% {
-              -webkit-transform: rotate(360deg);
-            }
+          100% {
+            -webkit-transform: rotate(360deg);
           }
         }
       }
+    }
+  }
+}
+#moveDev {
+  background-color: @moveDev-bg;
+  height: 100vh;
+  position: relative;
+  display: table;
+
+  .row {
+    margin: 0;
+  }
+
+  .moveDev {
+    height: 100vh;
+    background-image: url('../img/howToUse/app1.png');
+    background-position: center 370px;
+    background-repeat: no-repeat;
+  }
+
+  .inner {
+    margin-top: 155px;
+
+    h4 {
+      .pxToEm(36);
+      color: @moveDev-font-color;
+      text-align: center;
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona-Light", sans-serif;
+      text-align: center;
+      color: @moveDev-smallFont-color;
+    }
+  }
+
+  .howToUse {
+    .clearfix;
+    position: relative;
+    background: #000;
+
+    .howToUse-block {
+      height: 456px;
+      position: relative;
+      background-color: @moveDev-howToUse-bg;
+      width: 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .leftHand{
+        position: absolute;
+        left: 50%;
+        margin-left: -280px;
+        bottom: -20px;
+      }
+      .rightHand{
+        position: absolute;
+        left: 50%;
+        margin-left: 61px;
+        bottom: -20px;
+        transition: all 1s ease-in-out;
+        &.move{
+          margin-left: 11px;
+        }
+      }
+
+      p {
+        .pxToEm(22);
+        font-family: "Zona-Light", sans-serif;
+        text-align: center;
+        color: @moveDev-smallFont-color;
+        display: block;
+        line-height: 30px;
+        padding: 45px 130px;
+      }
+      .oculus{
+        transition: all 1s ease-in-out;
+        &.move{
+          margin-left: 160px;
+        }
+      }
+    }
+    .circle{
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background: #44bbff;
+      box-shadow: 0 0 0 20px rgba( 68, 187, 255, 0.4);
+      position: absolute;
+      left: calc(~'50% - 200px');
+      top: 100px;
+      transition: all 1s ease-in-out;
+      &.move{
+        left: 50%;
+        margin-left: 70px;
+        top: 40px;
+      }
+    }
+
+    .howToUse-left-block {
+      float: left;
+      background-image: url('../img/howToUse/first-bg.jpg');
+    }
+    .howToUse-right-block {
+      float: right;
+      background-image: url('../img/howToUse/second-bg.jpg');
     }
   }
 }
