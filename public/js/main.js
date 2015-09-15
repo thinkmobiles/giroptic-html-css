@@ -44,7 +44,7 @@ $('.bxslider').bxSlider({
     auto: true,
     autoControls: true
 });
-});
+
 $('#app .row').click(function(){
     $(".phone-style").addClass('down');
     $(".down").addClass('animate');

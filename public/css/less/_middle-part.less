@@ -1,0 +1,75 @@
+#accessories {
+  height: 100vh;
+  position: relative;
+  z-index: 6;
+
+  .bg-accessories {
+    background-image: url('../img/accessories-bg1.jpg');
+    background-size: cover;
+    overflow: hidden;
+    //height: 985px;
+    height: 470px;
+    .border-radius-bottom-right(50%, 94px);
+    .border-radius-bottom-left(50%, 94px);
+  }
+  .accessories-caption {
+    text-align: center;
+    margin-top: 310px;
+    color: @accessories-font-color;
+    display: none;
+    h4 {
+      .pxToEm(32);
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona Pro";
+    }
+  }
+  .accessories-carousel{
+    text-align: center;
+    margin-top: 170px;
+    ul{
+      list-style: none;
+      li{
+        display: inline-block;
+        margin-right: 9px;
+        a{
+          color: @accessories-link;
+          border: 2px solid @accessories-link;
+          .border-radius(19px);
+          display: block;
+          padding: 0 42px 0 17px;
+          font-family: "Zona Pro SemiBold", sans-serif;
+          .cls-1{
+            color: @accessories-link;
+          }
+          &:hover,
+          &.active{
+            color: @accessories-link-h;
+            border: 2px solid @accessories-link-h;
+            .cls-1{
+              fill: @accessories-link-h;
+            }
+          }
+          svg{
+            float: left;
+            margin-top: 4px;
+            margin-right: 40px;
+          }
+        }
+        &:last-child a{
+          padding-right: 22px;
+          svg{
+            margin-right: 17px;
+          }
+        }
+      }
+    }
+    p{
+      color: @accessories-p;
+      .pxToEm(16);
+      font-family: "Zona Pro", sans-serif;
+    }
+  }
+}
