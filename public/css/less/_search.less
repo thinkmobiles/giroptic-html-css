@@ -1,0 +1,55 @@
+#search-block {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: @search-bg;
+  z-index: -1;
+
+  .search-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+
+  .search-area {
+    position: absolute;
+    top: ~"calc((100vh - 73px) / 2)";
+    left: ~"calc((100vw - 60vw) / 2)";
+    z-index: 1001;
+    margin: 0 auto;
+    width: 60vw;
+
+    input[type=text] {
+      background: none;
+      border: none;
+      color: @search-text;
+      border-left: 5px solid;
+      border-color: @search-border;
+      outline: none;
+      height: 73px;
+      padding-left: 22px;
+      font-size: 60px;
+      line-height: 73px;
+      width: ~"calc((100vw - 73px) / 2)";
+      font-style: italic;
+      font-weight: 600;
+    }
+    input[type=submit] {
+      background-image: url("../img/ok_1.png");
+      background-position: 50%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      height: 73px;
+      width: 73px;
+      float: right;
+
+      &:hover {
+        background-image: url("../img/ok_2.png");
+      }
+    }
+  }
+}

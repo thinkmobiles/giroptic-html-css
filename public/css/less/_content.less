@@ -1,0 +1,975 @@
+#main {
+  .clearfix;
+}
+
+#pave2 {
+  background-color: @pav1-bg;
+  z-index: 6;
+
+  .counters {
+
+    &:after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+
+    .counter {
+      border-right: 1px solid @pave1-border;
+      padding: 65px 0 60px 0;
+
+      span {
+        display: block;
+        text-align: center;
+        font-family: "Zona-Light", sans-serif;
+        font-weight: 300;
+      }
+      .title {
+        color: @pave1-title;
+        .pxToEm(32);
+      }
+      .count {
+        color: @pave1-count;
+        .pxToEm(152)
+
+      }
+      .fps {
+        color: @pave1-fps;
+        .pxToEm(18)
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+/*#player {
+  background-color: @player-bg;
+  background-image: url('../img/player-bg.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 100vh;
+  z-index: 6;
+
+  #play {
+    background-image: url('../img/play-button.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 114px auto;
+
+    position: absolute;
+    top: 30%;
+    left: ~"calc(50% - 147.5px)";
+    cursor: pointer;
+    height: 320px;
+    width: 320px;
+
+    div {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      //opacity: 0;
+    }
+
+    #firstWave {
+      border: 2px solid rgba(68, 187, 255, 1);
+      border-radius: 100%;
+      height: 55%;
+      width: 55%;
+      top: 22.5%;
+      left: 22.5%;
+    }
+
+    #secondWave {
+      border: 2px solid rgba(68, 187, 255, 0.75);
+      border-radius: 100%;
+      height: 70%;
+      width: 70%;
+      top: 15%;
+      left: 15%;
+    }
+
+    #thirdWave {
+      border: 2px solid rgba(68, 187, 255, 0.5);
+      border-radius: 100%;
+      height: 85%;
+      width: 85%;
+      top: 7.5%;
+      left: 7.5%;
+    }
+
+    #fourthWave {
+      border: 2px solid rgba(68, 187, 255, 0.25);
+      border-radius: 100%;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .tabs {
+    position: absolute;
+    top: ~"calc(100% - 195px)";
+    -webkit-transition: padding-top 1s linear;
+    -moz-transition: padding-top 1s linear;
+    -o-transition: padding-top 1s linear;
+    transition: padding-top 1s linear;
+    overflow: hidden;
+
+    .tab {
+      width: ~"calc(33.33333% - 30px)";
+      height: 120px;
+      float: left;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      padding: 0;
+      margin: 0 15px;
+
+      span {
+        font-family: "Zona Pro SemiBold", sans-serif;
+        color: @player-text2;
+        display: block;
+        padding: 10px;
+        position: relative;
+        z-index: 1;
+        .pxToEm(20)
+
+        span {
+          color: @player-text1;
+          font-family: "Zona-Light", sans-serif;
+          .pxToEm(14);
+          padding: 0;
+          font-weight: 300;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.7;
+        -webkit-filter: brightness(.5);
+        filter: brightness(.5);
+      }
+
+      &:hover {
+        height: 125px;
+        border-bottom: 5px solid @player-border;
+
+        img {
+          -webkit-filter: brightness(.4);
+          filter: brightness(.4);
+        }
+      }
+    }
+
+    &:after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/player1.png') no-repeat bottom center;
+    //background-size: 100% 100%;
+  }
+}*/
+
+/*#gallery {
+  background-color: @gallery-bg;
+  background-image: url('../img/gallery-bg.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 5;
+  position: relative;
+  display: table;
+  height: 460px;
+
+  .gallery {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  p {
+    .pxToEm(32);
+    color: @gallery-text;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Zona Pro";
+    //line-height: 0.75;
+  }
+
+  button {
+    background: transparent;
+    border: 2px solid;
+    border-color: @gallery-border;
+    border-radius: 40px;
+    color: @gallery-btn;
+    height: 38px;
+    width: 195px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    .pxToEm(12);
+  }
+}
+
+#function {
+  background-color: @function-bg;
+  position: relative;
+  //height: 100vh;
+  z-index: 6;
+
+  .slide-function {
+    height: 100vh;
+    //height: 100%;
+    overflow: hidden;
+
+    &> div {
+      height: 100%;
+      display: table;
+    }
+
+    .image, .content {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .image {
+      text-align: center;
+    }
+
+    .content {
+      padding: 0 50px 0 135px;
+
+      .title {
+        font-family: "Zona Pro", sans-serif;
+        .pxToEm(32);
+        margin-bottom: 50px;
+        color: @function-title;
+        line-height: 1.389;
+      }
+      .body {
+        .pxToEm(14);
+        font-family: "Zona Pro", sans-serif;
+        color: : #898989;
+        line-height: 1.875;
+      }
+
+      .properties {
+        margin-top: 50px;
+
+        div {
+          border: 2px solid @function-forder;
+          border-radius: 100%;
+          height: 83px;
+          width: 83px;
+          font-family: "Zona Pro", sans-serif;
+          .pxToEm(8.5);
+          text-align: center;
+          float: left;
+          margin-right: 18px;
+          padding: 12px;
+
+          p {
+            //color: #959595;
+          }
+          span {
+            color: @function-span;
+          }
+        }
+
+        &:after {
+          clear: both;
+          content: '';
+          display: table;
+        }
+      }
+    }
+
+    &:nth-child(1) {
+
+      &> div:first-child {
+        background: url('../img/function-bg1.jpg');
+        background-size: cover;
+      }
+    }&:nth-child(2) {
+
+      &> div:first-child {
+        background: url('../img/function-bg2.jpg');
+        background-size: cover;
+      }
+    }&:nth-child(3) {
+
+      &> div:first-child {
+        background: url('../img/function-bg3.jpg');
+        background-size: cover;
+      }
+
+      .content {
+        .properties {
+
+          div {
+            border: none;
+            border-radius: 0;
+            height: auto;
+            width: auto;
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}*/
+
+#patchwork {
+  .clearfix;
+
+  .patchwork-left-block, .patchwork-right-block {
+    padding: 0;
+    width: 50%;
+    max-height: 514px;
+    img {
+      width: 100%;
+      max-height: 522px;
+    }
+  }
+
+  .patchwork-left-block {
+    float: left;
+  }
+  .patchwork-right-block {
+    float: right;
+  }
+}
+
+#accessories {
+  height: 100vh;
+  position: relative;
+  z-index: 6;
+
+  .bg-accessories {
+    background-image: url('../img/accessories-bg1.jpg');
+    background-size: cover;
+    overflow: hidden;
+    //height: 985px;
+    height: 100%;
+  }
+  .accessories-caption {
+    text-align: center;
+    margin-top: 310px;
+    color: @accessories-font-color;
+    h4 {
+      .pxToEm(32);
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona Pro";
+    }
+
+  }
+}
+
+/*.lens {
+  background-color: transparent;
+  width: 4530px;
+  height: 100px;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}*/
+
+#slideImg {
+  height: 100vh;
+  position: relative;
+  .clearfix;
+
+  .slide {
+    width: 20%;
+    float: left;
+    height: 1121px;
+    position: relative;
+
+    .slideImg-darck {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.2);
+      position: absolute;
+      top: 0;
+      opacity: 1;
+
+      &:hover {
+        opacity: 0;
+      }
+    }
+
+    img {
+      width: 100%;
+
+    }
+
+    .slide-ico {
+      width: 65px;
+      height: 65px;
+      background-color: @accessories-bg;
+      position: absolute;
+      top: 50%;
+      left: 43%;
+      .border-radius(50%);
+      cursor: pointer;
+    }
+  }
+}
+
+#app {
+  background-color: @app-bg;
+  //height: 763px;
+  height: 100vh;
+  background-image: url('../img/app-phone.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+
+  .row {
+    margin: 0;
+  }
+
+  .app-desc {
+    margin-top: 110px;
+
+    .app-devices {
+      margin: 0 auto;
+      width: 114px;
+      .clearfix;
+    }
+    .dev-ico {
+      background: url("../img/app/dev-sprite.png");
+      width: 38px;
+      height: 32px;
+      display: block;
+      float: left;
+      margin: 0 auto;
+      .clearfix;
+    }
+    .mob {
+      background-position: 0 0;
+    }
+    .tab {
+      background-position: -42px 0;
+    }
+    .desc {
+      background-position: -86px 0;
+      width: 32px;
+    }
+
+    h4 {
+      .pxToEm(36);
+      color: @app-font-color;
+      text-align: center;
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona-Light", sans-serif;
+      color: @app-font-color;
+      text-align: center;
+    }
+
+  }
+}
+
+#moveDev {
+  background-color: @moveDev-bg;
+  height: 100vh;
+  position: relative;
+  display: table;
+
+  .row {
+    margin: 0;
+  }
+
+  .moveDev {
+    height: 100vh;
+    background-image: url('../img/howToUse/app1.png');
+    background-position: center 370px;
+    background-repeat: no-repeat;
+  }
+
+  .inner {
+    margin-top: 155px;
+
+    h4 {
+      .pxToEm(36);
+      color: @moveDev-font-color;
+      text-align: center;
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona-Light", sans-serif;
+      text-align: center;
+      color: @moveDev-smallFont-color;
+    }
+  }
+
+  .howToUse {
+    .clearfix;
+
+    .howToUse-block {
+      height: 456px;
+      position: relative;
+      background-color: @moveDev-howToUse-bg;
+      width: 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      img {
+        position: absolute;
+        left: 50%;
+        margin-left: -280px;
+        bottom: -20px;
+      }
+
+      p {
+        .pxToEm(22);
+        font-family: "Zona-Light", sans-serif;
+        text-align: center;
+        color: @moveDev-smallFont-color;
+        display: block;
+        line-height: 30px;
+        padding: 45px 130px;
+      }
+    }
+
+    .howToUse-left-block {
+      float: left;
+      background-image: url('../img/howToUse/first-bg.jpg');
+    }
+    .howToUse-right-block {
+      float: right;
+      background-image: url('../img/howToUse/second-bg.jpg');
+    }
+  }
+}
+#sendApp {
+  background-color: @sendApp-bg;
+  background-image: url('../img/sendApp-bg.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 5;
+  position: relative;
+  display: table;
+  height: 340px;
+
+  .sendApp {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  p {
+    .pxToEm(32);
+    color: @sendApp-text;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Zona Pro";
+    //line-height: 0.75;
+  }
+
+  button {
+    background: @sendApp-btn;
+    border: 1px solid;
+    border-color: @sendApp-border;
+    border-radius: 40px;
+    color: @sendApp-btn2;
+    height: 38px;
+    width: 195px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-family: "Zona Pro", sans-serif;
+    font-weight: 400;
+    .pxToEm(14);
+  }
+}
+
+#speTech {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  background-image: url('../img/speTech-bg.jpg');
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 170px 0;
+
+  .row {
+    &> div {
+      height: 100%;
+    }
+  }
+
+  .speTech {
+    height: 33.3333%;
+    padding-bottom: 35px;
+    color: @speTech-text;
+    .pxToEm(12);
+    font-family: "Zona Pro", sans-serif;
+
+    h4 {
+      font-family: "Zona Pro Bold", sans-serif;
+      margin: 0;
+    }
+
+    .icons {
+      width: 49px;
+      height: 49px;
+      display: block;
+      margin-bottom: 15px;
+      background-position: top left;
+      background-repeat: no-repeat;
+
+      &.icon1 {
+        background-image: url('../img/speTech-icon1.png');
+      }
+      &.icon2 {
+        background-image: url('../img/speTech-icon2.png');
+      }
+      &.icon3 {
+        background-image: url('../img/speTech-icon3.png');
+      }
+      &.icon4 {
+        background-image: url('../img/speTech-icon4.png');
+      }
+      &.icon5 {
+        background-image: url('../img/speTech-icon5.png');
+      }
+      &.icon6 {
+        background-image: url('../img/speTech-icon6.png');
+      }
+      &.icon7 {
+        background-image: url('../img/speTech-icon7.png');
+      }
+      &.icon8 {
+        background-image: url('../img/speTech-icon8.png');
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding: 0 0 0 15px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: '-';
+          left: -1px;
+        }
+      }
+    }
+  }
+}
+
+#slideImg2 {
+  z-index: 5;
+  background: #ffffff;
+  .clearfix;
+
+  .slideImg2 {
+    background: url('../img/slideImg2-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 678px;
+    height: 678px;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
+
+    h2 {
+      .pxToEm(66);
+      line-height: 66px;
+      font-family: "Zona Pro Bold", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      color: #ffffff;
+      margin: 0;
+    }
+  }
+}
+
+#camera {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  background-color: @camera-bg;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('../img/camera-bg.jpg');
+  background-size: 100% 100%;
+
+  .content {
+    height: 100%;
+    display: table;
+
+    &> div {
+      display: table-cell;
+      vertical-align: middle;
+
+      &:nth-child(1){
+        width: 60%;
+        text-align: center;
+      }
+
+      &:nth-child(2){
+        width: 40%;
+      }
+    }
+
+    .points {
+      text-align: center;
+
+      ul {
+        margin: 0;
+        margin-left: 180px;
+        padding: 0;
+        list-style: none;
+
+        li {
+          float: left;
+          width: 15px;
+          height: 15px;
+          border: 2px solid;
+          border-color: @point-border;
+          background: @point-bg;
+          margin: 0 5px;
+          border-radius: 100%;
+
+          &.active {
+            border-color: @point-border1;
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    .buy-block {
+
+      .stamp {
+
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: "Zona Pro Bold", sans-serif;
+        .pxToEm(16);
+        color: @camera-stamp-text;
+        background-color: @camera-stamp-bg;
+        padding: 3px 9px;
+      }
+
+      .title {
+        color: @camera-content-text;
+        margin: 0 0 0.35em 0;
+        line-height: 0.85em;
+        font-weight: 100;
+        font-family: "Zona Pro", sans-serif;
+        .pxToEm(83);
+
+        .price {
+          //margin-right: 30px;
+          font-weight: 300;
+          font-family: "Zona-Light", sans-serif;
+          font-size: 24px;
+        }
+      }
+
+      .subtitle {
+        margin: 0 0 0.2em;
+        color: @camera-content-text;
+        font-family: "Zona Pro SemiBold", sans-serif;
+        .pxToEm(18);
+      }
+
+      .description {
+        color: @camera-content-text;
+        line-height: 29px;
+        margin-bottom: 30px;
+        .pxToEm(16);
+      }
+
+      .share {
+        border-top: 1px solid @camera-share-border;
+
+        .inTheBox {
+          position: relative;
+
+          &:before {
+            position: absolute;
+            content: '';
+            width: 8px;
+            height: 14px;
+            right: 0;
+            top: 13px;
+            background-position: top left;
+            background-image: url('../img/inTheBox.png');
+          }
+        }
+
+        &> div {
+          border-bottom: 1px solid @camera-share-border;
+          padding: 10px 0;
+        }
+
+        span {
+          font-family: "Zona-Light", sans-serif;
+          .pxToEm(14);
+          font-weight: 300;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          float: right;
+
+          li {
+            float: left;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .buy {
+        margin-top: 35px;
+
+        .btn-buy {
+          .pxToEm(17);
+          width: 180px;
+          height: 40px;
+          border-radius: 100px;
+          text-transform: uppercase;
+          color: @camera-btn-text;
+          padding: 5px 20px 5px 50px;
+          background: transparent;
+          background: @camera-btn-bg;
+          border: 2px solid;
+          border-color: @camera-btn-border;
+          position: relative;
+
+          &:before {
+            position: absolute;
+            content: '';
+            top: 9px;
+            left: 20px;
+            width: 19px;
+            height: 19px;
+            background: url('../img/shopping-cart-white.png') no-repeat 0 0;
+
+          }
+        }
+      }
+    }
+  }
+
+  #inBox-toggle {
+    position: relative;
+    float: left;
+    margin-left: 35px;
+    //padding: 9px 10px;
+    margin-top: 35px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    z-index: 120;
+
+    span {
+      display: block;
+      width: 36px;
+      height: 4px;
+      border-radius: 3px;
+      background-color: @inBox-bg;
+    }
+
+    .icon-bar + .icon-bar {
+      margin-top: 6px;
+    }
+  }
+
+  #inBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 100;
+
+    .inBox-collapse {
+      height: 100%;
+      background: #fff;
+      padding-top: 62px;
+
+      h2 {
+        margin: 40px 0 80px 90px;
+      }
+
+      &> div {
+        border-top: 1px solid;
+        border-color: @inBox-border;
+        //display: table;
+        min-height: 261px;
+
+        &:nth-child(n+1) {
+          border-left: 1px solid;
+          border-color: @inBox-border;
+        }
+      }
+
+      .image {
+        padding: 40px 0;
+        text-align: center;
+        height: 180px;
+
+        img {
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+
+      h4 {
+        display: block;
+        margin: 25px 0;
+        font-family: "Zona-Light", sans-serif;
+        .pxToEm(16);
+        text-align: center;
+      }
+    }
+  }
+}

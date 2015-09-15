@@ -10,10 +10,11 @@ $(document).ready(function() {
         responsive:{
             0:{items:1},
             768:{items:1},
-            800:{items:1},
-            1024:{items:3},
-            1280:{items:5},
-            1680:{items:5}
+            769:{items:3, autoWidth: true},
+            992:{items:3, autoWidth: true},
+            1024:{items:3, autoWidth: true},
+            1280:{items:5, autoWidth: true},
+            1920:{items:5}
         }
     });
     $("#paveOs .counters > .row").owlCarousel({
@@ -28,22 +29,22 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
-
-    // --- Accessories block
-    $('ul.tabs li').click(function(){
-        var tab_id = $(this).attr('data-tab');
-
-        $('ul.tabs li').removeClass('current');
-        $('.tab-content').removeClass('current');
-
-        $(this).addClass('current');
-        $("#"+tab_id).addClass('current');
-    });
-    $('.bxslider').bxSlider({
-        auto: true,
-        autoControls: true
-    });
 });
+// --- Accessories block
+$('ul.tabs li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+});
+$('.bxslider').bxSlider({
+    auto: true,
+    autoControls: true
+});
+
 
 // --- Application Section
 $('#app .row').click(function(){
