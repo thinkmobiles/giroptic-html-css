@@ -1,6 +1,3 @@
-//.section {
-//  width: ~"calc(100vw - 17px)";
-//}
 #appSlider {
   background-color: @appSlider-bg;
   height: 100vh;
@@ -348,8 +345,6 @@
   z-index: 5;
   overflow: hidden;
   position: relative;
-  //display: table;
-  //height: 340px;
 
   &:before {
     content: '';
@@ -361,11 +356,10 @@
     -webkit-transition: all 3s ease 0s;
     -moz-transition: all 3s ease 0s;
     transition: all 3s ease 0s;
-    left: 50%;
-    margin-left: -650px;
+    left: 0;
     top: 0;
     position: absolute;
-    width: 1250px;
+    width: 100%;
     height: 340px;
   }
 
@@ -378,8 +372,6 @@
 
   .sendApp {
     float: none;
-    //display: table-cell;
-    //vertical-align: middle;
     z-index: 10;
     display: table;
     height: 340px;
@@ -407,7 +399,7 @@
     color: @sendApp-text;
     text-align: center;
     margin-bottom: 20px;
-    font-family: "Zona Pro";
+    font-family: "Zona-Light";
   }
 
   button {
@@ -538,15 +530,19 @@
   background-attachment: fixed;
   padding: 160px 0;
   overflow: hidden;
+  
+  .columns {
+    padding: 0;
+    height: 100%;
 
-  .row {
-    &> div {
-      height: 100%;
+    .row {
+      padding: 0 15px;
     }
   }
 
   .speTech {
     height: 33.3333%;
+    min-height: 215px;
     padding-bottom: 40px;
     color: @speTech-text;
     .pxToEm(12);
@@ -659,6 +655,46 @@
       transition: all 0.2s ease 0s;
     }
   }
+
+  .owl-carousel {
+
+    .owl-stage-outer {
+      width: 100%;
+    }
+
+    .owl-controls {
+      position: absolute;
+      left: 50%;
+      margin-left: -61px;
+    }
+
+    .owl-dots {
+
+      .owl-dot {
+        float: left;
+        margin-left: 30px;
+
+        &:first-child {
+          margin: 0;
+        }
+      }
+
+      span {
+        background: #fff;
+        display: block;
+        border-radius: 100%;
+        border: 2px solid #fff;
+        width: 21px;
+        height: 21px;
+      }
+
+      .active {
+        span {
+          background: transparent;
+        }
+      }
+    }
+  }
 }
 
 
@@ -685,6 +721,9 @@
       }
     }
     .app-wrapper {
+      .iphone-mockup {
+        background-position: -25px 0 !important;
+      }
       .slider {
         width: 285px;
       }
@@ -705,7 +744,7 @@
     padding: 60px 0;
   }
 }
-@media (min-width:769px) and (max-width:1024px) {
+@media (min-width:769px) and (max-width:991px) {
   #appSlider {
     min-height: 1000px;
     .app-desc {
@@ -723,20 +762,33 @@
       }
     }
   }
+  #paveOs {
+    .owl-carousel {
+      .owl-stage {
+        width: 100% !important;
+      }
+      .owl-item {
+        width: 33.3333% !important;
+      }
+    }
+  }
+  #sendApp {
+    &:before {
+      background-size: cover;
+    }
+  }
   #speTech {
-    padding: 60px 0;
+    height: auto;
+    padding: 60px 0 0;
   }
 }
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media (min-width: 992px) and (max-width: 1280px) {
   #appSlider {
     min-height: 1000px;
     .app-desc {
       margin-top: 40px;
     }
     .app-wrapper {
-     .slider {
-       width: 855px;
-     }
      &:before {
        box-shadow: none;
      }
@@ -745,17 +797,30 @@
      }
     }
   }
+  #paveOs {
+    .owl-carousel {
+      .owl-stage {
+        width: 100% !important;
+      }
+      .owl-item {
+        width: 33.3333% !important;
+      }
+    }
+  }
+  #sendApp {
+    &:before {
+      background-size: 100% 100%;
+    }
+  }
   #speTech {
-    padding: 100px 0;
+    height: 100vh;
+    padding: 90px 0;
   }
 }
 @media (min-width: 1281px) {
   #appSlider {
     min-height: 1000px;
     .app-wrapper {
-      .slider {
-        width: 1425px;
-      }
       &:before {
         box-shadow: 0 0 150px 400px rgba(255,255,255,1);
       }
@@ -764,28 +829,41 @@
       }
     }
   }
+  #paveOs {
+    .owl-carousel {
+      .owl-stage {
+        width: 100% !important;
+      }
+      .owl-item {
+        width: 33.3333% !important;
+      }
+    }
+  }
   #speTech {
+    height: 100vh;
     padding: 160px 0;
   }
 }
 
 
-//.giroptic-header {
-//   display: none;
-// }
-//.section {
-//  display: none !important;
-//}
-//#appSlider, #paveOs, #sendApp, #speTech {
-//  &.section {
-//    display: block !important;
-//  }
-//}
-//#sendApp {
-//  &.section {
-//    display: table !important;
-//  }
-//}
-//#main {
-//  padding: 0;
-//}
+
+
+.giroptic-header {
+   display: none;
+ }
+.section {
+  display: none !important;
+}
+#appSlider, #paveOs, #sendApp, #speTech {
+  &.section {
+    display: block !important;
+  }
+}
+#sendApp {
+  &.section {
+    display: table !important;
+  }
+}
+#main {
+  padding: 0;
+}
