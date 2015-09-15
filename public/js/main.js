@@ -29,18 +29,34 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
-    //$("#speTech .columns").owlCarousel({
-    //    items: 3,
-    //    dots:true,
-    //    responsiveClass:true,
-    //    responsive:{
-    //        0:{items:1},
-    //        750:{items:1},
-    //        768:{items:3, dots:false},
-    //        1024:{items:3, dots:false},
-    //        1680:{items:3, dots:false}
-    //    }
+});
+// --- Accessories block
+$('ul.tabs li').click(function(){
+    var tab_id = $(this).attr('data-tab');
+
+    $('ul.tabs li').removeClass('current');
+    $('.tab-content').removeClass('current');
+
+    $(this).addClass('current');
+    $("#"+tab_id).addClass('current');
+});
+$('.bxslider').bxSlider({
+    auto: true,
+    autoControls: true
+});
+});
+$('#app .row').click(function(){
+    $(".phone-style").addClass('down');
+    $(".down").addClass('animate');
+    //$('.animate').(8000, function(){
+    //    $('.animate').addClass('circle');
     //});
+    setTimeout(function(){
+        $('.animate').addClass('circle');
+        $('.circle').animate({
+            scale:'1'
+        }, 300);
+    }, 3000);
 });
 
 // --- Send App Section
