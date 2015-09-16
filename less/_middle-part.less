@@ -9,8 +9,12 @@
     overflow: hidden;
     //height: 985px;
     height: 470px;
-    .border-radius-bottom-right(50%, 94px);
-    .border-radius-bottom-left(50%, 94px);
+    .border-radius-bottom-right(50%);
+    .border-radius-bottom-left(50%);
+    position: relative;
+    width: 126%;
+    left: -13%;
+    z-index: 1;
   }
   .accessories-caption {
     text-align: center;
@@ -20,15 +24,64 @@
     h4 {
       .pxToEm(32);
     }
-
     p {
       .pxToEm(22);
       font-family: "Zona Pro";
     }
   }
+  .accessories-topImage{
+    position: relative;
+    top: -300px;
+    left: 50%;
+    margin-left: -126px;
+    width: 262px;
+    height: 400px;
+    text-align: center;
+    z-index: 111;
+    img{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      margin-left: -100px;
+      &:first-child{
+        top: 0;
+        margin-left: -126px;
+      }
+    }
+    a{
+      text-transform: uppercase;
+      position: absolute;
+      right: -137px;
+      top: 115px;
+      .border-radius(17px);
+      border: 1px solid @accessories-link-h;
+      color: @accessories-link-h;
+      display: block;
+      width: 195px;
+      height: 38px;
+      line-height: 38px;
+      &:before{
+        content: "\2b";
+        font-size: 25px;
+        background: url("../img/playStopButton.png") no-repeat left top;
+        height: 62px;
+        line-height: 62px;
+        width: 63px;
+        left: -31px;
+        top: -14px;
+        position: absolute;
+        font-family: 'Glyphicons Halflings';
+      }
+      &:active{
+        &:before{
+          content: "\e072";
+        }
+      }
+    }
+  }
   .accessories-carousel{
     text-align: center;
-    margin-top: 170px;
+    margin-top: -240px;
     ul{
       list-style: none;
       li{
@@ -42,7 +95,7 @@
           padding: 0 42px 0 17px;
           font-family: "Zona Pro SemiBold", sans-serif;
           .cls-1{
-            color: @accessories-link;
+            fill: @accessories-link;
           }
           &:hover,
           &.active{
@@ -64,12 +117,348 @@
             margin-right: 17px;
           }
         }
+        &.current{
+          a{
+            color: @accessories-link-h;
+            border: 2px solid @accessories-link-h;
+            .cls-1{
+              fill: @accessories-link-h;
+            }
+          }
+        }
       }
     }
-    p{
-      color: @accessories-p;
-      .pxToEm(16);
-      font-family: "Zona Pro", sans-serif;
+    div {
+      display: none;
+      &.current{
+        display: block;
+      }
+      p {
+        color: @accessories-p;
+        .pxToEm(16);
+        font-family: "Zona Pro", sans-serif;
+        margin: 31px 0 41px;
+      }
+      a {
+        color: @accessories-link-h;
+        text-decoration: underline;
+        .pxToEm(16);
+        &:hover{
+          color: @accessories-link;
+        }
+      }
+    }
+  }
+}
+
+#slideImg {
+  height: 100vh;
+  position: relative;
+  .clearfix;
+
+  & > div {
+    width: 20%;
+    float: left;
+    height: 1121px;
+    position: relative;
+    &:before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,.2);
+      position: absolute;
+      top: 0;
+      opacity: 1;
+      z-index: 1;
+    }
+    &:hover:before {
+      opacity: 0.1;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .slide-ico {
+      width: 64px;
+      height: 64px;
+      background-color: @accessories-bg;
+      position: absolute;
+      top: 50%;
+      left: 43%;
+      .border-radius(50%);
+      cursor: pointer;
+      -webkit-transition: color 0.3s;
+      -moz-transition: color 0.3s;
+      transition: color 0.3s;
+      z-index: 2;
+      &:after{
+        content: '';
+        width: 95px;
+        height: 95px;
+        position: absolute;
+        top: -16px;
+        left: -16px;
+        .border-radius(50%);
+        border: 16px solid rgba(255, 255, 255, 0.4);
+        display: block;
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+        transition: transform 0.2s, opacity 0.2s;
+      }
+      &:hover:after{
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+        opacity: 0;
+        -webkit-transition: -webkit-transform 0.4s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.4s, opacity 0.2s;
+        transition: transform 0.4s, opacity 0.2s;
+      }
+      &:hover:before{
+        content: '';
+        width: 95px;
+        height: 95px;
+        position: absolute;
+        top: -16px;
+        left: -16px;
+        .border-radius(50%);
+        display: block;
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+        -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+        transition: transform 0.2s, opacity 0.2s;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+      }
+    }
+  }
+}
+#app {
+  background-color: @app-bg;
+  //height: 763px;
+  height: 100vh;
+
+  .row {
+    margin: 0;
+  }
+
+  .app-desc {
+    margin-top: 110px;
+    overflow: hidden;
+
+    .app-devices {
+      margin: 0 auto;
+      width: 114px;
+      .clearfix;
+    }
+    .dev-ico {
+      background: url("../img/app/dev-sprite.png");
+      width: 38px;
+      height: 32px;
+      display: block;
+      float: left;
+      margin: 0 auto;
+      .clearfix;
+    }
+    .mob {
+      background-position: 0 0;
+    }
+    .tab {
+      background-position: -42px 0;
+    }
+    .desc {
+      background-position: -86px 0;
+      width: 32px;
+    }
+
+    h4 {
+      .pxToEm(36);
+      color: @app-font-color;
+      text-align: center;
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona-Light", sans-serif;
+      color: @app-font-color;
+      text-align: center;
+    }
+
+  }
+  .phone-style{
+    position: absolute;
+    bottom: -584px;
+    left: calc(~'50% - 170px');
+    transition: bottom 3s;
+    &.down{
+      bottom: 0;
+      .animate {
+        -ms-transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        position: absolute;
+        bottom: -60%;
+        left: -110px;
+        z-index: -1;
+        opacity: 1;
+        width: 564px;
+        height: 564px;
+        background: #fff;
+        border-radius: 50%;
+        box-shadow: 0 0 0 121px rgba(255, 255, 255, 0.3);
+        &.scale {
+          transition: all 3s ease-in-out;
+          transform: scale(1);
+          -ms-transform: scale(1);
+          -webkit-transform: scale(1);
+        }
+      }
+      .circle{
+        position: absolute;
+        width: 1079px;
+        height: 1079px;
+        top: 60px;
+        left: -110%;
+        z-index: -2;
+        background: url("../img/app-phone/round-bgr.png") no-repeat center center;
+        -moz-animation: spin 16s infinite linear;
+        -webkit-animation: spin 16s infinite linear;
+        animation: spin 16s infinite linear;
+        background-size: 0;
+        &.scale {
+          transition: all 3s ease-in-out;
+          background-size: 100%;
+        }
+        @-moz-keyframes spin {
+          0% {
+            -moz-transform: rotate(0deg);
+          }
+
+          100% {
+            -moz-transform: rotate(360deg);
+          }
+        }
+        @-webkit-keyframes spin {
+          0% {
+            -webkit-transform: rotate(0deg);
+          }
+
+          100% {
+            -webkit-transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+}
+#moveDev {
+  background-color: @moveDev-bg;
+  height: 100vh;
+  position: relative;
+  display: table;
+
+  .row {
+    margin: 0;
+  }
+
+  .moveDev {
+    height: 100vh;
+    background-image: url('../img/howToUse/app1.png');
+    background-position: center 370px;
+    background-repeat: no-repeat;
+  }
+
+  .inner {
+    margin-top: 155px;
+
+    h4 {
+      .pxToEm(36);
+      color: @moveDev-font-color;
+      text-align: center;
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona-Light", sans-serif;
+      text-align: center;
+      color: @moveDev-smallFont-color;
+    }
+  }
+
+  .howToUse {
+    .clearfix;
+    position: relative;
+    background: #000;
+
+    .howToUse-block {
+      height: 456px;
+      position: relative;
+      background-color: @moveDev-howToUse-bg;
+      width: 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .leftHand{
+        position: absolute;
+        left: 50%;
+        margin-left: -280px;
+        bottom: -20px;
+      }
+      .rightHand{
+        position: absolute;
+        left: 50%;
+        margin-left: 61px;
+        bottom: -20px;
+        transition: all 1s ease-in-out;
+        &.move{
+          margin-left: 11px;
+        }
+      }
+
+      p {
+        .pxToEm(22);
+        font-family: "Zona-Light", sans-serif;
+        text-align: center;
+        color: @moveDev-smallFont-color;
+        display: block;
+        line-height: 30px;
+        padding: 45px 130px;
+      }
+      .oculus{
+        transition: all 1s ease-in-out;
+        &.move{
+          margin-left: 160px;
+        }
+      }
+    }
+    .circle{
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background: #44bbff;
+      box-shadow: 0 0 0 20px rgba( 68, 187, 255, 0.4);
+      position: absolute;
+      left: calc(~'50% - 200px');
+      top: 100px;
+      transition: all 1s ease-in-out;
+      &.move{
+        left: 50%;
+        margin-left: 70px;
+        top: 40px;
+      }
+    }
+
+    .howToUse-left-block {
+      float: left;
+      background-image: url('../img/howToUse/first-bg.jpg');
+    }
+    .howToUse-right-block {
+      float: right;
+      background-image: url('../img/howToUse/second-bg.jpg');
     }
   }
 }

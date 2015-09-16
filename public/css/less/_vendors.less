@@ -9,15 +9,15 @@
   -moz-border-radius: @radius;
   border-radius: @radius;
 }
-.border-radius-bottom-left(@radius) {
-  -webkit-border-bottom-left-radius: @radius;
-  -moz-border-bottom-left-radius: @radius;
-  border-bottom-left-radius: @radius;
+.border-radius-bottom-left(@radius, @height) {
+  -webkit-border-bottom-left-radius: @radius @height;
+  -moz-border-bottom-left-radius: @radius @height;
+  border-bottom-left-radius: @radius @height;
 }
-.border-radius-bottom-right(@radius) {
-  -webkit-border-bottom-right-radius: @radius;
-  -moz-border-bottom-right-radius: @radius;
-  border-bottom-right-radius: @radius;
+.border-radius-bottom-right(@radius, @height) {
+  -webkit-border-bottom-right-radius: @radius @height;
+  -moz-border-bottom-right-radius: @radius @height;
+  border-bottom-right-radius: @radius @height;
 }
 
 .box-shadow(@y, @x, @blur, @color) {

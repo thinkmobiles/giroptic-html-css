@@ -442,139 +442,262 @@
   }
 }
 
-//#app {
-//  background-color: @app-bg;
-//  //height: 763px;
-//  height: 100vh;
-//  background-image: url('../img/app-phone.png');
-//  background-position: center bottom;
-//  background-repeat: no-repeat;
-//
-//  .row {
-//    margin: 0;
-//  }
-//
-//  .app-desc {
-//    margin-top: 110px;
-//
-//    .app-devices {
-//      margin: 0 auto;
-//      width: 114px;
-//      .clearfix;
-//    }
-//    .dev-ico {
-//      background: url("../img/app/dev-sprite.png");
-//      width: 38px;
-//      height: 32px;
-//      display: block;
-//      float: left;
-//      margin: 0 auto;
-//      .clearfix;
-//    }
-//    .mob {
-//      background-position: 0 0;
-//    }
-//    .tab {
-//      background-position: -42px 0;
-//    }
-//    .desc {
-//      background-position: -86px 0;
-//      width: 32px;
-//    }
-//
-//    h4 {
-//      .pxToEm(36);
-//      color: @app-font-color;
-//      text-align: center;
-//      span {
-//        text-transform: uppercase;
-//      }
-//    }
-//
-//    p {
-//      .pxToEm(22);
-//      font-family: "Zona-Light", sans-serif;
-//      color: @app-font-color;
-//      text-align: center;
-//    }
-//
-//  }
-//}
+#app {
+  background-color: @app-bg;
+  //height: 763px;
+  height: 100vh;
+  background-image: url('../img/app-phone.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
 
-//#moveDev {
-//  background-color: @moveDev-bg;
-//  height: 100vh;
-//  position: relative;
-//  display: table;
-//
-//  .row {
-//    margin: 0;
-//  }
-//
-//  .moveDev {
-//    height: 100vh;
-//    background-image: url('../img/howToUse/app1.png');
-//    background-position: center 370px;
-//    background-repeat: no-repeat;
-//  }
-//
-//  .inner {
-//    margin-top: 155px;
-//
-//    h4 {
-//      .pxToEm(36);
-//      color: @moveDev-font-color;
-//      text-align: center;
-//    }
-//
-//    p {
-//      .pxToEm(22);
-//      font-family: "Zona-Light", sans-serif;
-//      text-align: center;
-//      color: @moveDev-smallFont-color;
-//    }
-//  }
-//
-//  .howToUse {
-//    .clearfix;
-//
-//    .howToUse-block {
-//      height: 456px;
-//      position: relative;
-//      background-color: @moveDev-howToUse-bg;
-//      width: 50%;
-//      background-position: center center;
-//      background-repeat: no-repeat;
-//      background-size: cover;
-//
-//      img {
-//        position: absolute;
-//        left: 50%;
-//        margin-left: -280px;
-//        bottom: -20px;
-//      }
-//
-//      p {
-//        .pxToEm(22);
-//        font-family: "Zona-Light", sans-serif;
-//        text-align: center;
-//        color: @moveDev-smallFont-color;
-//        display: block;
-//        line-height: 30px;
-//        padding: 45px 130px;
-//      }
-//    }
-//
-//    .howToUse-left-block {
-//      float: left;
-//      background-image: url('../img/howToUse/first-bg.jpg');
-//    }
-//    .howToUse-right-block {
-//      float: right;
-//      background-image: url('../img/howToUse/second-bg.jpg');
-//    }
-//  }
-//}
+  .row {
+    margin: 0;
+  }
+
+  .app-desc {
+    margin-top: 110px;
+
+    .app-devices {
+      margin: 0 auto;
+      width: 114px;
+      .clearfix;
+    }
+    .dev-ico {
+      background: url("../img/app/dev-sprite.png");
+      width: 38px;
+      height: 32px;
+      display: block;
+      float: left;
+      margin: 0 auto;
+      .clearfix;
+    }
+    .mob {
+      background-position: 0 0;
+    }
+    .tab {
+      background-position: -42px 0;
+    }
+    .desc {
+      background-position: -86px 0;
+      width: 32px;
+    }
+
+    h4 {
+      .pxToEm(36);
+      color: @app-font-color;
+      text-align: center;
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona-Light", sans-serif;
+      color: @app-font-color;
+      text-align: center;
+    }
+
+  }
+}
+
+#moveDev {
+  background-color: @moveDev-bg;
+  height: 100vh;
+  position: relative;
+  display: table;
+
+  .row {
+    margin: 0;
+  }
+
+  .moveDev {
+    height: 100vh;
+    background-image: url('../img/howToUse/app1.png');
+    background-position: center 370px;
+    background-repeat: no-repeat;
+  }
+
+  .inner {
+    margin-top: 155px;
+
+    h4 {
+      .pxToEm(36);
+      color: @moveDev-font-color;
+      text-align: center;
+    }
+
+    p {
+      .pxToEm(22);
+      font-family: "Zona-Light", sans-serif;
+      text-align: center;
+      color: @moveDev-smallFont-color;
+    }
+  }
+
+  .howToUse {
+    .clearfix;
+
+    .howToUse-block {
+      height: 456px;
+      position: relative;
+      background-color: @moveDev-howToUse-bg;
+      width: 50%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      img {
+        position: absolute;
+        left: 50%;
+        margin-left: -280px;
+        bottom: -20px;
+      }
+
+      p {
+        .pxToEm(22);
+        font-family: "Zona-Light", sans-serif;
+        text-align: center;
+        color: @moveDev-smallFont-color;
+        display: block;
+        line-height: 30px;
+        padding: 45px 130px;
+      }
+    }
+
+    .howToUse-left-block {
+      float: left;
+      background-image: url('../img/howToUse/first-bg.jpg');
+    }
+    .howToUse-right-block {
+      float: right;
+      background-image: url('../img/howToUse/second-bg.jpg');
+    }
+  }
+}
+#sendApp {
+  background-color: @sendApp-bg;
+  background-image: url('../img/sendApp-bg.jpg');
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 5;
+  position: relative;
+  display: table;
+  height: 340px;
+
+  .sendApp {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  p {
+    .pxToEm(32);
+    color: @sendApp-text;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Zona Pro";
+    //line-height: 0.75;
+  }
+
+  button {
+    background: @sendApp-btn;
+    border: 1px solid;
+    border-color: @sendApp-border;
+    border-radius: 40px;
+    color: @sendApp-btn2;
+    height: 38px;
+    width: 195px;
+    display: block;
+    margin: 0 auto;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    font-family: "Zona Pro", sans-serif;
+    font-weight: 400;
+    .pxToEm(14);
+  }
+}
+
+#speTech {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  background-image: url('../img/speTech-bg.jpg');
+  background-position: 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 170px 0;
+
+  .row {
+    &> div {
+      height: 100%;
+    }
+  }
+
+  .speTech {
+    height: 33.3333%;
+    padding-bottom: 35px;
+    color: @speTech-text;
+    .pxToEm(12);
+    font-family: "Zona Pro", sans-serif;
+
+    h4 {
+      font-family: "Zona Pro Bold", sans-serif;
+      margin: 0;
+    }
+
+    .icons {
+      width: 49px;
+      height: 49px;
+      display: block;
+      margin-bottom: 15px;
+      background-position: top left;
+      background-repeat: no-repeat;
+
+      &.icon1 {
+        background-image: url('../img/speTech-icon1.png');
+      }
+      &.icon2 {
+        background-image: url('../img/speTech-icon2.png');
+      }
+      &.icon3 {
+        background-image: url('../img/speTech-icon3.png');
+      }
+      &.icon4 {
+        background-image: url('../img/speTech-icon4.png');
+      }
+      &.icon5 {
+        background-image: url('../img/speTech-icon5.png');
+      }
+      &.icon6 {
+        background-image: url('../img/speTech-icon6.png');
+      }
+      &.icon7 {
+        background-image: url('../img/speTech-icon7.png');
+      }
+      &.icon8 {
+        background-image: url('../img/speTech-icon8.png');
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        padding: 0 0 0 15px;
+        position: relative;
+
+        &:before {
+          position: absolute;
+          content: '-';
+          left: -1px;
+        }
+      }
+    }
+  }
+}
 
 #slideImg2 {
   z-index: 5;
