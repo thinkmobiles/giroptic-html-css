@@ -810,251 +810,6 @@ button {
   border-radius: 50%;
   cursor: pointer;
 }
-#slideImg2 {
-  z-index: 5;
-  background: #ffffff;
-  /* display: table */
-  -height: 1%;
-  /*IE6*/
-  *zoom: 1;
-  /*IE6-7*/
-  display: table;
-}
-#slideImg2:after {
-  /*content: '1 1';*/
-  /*Op15+*/
-  content: '1 1 1 1 1 1 1 1 1 1 1';
-  /*Op12+*/
-  font: 0.1px/0 a;
-  display: block;
-  word-spacing: 99in;
-  overflow: hidden;
-  /*IE8-*/
-}
-#slideImg2 .slideImg2 {
-  background: url('../img/slideImg2-bg.jpg');
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-size: 100% 678px;
-  height: 678px;
-  width: 100%;
-  display: table-cell;
-  vertical-align: middle;
-}
-#slideImg2 .slideImg2 h2 {
-  font-size: 6.6em;
-  line-height: 66px;
-  font-family: "Zona Pro Bold", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
-  margin: 0;
-}
-#camera {
-  z-index: 6;
-  position: relative;
-  height: 100vh;
-  background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: url('../img/camera-bg.jpg');
-  background-size: 100% 100%;
-}
-#camera .content {
-  height: 100%;
-  display: table;
-}
-#camera .content > div {
-  display: table-cell;
-  vertical-align: middle;
-}
-#camera .content > div:nth-child(1) {
-  width: 60%;
-  text-align: center;
-}
-#camera .content > div:nth-child(2) {
-  width: 40%;
-}
-#camera .content .points {
-  text-align: center;
-}
-#camera .content .points ul {
-  margin: 0;
-  margin-left: 180px;
-  padding: 0;
-  list-style: none;
-}
-#camera .content .points ul li {
-  float: left;
-  width: 15px;
-  height: 15px;
-  border: 2px solid;
-  border-color: #a0a0a0;
-  background: #a0a0a0;
-  margin: 0 5px;
-  border-radius: 100%;
-}
-#camera .content .points ul li.active {
-  border-color: #44bbff;
-  background: transparent;
-}
-#camera .content .buy-block .stamp {
-  display: inline-block;
-  text-transform: uppercase;
-  font-family: "Zona Pro Bold", sans-serif;
-  font-size: 1.6em;
-  color: #ffffff;
-  background-color: #4b4b4b;
-  padding: 3px 9px;
-}
-#camera .content .buy-block .title {
-  color: #4b4b4b;
-  margin: 0 0 0.35em 0;
-  line-height: 0.85em;
-  font-weight: 100;
-  font-family: "Zona Pro", sans-serif;
-  font-size: 8.3em;
-}
-#camera .content .buy-block .title .price {
-  font-weight: 300;
-  font-family: "Zona-Light", sans-serif;
-  font-size: 24px;
-}
-#camera .content .buy-block .subtitle {
-  margin: 0 0 0.2em;
-  color: #4b4b4b;
-  font-family: "Zona Pro SemiBold", sans-serif;
-  font-size: 1.8em;
-}
-#camera .content .buy-block .description {
-  color: #4b4b4b;
-  line-height: 29px;
-  margin-bottom: 30px;
-  font-size: 1.6em;
-}
-#camera .content .buy-block .share {
-  border-top: 1px solid #e6e6e7;
-}
-#camera .content .buy-block .share .inTheBox {
-  position: relative;
-}
-#camera .content .buy-block .share .inTheBox:before {
-  position: absolute;
-  content: '';
-  width: 8px;
-  height: 14px;
-  right: 0;
-  top: 13px;
-  background-position: top left;
-  background-image: url('../img/inTheBox.png');
-}
-#camera .content .buy-block .share > div {
-  border-bottom: 1px solid #e6e6e7;
-  padding: 10px 0;
-}
-#camera .content .buy-block .share span {
-  font-family: "Zona-Light", sans-serif;
-  font-size: 1.4em;
-  font-weight: 300;
-}
-#camera .content .buy-block .share ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  float: right;
-}
-#camera .content .buy-block .share ul li {
-  float: left;
-  margin-left: 10px;
-}
-#camera .content .buy-block .buy {
-  margin-top: 35px;
-}
-#camera .content .buy-block .buy .btn-buy {
-  font-size: 1.7em;
-  width: 180px;
-  height: 40px;
-  border-radius: 100px;
-  text-transform: uppercase;
-  color: #ffffff;
-  padding: 5px 20px 5px 50px;
-  background: transparent;
-  background: #44bbff;
-  border: 2px solid;
-  border-color: #44bbff;
-  position: relative;
-}
-#camera .content .buy-block .buy .btn-buy:before {
-  position: absolute;
-  content: '';
-  top: 9px;
-  left: 20px;
-  width: 19px;
-  height: 19px;
-  background: url('../img/shopping-cart-white.png') no-repeat 0 0;
-}
-#camera #inBox-toggle {
-  position: relative;
-  float: left;
-  margin-left: 35px;
-  margin-top: 35px;
-  background-color: transparent;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  z-index: 120;
-}
-#camera #inBox-toggle span {
-  display: block;
-  width: 36px;
-  height: 4px;
-  border-radius: 3px;
-  background-color: #44bbff;
-}
-#camera #inBox-toggle .icon-bar + .icon-bar {
-  margin-top: 6px;
-}
-#camera #inBox {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  z-index: 100;
-}
-#camera #inBox .inBox-collapse {
-  height: 100%;
-  background: #fff;
-  padding-top: 62px;
-}
-#camera #inBox .inBox-collapse h2 {
-  margin: 40px 0 80px 90px;
-}
-#camera #inBox .inBox-collapse > div {
-  border-top: 1px solid;
-  border-color: #f5f5f5;
-  min-height: 261px;
-}
-#camera #inBox .inBox-collapse > div:nth-child(n+1) {
-  border-left: 1px solid;
-  border-color: #f5f5f5;
-}
-#camera #inBox .inBox-collapse .image {
-  padding: 40px 0;
-  text-align: center;
-  height: 180px;
-}
-#camera #inBox .inBox-collapse .image img {
-  display: inline-block;
-  vertical-align: middle;
-}
-#camera #inBox .inBox-collapse h4 {
-  display: block;
-  margin: 25px 0;
-  font-family: "Zona-Light", sans-serif;
-  font-size: 1.6em;
-  text-align: center;
-}
 .is-min-height {
   min-height: 888px;
 }
@@ -2945,6 +2700,306 @@ button {
 #speTech .owl-carousel .owl-dots .active span {
   background: transparent;
 }
+#slideImg2 {
+  z-index: 5;
+  background: #ffffff;
+  /* display: table */
+  -height: 1%;
+  /*IE6*/
+  *zoom: 1;
+  /*IE6-7*/
+  display: table;
+}
+#slideImg2:after {
+  /*content: '1 1';*/
+  /*Op15+*/
+  content: '1 1 1 1 1 1 1 1 1 1 1';
+  /*Op12+*/
+  font: 0.1px/0 a;
+  display: block;
+  word-spacing: 99in;
+  overflow: hidden;
+  /*IE8-*/
+}
+#slideImg2 .slideImg2 {
+  background: url('../img/slideImg2-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto 100%;
+  height: 678px;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+#slideImg2 .slideImg2 h2 {
+  font-size: 6.6em;
+  line-height: 66px;
+  font-family: "Zona Pro Bold", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin: 0;
+}
+#camera {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('../img/bottom-part/camera-bg.jpg');
+  background-size: 100% 100%;
+}
+#camera > .container > .row {
+  display: table;
+}
+#camera .content {
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0;
+}
+#camera .content > div {
+  position: relative;
+  height: 100%;
+  max-height: 660px;
+}
+#camera .content > div:nth-child(2) {
+  padding: 0;
+}
+#camera .content .cameraSlider {
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+#camera .content .cameraSlider .visual-camera {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#camera .content .points {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+#camera .content .points ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#camera .content .points ul li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid;
+  border-color: #a0a0a0;
+  background: #a0a0a0;
+  margin: 0 5px;
+  border-radius: 100%;
+}
+#camera .content .points ul li.active {
+  border-color: #44bbff;
+  background: transparent;
+}
+#camera .content .buy-block {
+  display: table;
+  height: 100%;
+}
+#camera .content .buy-block > div {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+}
+#camera .content .buy-block .stamp {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Zona Pro Bold", sans-serif;
+  font-size: 1.6em;
+  color: #ffffff;
+  background-color: #4b4b4b;
+  padding: 3px 9px;
+}
+#camera .content .buy-block .title {
+  color: #4b4b4b;
+  margin: 0 0 0.35em 0;
+  line-height: 0.85em;
+  font-weight: 100;
+  font-family: "Zona Pro", sans-serif;
+  font-size: 7.4em;
+}
+#camera .content .buy-block .title .price {
+  font-weight: 100;
+  font-family: "Zona-Light", sans-serif;
+  font-size: 24px;
+}
+#camera .content .buy-block .subtitle {
+  margin: 0 0 0.2em;
+  color: #4b4b4b;
+  font-family: "Zona Pro SemiBold", sans-serif;
+  font-size: 1.8em;
+}
+#camera .content .buy-block .description {
+  color: #4b4b4b;
+  line-height: 29px;
+  margin-bottom: 30px;
+  font-size: 1.6em;
+}
+#camera .content .buy-block .share {
+  border-top: 1px solid #e6e6e7;
+}
+#camera .content .buy-block .share .inTheBox {
+  position: relative;
+}
+#camera .content .buy-block .share .inTheBox:before {
+  position: absolute;
+  content: '';
+  width: 8px;
+  height: 14px;
+  right: 0;
+  top: 13px;
+  background-position: top left;
+  background-image: url('../img/inTheBox.png');
+}
+#camera .content .buy-block .share > div {
+  border-bottom: 1px solid #e6e6e7;
+  padding: 10px 0;
+}
+#camera .content .buy-block .share span {
+  font-family: "Zona-Light", sans-serif;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+#camera .content .buy-block .share ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: right;
+}
+#camera .content .buy-block .share ul li {
+  float: left;
+  margin-left: 10px;
+}
+#camera .content .buy-block .buy {
+  margin-top: 35px;
+}
+#camera .content .buy-block .buy .btn-buy {
+  font-size: 1.7em;
+  width: 180px;
+  height: 40px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 5px 20px 5px 50px;
+  background: transparent;
+  background: #44bbff;
+  border: 2px solid;
+  border-color: #44bbff;
+  position: relative;
+}
+#camera .content .buy-block .buy .btn-buy:before {
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 20px;
+  width: 19px;
+  height: 19px;
+  background: url('../img/shopping-cart-white.png') no-repeat 0 0;
+}
+#camera .inBox {
+  position: absolute;
+  padding: 0;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  z-index: 120;
+}
+#camera .inBox .inBox-btn {
+  position: absolute;
+  margin-left: 35px;
+  margin-top: 35px;
+  top: 0;
+  left: 0;
+  z-index: 120;
+}
+#camera .inBox #inBox-toggle {
+  float: left;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+#camera .inBox #inBox-toggle span {
+  display: block;
+  width: 36px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: #44bbff;
+}
+#camera .inBox #inBox-toggle .icon-bar + .icon-bar {
+  margin-top: 6px;
+}
+#camera .inBox .inBox-collapse {
+  height: 100%;
+  width: 100%;
+}
+#camera .inBox .collapsing {
+  position: relative;
+  width: 0;
+  overflow: hidden;
+  -webkit-transition: all 500ms linear 0s;
+  -moz-transition: all 500ms linear 0s;
+  transition: all 500ms linear 0s;
+}
+#camera .inBox .inBox-cnt {
+  background: #fff;
+  padding-top: 62px;
+}
+#camera .inBox .inBox-cnt h2 {
+  margin: 40px 0 80px 90px;
+}
+#camera .inBox .inBox-cnt .row {
+  margin: 0;
+  height: calc(100% - 163px);
+}
+#camera .inBox .inBox-cnt .row > div {
+  border-top: 1px solid;
+  border-color: #eeeeee;
+  height: 33.3333%;
+  position: relative;
+}
+#camera .inBox .inBox-cnt .row > div:nth-child(n+1) {
+  border-left: 1px solid;
+  border-color: #eeeeee;
+}
+#camera .inBox .inBox-cnt .feature {
+  display: table;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+#camera .inBox .inBox-cnt .feature .image {
+  height: 100%;
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+#camera .inBox .inBox-cnt .feature img {
+  display: inline-block;
+  vertical-align: middle;
+}
+#camera .inBox .inBox-cnt .feature h4 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 25px 0;
+  font-family: "Zona-Light", sans-serif;
+  font-size: 1.6em;
+  text-align: center;
+}
 @media (max-width: 768px) {
   #appSlider {
     min-height: 1100px;
@@ -3055,6 +3110,22 @@ button {
   #speTech {
     height: 100vh;
     padding: 160px 0;
+  }
+}
+@media (min-width: 1281px) {
+  #appSlider {
+    min-height: 1000px;
+  }
+  #appSlider .app-wrapper:before {
+    box-shadow: 0 0 150px 400px #ffffff;
+  }
+  #appSlider .app-wrapper:after {
+    box-shadow: 0 0 150px 400px #ffffff;
+  }
+}
+@media (min-width: 1681px) {
+  #slideImg2 .slideImg2 {
+    background-size: 100% 678px;
   }
 }
 #footer {
