@@ -26,6 +26,7 @@
     bottom:0;
     height: 30px;
     width: 30px;
+    cursor: pointer;
   }
 }
 
@@ -258,6 +259,10 @@
     }
   }
 
+  .first-page-desc-show {
+    opacity: 1 !important;
+  }
+
   .home-first-page {
     height: 100%;
     position: relative;
@@ -266,7 +271,7 @@
       background-position: 50% 50%;
       background-size: cover;
       text-align: center;
-      padding-top: 310px;
+      padding-top: 260px;
       &:before {
         content: '';
         display: block;
@@ -278,8 +283,21 @@
         background-color: @home-fp-bg;
       }
 
+      .first-page-contetn{
+        .cam-circle {
+          opacity: 0;
+          margin-top: 30px;
+          transition: all .5s cubic-bezier(0.4,.85,.49,.99) .5s;
+        }
+        .show-cam {
+          opacity: 1;
+          margin-top: 0;
+        }
+      }
       .first-page-desc {
         margin-top: 55px;
+        opacity: 0;
+        transition: all .5s cubic-bezier(0.4,.85,.49,.99) 1.7s;
         p {
           color: @content-text;
           .pxToEm(24);
@@ -288,9 +306,23 @@
           text-transform: uppercase;
           .pxToEm(36);
         }
+        .first-page-btn {
+          display: inline-block;
+          line-height: 40px;
+          background-color: @home-bg;
+          width: 245px;
+          text-align: center;
+          .border-radius(20px);
+          color: @home-scroll;
+          .pxToEm(14);
+          margin-top: 20px;
+          cursor: pointer;
+        }
       }
       .scroll {
         .scroll;
+        opacity: 0;
+        transition: all 1.5s ease-out 1.5s;
         .scroll-btn {
           .scroll-btn;
         }
@@ -510,7 +542,7 @@
     padding-top: 125px;
 
     .tab {
-      width: ~"calc(33.33333% - 30px)";
+      width: 26.2%;
       height: 120px;
       float: left;
       text-align: left;

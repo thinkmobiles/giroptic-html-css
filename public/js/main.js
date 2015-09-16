@@ -14,7 +14,7 @@ $(document).ready(function() {
             992:{items:3, autoWidth: true},
             1024:{items:3, autoWidth: true},
             1280:{items:5, autoWidth: true},
-            1920:{items:5}
+            1980:{items:5}
         }
     });
     $("#paveOs .counters > .row").owlCarousel({

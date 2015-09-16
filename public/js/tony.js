@@ -1,9 +1,22 @@
 /**
  * Created by TONY on 15.09.2015.
  */
-$(document).ready(function() {
+$(window).on('load', function() {
 
+
+    var showPlayer = function() {
+      var player = $('#circleCircle');
+      var playerText = $('.first-page-desc');
+      var playerScroll = $('.home-first-page-bg .scroll');
+      player.addClass('show-cam');
+      playerText.addClass('first-page-desc-show');
+      playerScroll.addClass('first-page-desc-show');
+    };
+
+
+    showPlayer();
 });
+
 
 function videoAnimate() {
     var play = $('#play');
