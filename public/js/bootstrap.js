@@ -571,7 +571,7 @@ if (typeof jQuery === 'undefined') {
 
   Collapse.prototype.dimension = function () {
     var hasWidth = this.$element.hasClass('width')
-    return hasWidth ? 'width' : 'height'
+    return hasWidth ? 'height' : 'width'
   }
 
   Collapse.prototype.show = function () {

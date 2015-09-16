@@ -14,7 +14,7 @@ $(document).ready(function() {
             992:{items:3, autoWidth: true},
             1024:{items:3, autoWidth: true},
             1280:{items:5, autoWidth: true},
-            1920:{items:5}
+            1980:{items:5}
         }
     });
     $("#paveOs .counters > .row").owlCarousel({
@@ -119,11 +119,4 @@ $('#search-btn').bind('click', function(){
         opacity: '1',
         zIndex: '1000'
     }, 10);
-});
-$('#inBox-toggle').bind('click', function(){
-    if ($('#inBox').hasClass('in')) {
-        $('#inBox').removeClass('in');
-    } else {
-        $('#inBox').addClass('in');
-    }
 });
