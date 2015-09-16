@@ -696,8 +696,352 @@
     }
   }
 }
+#slideImg2 {
+  z-index: 5;
+  background: #ffffff;
+  .clearfix;
 
+  .slideImg2 {
+    background: url('../img/slideImg2-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    //background-size: 100% 678px;
+    background-size: auto 100%;
+    height: 678px;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
 
+    h2 {
+      .pxToEm(66);
+      line-height: 66px;
+      font-family: "Zona Pro Bold", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      color: #ffffff;
+      margin: 0;
+    }
+  }
+}
+#camera {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  background-color: @camera-bg;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-image: url('../img/bottom-part/camera-bg.jpg');
+  background-size: 100% 100%;
+
+  &> .container {
+
+    &> .row {
+      display: table;
+    }
+  }
+
+  .content {
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0;
+
+    &> div {
+      position: relative;
+      height: 100%;
+      max-height: 660px;
+
+      &:nth-child(2) {
+        padding: 0;
+      }
+    }
+
+    .cameraSlider {
+      height: 100%;
+      position: relative;
+      text-align: center;
+
+      .visual-camera {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .points {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      text-align: center;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border: 2px solid;
+          border-color: @point-border;
+          background: @point-bg;
+          margin: 0 5px;
+          border-radius: 100%;
+
+          &.active {
+            border-color: @point-border1;
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    .buy-block {
+      display: table;
+      height: 100%;
+
+      &> div {
+        display: table-cell;
+        vertical-align: middle;
+        height: 100%;
+      }
+
+      .stamp {
+
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: "Zona Pro Bold", sans-serif;
+        .pxToEm(16);
+        color: @camera-stamp-text;
+        background-color: @camera-stamp-bg;
+        padding: 3px 9px;
+      }
+
+      .title {
+        color: @camera-content-text;
+        margin: 0 0 0.35em 0;
+        line-height: 0.85em;
+        font-weight: 100;
+        font-family: "Zona Pro", sans-serif;
+        .pxToEm(74);
+
+        .price {
+          font-weight: 100;
+          font-family: "Zona-Light", sans-serif;
+          font-size: 24px;
+        }
+      }
+
+      .subtitle {
+        margin: 0 0 0.2em;
+        color: @camera-content-text;
+        font-family: "Zona Pro SemiBold", sans-serif;
+        .pxToEm(18);
+      }
+
+      .description {
+        color: @camera-content-text;
+        line-height: 29px;
+        margin-bottom: 30px;
+        .pxToEm(16);
+      }
+
+      .share {
+        border-top: 1px solid @camera-share-border;
+
+        .inTheBox {
+          position: relative;
+
+          &:before {
+            position: absolute;
+            content: '';
+            width: 8px;
+            height: 14px;
+            right: 0;
+            top: 13px;
+            background-position: top left;
+            background-image: url('../img/inTheBox.png');
+          }
+        }
+
+        &> div {
+          border-bottom: 1px solid @camera-share-border;
+          padding: 10px 0;
+        }
+
+        span {
+          font-family: "Zona-Light", sans-serif;
+          .pxToEm(14);
+          font-weight: 300;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          float: right;
+
+          li {
+            float: left;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .buy {
+        margin-top: 35px;
+
+        .btn-buy {
+          .pxToEm(17);
+          width: 180px;
+          height: 40px;
+          border-radius: 100px;
+          text-transform: uppercase;
+          color: @camera-btn-text;
+          padding: 5px 20px 5px 50px;
+          background: transparent;
+          background: @camera-btn-bg;
+          border: 2px solid;
+          border-color: @camera-btn-border;
+          position: relative;
+
+          &:before {
+            position: absolute;
+            content: '';
+            top: 9px;
+            left: 20px;
+            width: 19px;
+            height: 19px;
+            background: url('../img/shopping-cart-white.png') no-repeat 0 0;
+
+          }
+        }
+      }
+    }
+  }
+
+  .inBox {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 100%;
+    z-index: 120;
+
+    .inBox-btn {
+      position: absolute;
+      margin-left: 35px;
+      margin-top: 35px;
+      top: 0;
+      left: 0;
+      z-index: 120;
+    }
+
+    #inBox-toggle {
+      float: left;
+      //padding: 9px 10px;
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid transparent;
+      border-radius: 4px;
+
+      span {
+        display: block;
+        width: 36px;
+        height: 4px;
+        border-radius: 3px;
+        background-color: @inBox-bg;
+      }
+
+      .icon-bar + .icon-bar {
+        margin-top: 6px;
+      }
+    }
+
+    .inBox-collapse {
+      height: 100%;
+      width: 100%;
+    }
+
+    .collapsing {
+      position: relative;
+      width: 0;
+      overflow: hidden;
+      -webkit-transition: all 500ms linear 0s;
+      -moz-transition: all 500ms linear 0s;
+      transition: all 500ms linear 0s;
+
+      //-webkit-transition-timing-function: ease;
+      //-o-transition-timing-function: ease;
+      //transition-timing-function: ease;
+      //-webkit-transition-duration: .35s;
+      //-o-transition-duration: .35s;
+      //transition-duration: .35s;
+      //-webkit-transition-property: width, visibility;
+      //-o-transition-property: width, visibility;
+      //transition-property: width, visibility;
+    }
+
+    .inBox-cnt {
+      background: #fff;
+      padding-top: 62px;
+
+      h2 {
+        margin: 40px 0 80px 90px;
+      }
+
+      .row {
+        margin: 0;
+        height: ~"calc(100% - 163px)";
+        
+        &> div {
+          border-top: 1px solid;
+          border-color: @inBox-border;
+          height: 33.3333%;
+          position: relative;
+
+          &:nth-child(n+1) {
+            border-left: 1px solid;
+            border-color: @inBox-border;
+          }
+        }
+      }
+
+      .feature {
+        display: table;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+
+        .image {
+          height: 100%;
+          width: 100%;
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        img {
+          display: inline-block;
+          vertical-align: middle;
+        }
+
+        h4 {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          margin: 25px 0;
+          font-family: "Zona-Light", sans-serif;
+          .pxToEm(16);
+          text-align: center;
+        }
+      }
+    }
+  }
+}
 
 
 
@@ -844,7 +1188,26 @@
     padding: 160px 0;
   }
 }
-
+@media (min-width: 1281px) {
+  #appSlider {
+    min-height: 1000px;
+    .app-wrapper {
+      &:before {
+        box-shadow: 0 0 150px 400px rgba(255,255,255,1);
+      }
+      &:after {
+        box-shadow: 0 0 150px 400px rgba(255,255,255,1);
+      }
+    }
+  }
+}
+@media (min-width: 1681px) {
+  #slideImg2 {
+    .slideImg2 {
+      background-size: 100% 678px;
+    }
+  }
+}
 
 
 
@@ -854,12 +1217,12 @@
 //.section {
 //  display: none !important;
 //}
-//#appSlider, #paveOs, #sendApp, #speTech {
+//#appSlider, #paveOs, #sendApp, #speTech, #slideImg2, #camera {
 //  &.section {
 //    display: block !important;
 //  }
 //}
-//#sendApp {
+//#sendApp, #slideImg2 {
 //  &.section {
 //    display: table !important;
 //  }

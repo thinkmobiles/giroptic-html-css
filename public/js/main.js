@@ -61,7 +61,7 @@ $('#app .row').click(function(){
     }, 3000);
 });
 // --- How to use Section
-$('#moveDev').click(function(){
+$('#moveDev').mouseup(function(){
     setTimeout(function(){
         $('.rightHand').animate(3000, function(){
             $('.rightHand').addClass('move');
@@ -79,10 +79,11 @@ $('#moveDev').click(function(){
     }, 4500);
     setTimeout(function(){
         $('#moveDev').animate(3000, function(){
-            $('.howToUse').hide();
-            $('.moveDev').hide();
+            $('.howToUse-left-block').hide();
+            $('.howToUse-right-block').hide();
+            $('.moveDev').addClass('blackBgr');
         });
-    }, 5000);
+    }, 6000);
 });
 
 // --- Send App Section
@@ -119,11 +120,4 @@ $('#search-btn').bind('click', function(){
         opacity: '1',
         zIndex: '1000'
     }, 10);
-});
-$('#inBox-toggle').bind('click', function(){
-    if ($('#inBox').hasClass('in')) {
-        $('#inBox').removeClass('in');
-    } else {
-        $('#inBox').addClass('in');
-    }
 });
