@@ -757,59 +757,6 @@ button {
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
 }*/
-#slideImg {
-  height: 100vh;
-  position: relative;
-  /* display: table */
-  -height: 1%;
-  /*IE6*/
-  *zoom: 1;
-  /*IE6-7*/
-  display: table;
-}
-#slideImg:after {
-  /*content: '1 1';*/
-  /*Op15+*/
-  content: '1 1 1 1 1 1 1 1 1 1 1';
-  /*Op12+*/
-  font: 0.1px/0 a;
-  display: block;
-  word-spacing: 99in;
-  overflow: hidden;
-  /*IE8-*/
-}
-#slideImg .slide {
-  width: 20%;
-  float: left;
-  height: 1121px;
-  position: relative;
-}
-#slideImg .slide .slideImg-darck {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: absolute;
-  top: 0;
-  opacity: 1;
-}
-#slideImg .slide .slideImg-darck:hover {
-  opacity: 0;
-}
-#slideImg .slide img {
-  width: 100%;
-}
-#slideImg .slide .slide-ico {
-  width: 65px;
-  height: 65px;
-  background-color: #ffffff;
-  position: absolute;
-  top: 50%;
-  left: 43%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%;
-  cursor: pointer;
-}
 /*== ANIMATION CLASS =======================*/
 /*==========================================*/
 .is-min-height {
@@ -1726,7 +1673,6 @@ button {
 #slideImg > div {
   width: 20%;
   float: left;
-  height: 1121px;
   position: relative;
 }
 #slideImg > div:before {
