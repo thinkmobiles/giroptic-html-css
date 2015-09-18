@@ -2102,6 +2102,22 @@ button {
   #accessories .accessories-carousel div p {
     margin: 31px 30px 41px;
   }
+  #app .app-desc {
+    margin-top: 50px;
+  }
+  #app .phone-style img {
+    height: 480px;
+    width: auto;
+  }
+  #app .phone-style.down .animate {
+    left: -95px;
+    width: 467px;
+    height: 467px;
+    box-shadow: 0 0 0 101px rgba(255, 255, 255, 0.3);
+  }
+  #app .phone-style.down .circle {
+    left: -150%;
+  }
 }
 #appSlider {
   background-color: #ffffff;

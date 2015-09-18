@@ -527,7 +527,7 @@
       background: #44bbff;
       box-shadow: 0 0 0 20px rgba( 68, 187, 255, 0.4);
       position: absolute;
-      left: calc(~'50% - 200px');
+      left: ~'calc(50% - 200px)';
       top: 100px;
       transition: all 1s ease-in-out;
       &.move{
@@ -561,6 +561,28 @@
       div {
         p {
           margin: 31px 30px 41px;
+        }
+      }
+    }
+  }
+  #app {
+    .app-desc{
+      margin-top: 50px;
+    }
+    .phone-style{
+      img{
+        height: 480px;
+        width: auto;
+      }
+      &.down{
+        .animate{
+          left: -95px;
+          width: 467px;
+          height: 467px;
+          box-shadow: 0 0 0 101px rgba(255, 255, 255, 0.3);
+        }
+        .circle{
+          left: -150%;
         }
       }
     }
