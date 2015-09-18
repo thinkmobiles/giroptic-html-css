@@ -3381,23 +3381,6 @@ button {
     width: 30%;
   }
 }
-.giroptic-header {
-  display: none;
-}
-.section {
-  display: none !important;
-}
-/*#appSlider, #paveOs, #sendApp, #speTech, #slideImg2, #camera,*/
-#footer.section {
-  display: block !important;
-}
-#sendApp.section,
-#slideImg2.section {
-  display: table !important;
-}
-#main {
-  padding: 0;
-}
 @media (min-width: 768px) {
   .container {
     max-width: 100%;
