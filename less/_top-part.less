@@ -1,3 +1,4 @@
+
 /*== ANIMATION CLASS =======================*/
 
 /*==========================================*/
@@ -264,6 +265,9 @@
   }
 
   .home-first-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     position: relative;
     .home-first-page-bg {
@@ -272,6 +276,7 @@
       background-size: cover;
       text-align: center;
       padding-top: 260px;
+      width: 100%;
       &:before {
         content: '';
         display: block;
@@ -463,7 +468,7 @@
   }
 
   img.playerAnim {
-    transform: scale(1.3);
+    transform: scale(1.2);
   }
 
   #play {
@@ -538,8 +543,13 @@
     -o-transition: padding-top 1s linear;
     transition: padding-top 1s linear;
     overflow: hidden;
-    height: 125px;
     padding-top: 125px;
+    height: 140px;
+    .hvr-underline-from-center {
+      &:before {
+        z-index: 9999;
+      }
+    }
 
     .tab {
       width: 26.2%;
@@ -550,24 +560,26 @@
       overflow: hidden;
       cursor: pointer;
       padding: 0;
-      margin: 0 15px;
+      margin: 0 3%;
+      margin-top: 20px;
+      .box-sizing(border-box);
+      transition: all linear .3s;
 
-      span {
-        font-family: "Zona Pro SemiBold", sans-serif;
-        color: @player-text2;
+      &>span {
+        font-family: "Zona-Light", sans-serif;
+        color: @player-text1;
         display: block;
-        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
         position: relative;
         z-index: 1;
-        .pxToEm(20)
-
-      span {
-        color: @player-text1;
-        font-family: "Zona-Light", sans-serif;
-        .pxToEm(14);
-        padding: 0;
-        font-weight: 300;
-      }
+        .pxToEm(16);
+        &:first-child {
+            font-family: "Zona Pro SemiBold", sans-serif;
+            .pxToEm(20);
+            color: @player-text2;
+          font-weight: 300;
+        }
       }
 
       img {
@@ -582,8 +594,8 @@
 
       &:hover {
         height: 125px;
-        border-bottom: 5px solid @player-border;
-
+       // border-bottom: 5px solid @player-border;
+        margin-top: 0px;
         img {
           -webkit-filter: brightness(.4);
           filter: brightness(.4);
@@ -689,6 +701,10 @@
     padding: 5px 20px;
     text-transform: uppercase;
     .pxToEm(12);
+    &:hover {
+      background-color:  @gallery-border;
+      color:#fff;
+    }
   }
 }
 

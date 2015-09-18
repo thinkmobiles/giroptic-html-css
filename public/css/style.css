@@ -1055,6 +1055,9 @@ button {
   opacity: 1 !important;
 }
 #home .home-first-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   position: relative;
 }
@@ -1064,6 +1067,7 @@ button {
   background-size: cover;
   text-align: center;
   padding-top: 260px;
+  width: 100%;
 }
 #home .home-first-page .home-first-page-bg:before {
   content: '';
@@ -1270,7 +1274,7 @@ button {
   transition: transform 4s;
 }
 #player img.playerAnim {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 #player #play {
   background-image: url('../img/play-button.png');
@@ -1337,8 +1341,11 @@ button {
   -o-transition: padding-top 1s linear;
   transition: padding-top 1s linear;
   overflow: hidden;
-  height: 125px;
   padding-top: 125px;
+  height: 140px;
+}
+#player .tabs .hvr-underline-from-center:before {
+  z-index: 9999;
 }
 #player .tabs .tab {
   width: 26.2%;
@@ -1349,21 +1356,27 @@ button {
   overflow: hidden;
   cursor: pointer;
   padding: 0;
-  margin: 0 15px;
+  margin: 0 3%;
+  margin-top: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all linear .3s;
 }
-#player .tabs .tab span {
-  font-family: "Zona Pro SemiBold", sans-serif;
-  color: #ffffff;
+#player .tabs .tab > span {
+  font-family: "Zona-Light", sans-serif;
+  color: #44bbff;
   display: block;
-  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
   z-index: 1;
+  font-size: 1.6em;
 }
-#player .tabs .tab span .pxToEm(20) span {
-  color: #44bbff;
-  font-family: "Zona-Light", sans-serif;
-  font-size: 1.4em;
-  padding: 0;
+#player .tabs .tab > span:first-child {
+  font-family: "Zona Pro SemiBold", sans-serif;
+  font-size: 2em;
+  color: #ffffff;
   font-weight: 300;
 }
 #player .tabs .tab img {
@@ -1377,7 +1390,7 @@ button {
 }
 #player .tabs .tab:hover {
   height: 125px;
-  border-bottom: 5px solid #44bbff;
+  margin-top: 0px;
 }
 #player .tabs .tab:hover img {
   -webkit-filter: brightness(0.4);
@@ -1461,6 +1474,10 @@ button {
   padding: 5px 20px;
   text-transform: uppercase;
   font-size: 1.2em;
+}
+#gallery button:hover {
+  background-color: #44bbff;
+  color: #fff;
 }
 /*== End Gallery ===============================*/
 /*== Begin Function ===============================*/
