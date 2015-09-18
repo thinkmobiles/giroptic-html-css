@@ -66,24 +66,24 @@ $('#moveDev').mouseup(function(){
         $('.rightHand').animate(3000, function(){
             $('.rightHand').addClass('move');
         });
-    }, 3000);
+    }, 1000);
     setTimeout(function(){
         $('.circle').animate(3000, function(){
             $('.circle').addClass('move');
         });
-    }, 3500);
+    }, 1500);
     setTimeout(function(){
         $('.oculus').animate(3000, function(){
             $('.oculus').addClass('move');
         });
-    }, 4500);
+    }, 2500);
     setTimeout(function(){
         $('#moveDev').animate(3000, function(){
             $('.howToUse-left-block').hide();
             $('.howToUse-right-block').hide();
             $('.moveDev').addClass('blackBgr');
         });
-    }, 6000);
+    }, 4000);
 });
 
 // --- Send App Section

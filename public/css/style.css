@@ -1557,12 +1557,12 @@ button {
   background-size: cover;
   overflow: hidden;
   height: 470px;
-  -webkit-border-bottom-right-radius: 50%;
-  -moz-border-bottom-right-radius: 50%;
-  border-bottom-right-radius: 50%;
-  -webkit-border-bottom-left-radius: 50%;
-  -moz-border-bottom-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+  -webkit-border-bottom-right-radius: 50% 100px;
+  -moz-border-bottom-right-radius: 50% 100px;
+  border-bottom-right-radius: 50% 100px;
+  -webkit-border-bottom-left-radius: 50% 100px;
+  -moz-border-bottom-left-radius: 50% 100px;
+  border-bottom-left-radius: 50% 100px;
   position: relative;
   width: 100%;
   left: 0;
@@ -2144,6 +2144,18 @@ button {
 #moveDev .howToUse .howToUse-right-block {
   float: right;
   background-image: url('../img/howToUse/second-bg.jpg');
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #accessories .bg-accessories {
+    background-image: url('../img/accessories-bg1.jpg');
+    height: 357px;
+  }
+  #accessories .accessories-carousel {
+    margin-top: -269px;
+  }
+  #accessories .accessories-carousel div p {
+    margin: 31px 30px 41px;
+  }
 }
 #appSlider {
   background-color: #ffffff;
