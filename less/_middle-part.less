@@ -9,8 +9,8 @@
     overflow: hidden;
     //height: 985px;
     height: 470px;
-    .border-radius-bottom-right(50%);
-    .border-radius-bottom-left(50%);
+    .border-radius-bottom-right(50% 100px);
+    .border-radius-bottom-left(50% 100px);
     position: relative;
     width: 100%;
     //left: -13%;
@@ -544,6 +544,25 @@
     .howToUse-right-block {
       float: right;
       background-image: url('../img/howToUse/second-bg.jpg');
+    }
+  }
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #accessories {
+    .bg-accessories {
+      background-image: url('../img/accessories-bg1.jpg');
+      //height: 985px;
+      height: 357px;
+    }
+    .accessories-carousel {
+      margin-top: -269px;
+      div {
+        p {
+          margin: 31px 30px 41px;
+        }
+      }
     }
   }
 }
