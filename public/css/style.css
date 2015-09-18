@@ -1060,6 +1060,8 @@ button {
   align-items: center;
   height: 100%;
   position: relative;
+  width: 100%;
+  top: -10px;
 }
 #home .home-first-page .home-first-page-bg {
   background-image: url("../img/home/home-fp-bg.jpg");
@@ -1113,42 +1115,6 @@ button {
   color: #ffffff;
   font-size: 1.4em;
   margin-top: 20px;
-  cursor: pointer;
-}
-#home .home-first-page .home-first-page-bg .scroll {
-  position: absolute;
-  bottom: 105px;
-  text-align: center;
-  width: 100%;
-  left: 0;
-  color: #ffffff;
-  opacity: 0;
-  transition: all 1.5s ease-out 1.5s;
-}
-#home .home-first-page .home-first-page-bg .scroll .scroll-btn {
-  background-image: url('../img/scroll.png');
-  background-repeat: no-repeat;
-  background-size: auto;
-  display: block;
-  position: relative;
-  margin-left: -15px;
-  left: 50%;
-  bottom: 0;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-}
-#home .home-first-page .home-first-page-bg .scroll .scroll-btn {
-  background-image: url('../img/scroll.png');
-  background-repeat: no-repeat;
-  background-size: auto;
-  display: block;
-  position: relative;
-  margin-left: -15px;
-  left: 50%;
-  bottom: 0;
-  height: 30px;
-  width: 30px;
   cursor: pointer;
 }
 #sub-header {
