@@ -2657,7 +2657,6 @@ button {
 #speTech .speTech .description {
   position: relative;
   top: 10%;
-  opacity: 0;
   transition: all 0.2s ease 0s;
 }
 #speTech .owl-carousel .owl-stage-outer {
@@ -2708,9 +2707,9 @@ button {
 }
 #slideImg2.section {
   background: url('../img/slideImg2-bg.jpg') no-repeat;
-  background-position: 0 0;
-  background-size: 100% 100%;
   background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 #slideImg2 .slideImg2 {
   height: 678px;
@@ -3153,6 +3152,11 @@ button {
   text-align: center;
   font-size: 1.4em;
 }
+.paraxify {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
 @media (max-width: 768px) {
   #appSlider {
     min-height: 1100px;
@@ -3185,6 +3189,22 @@ button {
   }
   #speTech {
     padding: 60px 0;
+  }
+  #footer .follow-us {
+    padding-bottom: 40px;
+  }
+  #footer .row {
+    padding: 85px 0px 40px;
+  }
+  #footer .column {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 0 40px 0;
+  }
+  #footer .column:nth-child(n) {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 0 40px 0;
   }
 }
 @media (min-width: 769px) and (max-width: 991px) {
@@ -3228,6 +3248,17 @@ button {
     margin: 0 0 40px 0;
   }
 }
+@media (min-width: 992px) and (max-width: 1024px) {
+  #footer .col-md-10 {
+    width: 100%;
+  }
+  #footer .col-md-offset-1 {
+    margin-left: 0%;
+  }
+  #footer .column.logo-content {
+    width: 30%;
+  }
+}
 @media (min-width: 992px) and (max-width: 1280px) {
   #appSlider {
     min-height: 1000px;
@@ -3252,18 +3283,10 @@ button {
   }
   #speTech {
     height: 100vh;
-    padding: 90px 0;
+    padding: 80px 0;
   }
-  #footer .column.logo-content {
-    width: 30%;
-  }
-}
-@media (min-width: 992px) and (max-width: 1024px) {
-  #footer .col-md-10 {
-    width: 100%;
-  }
-  #footer .col-md-offset-1 {
-    margin-left: 0%;
+  #camera .inBox .inBox-cnt .feature h4 {
+    margin: 15px 0;
   }
   #footer .column.logo-content {
     width: 30%;

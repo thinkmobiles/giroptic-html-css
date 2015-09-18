@@ -30,6 +30,7 @@ $(document).ready(function() {
         }
     });
 });
+
 // --- Accessories block
 $('ul.tabs li').click(function(){
     var tab_id = $(this).attr('data-tab');
@@ -60,6 +61,7 @@ $('#app .row').click(function(){
         });
     }, 3000);
 });
+
 // --- How to use Section
 $('#moveDev').mouseup(function(){
     setTimeout(function(){
@@ -114,7 +116,7 @@ $('#speTech').click(function(){
     }, 800);
 });
 // --- Parallax effect
-$(window).stellar();
+myParaxify = paraxify('.paraxify');
 
 // --- Camera section
 $('#inBoxToggle').click(function(){
@@ -137,7 +139,6 @@ $('#inBoxToggle').click(function(){
         });
     }
 });
-
 
 // --- Search Section
 $('#search-btn').bind('click', function(){
