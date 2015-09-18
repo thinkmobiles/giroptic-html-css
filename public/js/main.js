@@ -40,10 +40,10 @@ $('ul.tabs li').click(function(){
     $(this).addClass('current');
     $("#"+tab_id).addClass('current');
 });
-$('.bxslider').bxSlider({
-    auto: true,
-    autoControls: true
-});
+//$('.bxslider').bxSlider({
+//    auto: true,
+//    autoControls: true
+//});
 
 
 // --- Application Section
@@ -66,24 +66,24 @@ $('#moveDev').mouseup(function(){
         $('.rightHand').animate(3000, function(){
             $('.rightHand').addClass('move');
         });
-    }, 3000);
+    }, 1000);
     setTimeout(function(){
         $('.circle').animate(3000, function(){
             $('.circle').addClass('move');
         });
-    }, 3500);
+    }, 1500);
     setTimeout(function(){
         $('.oculus').animate(3000, function(){
             $('.oculus').addClass('move');
         });
-    }, 4500);
+    }, 2500);
     setTimeout(function(){
         $('#moveDev').animate(3000, function(){
             $('.howToUse-left-block').hide();
             $('.howToUse-right-block').hide();
             $('.moveDev').addClass('blackBgr');
         });
-    }, 6000);
+    }, 4000);
 });
 
 // --- Send App Section
@@ -113,6 +113,31 @@ $('#speTech').click(function(){
         }, 200);
     }, 800);
 });
+// --- Parallax effect
+$(window).stellar();
+
+// --- Camera section
+$('#inBoxToggle').click(function(){
+    if ($('#inBox-collapse').hasClass('in')) {
+        $('#inBox-collapse').animate({
+            left: '-100%'
+        }, 800);
+        $('#inBox-collapse').removeClass('in');
+        $('.inBox-cnt .feature').css('top', '10%');
+        $('.inBox-cnt .feature').css('opacity', '0');
+    } else {
+        $('#inBox-collapse').addClass('in');
+        $('#inBox-collapse').animate({
+            left: '0'
+        }, 800, function(){
+            $('.inBox-cnt .feature').animate({
+                top: '0',
+                opacity: '1'
+            }, 200);
+        });
+    }
+});
+
 
 // --- Search Section
 $('#search-btn').bind('click', function(){
