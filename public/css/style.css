@@ -1002,8 +1002,13 @@ button {
   opacity: 1 !important;
 }
 #home .home-first-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   position: relative;
+  width: 100%;
+  top: -10px;
 }
 #home .home-first-page .home-first-page-bg {
   background-image: url("../img/home/home-fp-bg.jpg");
@@ -1011,6 +1016,7 @@ button {
   background-size: cover;
   text-align: center;
   padding-top: 260px;
+  width: 100%;
 }
 #home .home-first-page .home-first-page-bg:before {
   content: '';
@@ -1056,42 +1062,6 @@ button {
   color: #ffffff;
   font-size: 1.4em;
   margin-top: 20px;
-  cursor: pointer;
-}
-#home .home-first-page .home-first-page-bg .scroll {
-  position: absolute;
-  bottom: 105px;
-  text-align: center;
-  width: 100%;
-  left: 0;
-  color: #ffffff;
-  opacity: 0;
-  transition: all 1.5s ease-out 1.5s;
-}
-#home .home-first-page .home-first-page-bg .scroll .scroll-btn {
-  background-image: url('../img/scroll.png');
-  background-repeat: no-repeat;
-  background-size: auto;
-  display: block;
-  position: relative;
-  margin-left: -15px;
-  left: 50%;
-  bottom: 0;
-  height: 30px;
-  width: 30px;
-  cursor: pointer;
-}
-#home .home-first-page .home-first-page-bg .scroll .scroll-btn {
-  background-image: url('../img/scroll.png');
-  background-repeat: no-repeat;
-  background-size: auto;
-  display: block;
-  position: relative;
-  margin-left: -15px;
-  left: 50%;
-  bottom: 0;
-  height: 30px;
-  width: 30px;
   cursor: pointer;
 }
 #sub-header {
@@ -1217,7 +1187,7 @@ button {
   transition: transform 4s;
 }
 #player img.playerAnim {
-  transform: scale(1.3);
+  transform: scale(1.2);
 }
 #player #play {
   background-image: url('../img/play-button.png');
@@ -1284,8 +1254,11 @@ button {
   -o-transition: padding-top 1s linear;
   transition: padding-top 1s linear;
   overflow: hidden;
-  height: 125px;
   padding-top: 125px;
+  height: 140px;
+}
+#player .tabs .hvr-underline-from-center:before {
+  z-index: 9999;
 }
 #player .tabs .tab {
   width: 26.2%;
@@ -1296,21 +1269,27 @@ button {
   overflow: hidden;
   cursor: pointer;
   padding: 0;
-  margin: 0 15px;
+  margin: 0 3%;
+  margin-top: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all linear .3s;
 }
-#player .tabs .tab span {
-  font-family: "Zona Pro SemiBold", sans-serif;
-  color: #ffffff;
+#player .tabs .tab > span {
+  font-family: "Zona-Light", sans-serif;
+  color: #44bbff;
   display: block;
-  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: relative;
   z-index: 1;
+  font-size: 1.6em;
 }
-#player .tabs .tab span .pxToEm(20) span {
-  color: #44bbff;
-  font-family: "Zona-Light", sans-serif;
-  font-size: 1.4em;
-  padding: 0;
+#player .tabs .tab > span:first-child {
+  font-family: "Zona Pro SemiBold", sans-serif;
+  font-size: 2em;
+  color: #ffffff;
   font-weight: 300;
 }
 #player .tabs .tab img {
@@ -1324,7 +1303,7 @@ button {
 }
 #player .tabs .tab:hover {
   height: 125px;
-  border-bottom: 5px solid #44bbff;
+  margin-top: 0px;
 }
 #player .tabs .tab:hover img {
   -webkit-filter: brightness(0.4);
@@ -1408,6 +1387,10 @@ button {
   padding: 5px 20px;
   text-transform: uppercase;
   font-size: 1.2em;
+}
+#gallery button:hover {
+  background-color: #44bbff;
+  color: #fff;
 }
 /*== End Gallery ===============================*/
 /*== Begin Function ===============================*/
@@ -2690,7 +2673,6 @@ button {
 #speTech .speTech .description {
   position: relative;
   top: 10%;
-  opacity: 0;
   transition: all 0.2s ease 0s;
 }
 #speTech .owl-carousel .owl-stage-outer {
@@ -2741,9 +2723,9 @@ button {
 }
 #slideImg2.section {
   background: url('../img/slideImg2-bg.jpg') no-repeat;
-  background-position: 0 0;
-  background-size: 100% 100%;
   background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
 }
 #slideImg2 .slideImg2 {
   height: 678px;
@@ -3186,6 +3168,11 @@ button {
   text-align: center;
   font-size: 1.4em;
 }
+.paraxify {
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+}
 @media (max-width: 768px) {
   #appSlider {
     min-height: 1100px;
@@ -3218,6 +3205,22 @@ button {
   }
   #speTech {
     padding: 60px 0;
+  }
+  #footer .follow-us {
+    padding-bottom: 40px;
+  }
+  #footer .row {
+    padding: 85px 0px 40px;
+  }
+  #footer .column {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 0 40px 0;
+  }
+  #footer .column:nth-child(n) {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 0 40px 0;
   }
 }
 @media (min-width: 769px) and (max-width: 991px) {
@@ -3261,6 +3264,17 @@ button {
     margin: 0 0 40px 0;
   }
 }
+@media (min-width: 992px) and (max-width: 1024px) {
+  #footer .col-md-10 {
+    width: 100%;
+  }
+  #footer .col-md-offset-1 {
+    margin-left: 0%;
+  }
+  #footer .column.logo-content {
+    width: 30%;
+  }
+}
 @media (min-width: 992px) and (max-width: 1280px) {
   #appSlider {
     min-height: 1000px;
@@ -3285,18 +3299,10 @@ button {
   }
   #speTech {
     height: 100vh;
-    padding: 90px 0;
+    padding: 80px 0;
   }
-  #footer .column.logo-content {
-    width: 30%;
-  }
-}
-@media (min-width: 992px) and (max-width: 1024px) {
-  #footer .col-md-10 {
-    width: 100%;
-  }
-  #footer .col-md-offset-1 {
-    margin-left: 0%;
+  #camera .inBox .inBox-cnt .feature h4 {
+    margin: 15px 0;
   }
   #footer .column.logo-content {
     width: 30%;
