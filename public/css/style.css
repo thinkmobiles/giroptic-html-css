@@ -1436,7 +1436,6 @@ button {
 #pave2 .counters .counter .count img {
   opacity: 0.2;
   transition: all 0.3s ease-in-out;
-  transform: rotate(-45deg);
 }
 #pave2 .counters .counter .count img:hover {
   opacity: 1;

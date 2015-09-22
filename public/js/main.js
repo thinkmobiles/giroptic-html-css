@@ -63,38 +63,12 @@ $('#app .row').click(function(){
 });
 
 // --- Patchwork Section
-$('#patchwork').mouseup(function(){
+$('#patchwork').mouseenter(function(){
     setTimeout(function(){
         $('img').animate(3000, function(){
             $('img').addClass('scale');
         });
     }, 1000);
-});
-
-// --- How to use Section
-$('#moveDev').mouseup(function(){
-    setTimeout(function(){
-        $('.rightHand').animate(3000, function(){
-            $('.rightHand').addClass('move');
-        });
-    }, 1000);
-    setTimeout(function(){
-        $('.circle').animate(3000, function(){
-            $('.circle').addClass('move');
-        });
-    }, 1500);
-    setTimeout(function(){
-        $('.oculus').animate(3000, function(){
-            $('.oculus').addClass('move');
-        });
-    }, 2500);
-    setTimeout(function(){
-        $('#moveDev').animate(3000, function(){
-            $('.howToUse-left-block').hide();
-            $('.howToUse-right-block').hide();
-            $('.moveDev').addClass('blackBgr');
-        });
-    }, 4000);
 });
 
 // --- 3D Effect
