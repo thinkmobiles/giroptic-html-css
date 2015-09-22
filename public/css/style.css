@@ -1322,7 +1322,6 @@ button {
   color: #fff;
 }
 /*== End Gallery ===============================*/
-/*== Begin Function ===============================*/
 #function {
   background-color: #ffffff;
   position: relative;
@@ -1344,8 +1343,11 @@ button {
 #function .slide-function .image {
   text-align: center;
 }
-#function .slide-function .content {
-  padding: 0 50px 0 135px;
+#function .slide-function .image img {
+  max-width: 540px;
+  width: 100%;
+  vertical-align: middle;
+  display: inline-block;
 }
 #function .slide-function .content .title {
   font-family: "Zona Pro", sans-serif;
@@ -1391,6 +1393,9 @@ button {
   background: url('../img/function-bg2.jpg');
   background-size: cover;
 }
+#function .slide-function:nth-child(2) .image {
+  vertical-align: bottom;
+}
 #function .slide-function:nth-child(3) > div:first-child {
   background: url('../img/function-bg3.jpg');
   background-size: cover;
@@ -1403,9 +1408,9 @@ button {
   display: inline-block;
   vertical-align: middle;
 }
-@keyframes play-animate {
+#function .slide-function:nth-child(3) .image img {
+  max-width: 620px;
 }
-/*== End Function ===============================*/
 #pave2 {
   background-color: #44bbff;
   z-index: 6;
