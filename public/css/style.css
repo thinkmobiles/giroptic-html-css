@@ -361,40 +361,6 @@ button {
   overflow: hidden;
   /*IE8-*/
 }
-#pave2 {
-  background-color: #44bbff;
-  z-index: 6;
-}
-#pave2 .counters:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-#pave2 .counters .counter {
-  border-right: 1px solid #69c9ff;
-  padding: 65px 0 60px 0;
-}
-#pave2 .counters .counter span {
-  display: block;
-  text-align: center;
-  font-family: "Zona-Light", sans-serif;
-  font-weight: 300;
-}
-#pave2 .counters .counter .title {
-  color: #b4e4ff;
-  font-size: 3.2em;
-}
-#pave2 .counters .counter .count {
-  color: #0d47a1;
-  font-size: 15.2em;
-}
-#pave2 .counters .counter .fps {
-  color: #b4e4ff;
-  font-size: 1.8em;
-}
-#pave2 .counters .counter:last-child {
-  border: none;
-}
 /*#player {
   background-color: @player-bg;
   background-image: url('../img/player-bg.jpg');
@@ -691,65 +657,6 @@ button {
     }
   }
 }*/
-#patchwork {
-  /* display: table */
-  -height: 1%;
-  /*IE6*/
-  *zoom: 1;
-  /*IE6-7*/
-  display: table;
-}
-#patchwork:after {
-  /*content: '1 1';*/
-  /*Op15+*/
-  content: '1 1 1 1 1 1 1 1 1 1 1';
-  /*Op12+*/
-  font: 0.1px/0 a;
-  display: block;
-  word-spacing: 99in;
-  overflow: hidden;
-  /*IE8-*/
-}
-#patchwork .patchwork-left-block,
-#patchwork .patchwork-right-block {
-  padding: 0;
-  width: 50%;
-  max-height: 514px;
-}
-#patchwork .patchwork-left-block img,
-#patchwork .patchwork-right-block img {
-  width: 100%;
-  max-height: 522px;
-}
-#patchwork .patchwork-left-block {
-  float: left;
-}
-#patchwork .patchwork-right-block {
-  float: right;
-}
-#accessories {
-  height: 100vh;
-  position: relative;
-  z-index: 6;
-}
-#accessories .bg-accessories {
-  background-image: url('../img/accessories-bg1.jpg');
-  background-size: cover;
-  overflow: hidden;
-  height: 100%;
-}
-#accessories .accessories-caption {
-  text-align: center;
-  margin-top: 310px;
-  color: #ffffff;
-}
-#accessories .accessories-caption h4 {
-  font-size: 3.2em;
-}
-#accessories .accessories-caption p {
-  font-size: 2.2em;
-  font-family: "Zona Pro";
-}
 /*.lens {
   background-color: transparent;
   width: 4530px;
@@ -1499,6 +1406,109 @@ button {
 @keyframes play-animate {
 }
 /*== End Function ===============================*/
+#pave2 {
+  background-color: #44bbff;
+  z-index: 6;
+}
+#pave2 .counters:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+#pave2 .counters .counter {
+  border-right: 1px solid #69c9ff;
+  padding: 65px 0 60px 0;
+}
+#pave2 .counters .counter span {
+  display: block;
+  text-align: center;
+  font-family: "Zona-Light", sans-serif;
+  font-weight: 300;
+}
+#pave2 .counters .counter .title {
+  color: #b4e4ff;
+  font-size: 3.2em;
+}
+#pave2 .counters .counter .count {
+  color: #0d47a1;
+  font-size: 15.2em;
+}
+#pave2 .counters .counter .count img {
+  opacity: 0.2;
+  transition: all 0.3s ease-in-out;
+  transform: rotate(-45deg);
+}
+#pave2 .counters .counter .count img:hover {
+  opacity: 1;
+}
+#pave2 .counters .counter .fps {
+  color: #b4e4ff;
+  font-size: 1.8em;
+}
+#pave2 .counters .counter:last-child {
+  border: none;
+}
+#patchwork {
+  /* display: table */
+  -height: 1%;
+  /*IE6*/
+  *zoom: 1;
+  /*IE6-7*/
+  display: table;
+}
+#patchwork:after {
+  /*content: '1 1';*/
+  /*Op15+*/
+  content: '1 1 1 1 1 1 1 1 1 1 1';
+  /*Op12+*/
+  font: 0.1px/0 a;
+  display: block;
+  word-spacing: 99in;
+  overflow: hidden;
+  /*IE8-*/
+}
+#patchwork .patchwork-left-block,
+#patchwork .patchwork-right-block {
+  padding: 0;
+  width: 50%;
+  max-height: 514px;
+  min-height: 454px;
+  position: relative;
+}
+#patchwork .patchwork-left-block img,
+#patchwork .patchwork-right-block img {
+  width: auto;
+  max-height: 454px;
+  position: absolute;
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  z-index: 1;
+  opacity: 1;
+}
+#patchwork .patchwork-left-block img.scale,
+#patchwork .patchwork-right-block img.scale {
+  transition: all 6s ease-in-out;
+  transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+}
+#patchwork .patchwork-left-block {
+  float: left;
+  background: url("../img/patchwork/left-bgr.jpg") no-repeat left top;
+}
+#patchwork .patchwork-left-block img {
+  top: 60px;
+  left: 115px;
+}
+#patchwork .patchwork-right-block {
+  float: right;
+  background: url("../img/patchwork/left-bgr.jpg") no-repeat left top;
+  width: calc(50% - 1px);
+}
+#patchwork .patchwork-right-block img {
+  left: 52px;
+}
 #accessories {
   height: 100vh;
   position: relative;
@@ -1684,10 +1694,10 @@ button {
   content: '';
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #000;
   position: absolute;
   top: 0;
-  opacity: 1;
+  opacity: 0.3;
   z-index: 1;
 }
 #slideImg > div:hover:before {
@@ -1757,6 +1767,7 @@ button {
 #app {
   background-color: #44bbff;
   height: 100vh;
+  overflow: hidden;
 }
 #app .row {
   margin: 0;
@@ -1867,16 +1878,17 @@ button {
 }
 #app .phone-style.down .circle {
   position: absolute;
-  width: 1079px;
-  height: 1079px;
-  top: 60px;
-  left: -110%;
+  width: 1194px;
+  height: 1194px;
+  top: 62px;
+  left: -430px;
   z-index: -2;
   background: url("../img/app-phone/round-bgr.png") no-repeat center center;
   -moz-animation: spin 16s infinite linear;
   -webkit-animation: spin 16s infinite linear;
   animation: spin 16s infinite linear;
   background-size: 0;
+  opacity: 0.18;
 }
 #app .phone-style.down .circle.scale {
   transition: all 3s ease-in-out;
@@ -1907,94 +1919,38 @@ button {
 #moveDev .row {
   margin: 0;
 }
-#moveDev .cd-background-wrapper {
-  background-color: #001426;
-  position: relative;
+#moveDev .scene {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   overflow: hidden;
+  right: 0;
+  height: 100vh;
 }
-#moveDev .no-touch .cd-background-wrapper {
-  -webkit-perspective: 4000px;
-  -moz-perspective: 4000px;
-  perspective: 4000px;
-}
-#moveDev .cd-background-wrapper::before {
-  /* never visible - this is used in jQuery to check the device type */
-  content: 'web';
-  display: none;
-}
-#moveDev .touch .cd-background-wrapper::before {
-  /* never visible - this is used in jQuery to check the device type */
-  content: 'mobile';
-}
-#moveDev .cd-floating-background {
-  position: relative;
-}
-#moveDev .cd-floating-background img {
-  display: block;
-  width: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background-color: rgba(255, 255, 255, 0.01);
-}
-#moveDev .cd-floating-background img:not(:first-child) {
+#moveDev .scene div {
   position: absolute;
-  top: 0;
-  left: 0;
+  bottom: 0;
 }
-#moveDev .no-touch .cd-floating-background {
-  top: 0;
-  left: 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
+#moveDev .scene div.arrows {
+  width: 1266px;
+  left: 50%;
+  margin-left: -633px;
+  height: 435px;
+  bottom: 245px;
+  background: url('../img/howToUse/arrows.png') no-repeat center;
 }
-#moveDev .no-touch .cd-floating-background.is-absolute {
-  position: absolute;
-}
-#moveDev .no-touch .cd-floating-background img:first-child {
-  -webkit-transform: translateZ(50px);
-  -moz-transform: translateZ(50px);
-  -ms-transform: translateZ(50px);
-  -o-transform: translateZ(50px);
-  transform: translateZ(50px);
-}
-#moveDev .no-touch .cd-floating-background img:nth-child(2) {
-  -webkit-transform: translateZ(290px);
-  -moz-transform: translateZ(290px);
-  -ms-transform: translateZ(290px);
-  -o-transform: translateZ(290px);
-  transform: translateZ(290px);
-}
-#moveDev .no-touch .cd-floating-background img:nth-child(3) {
-  -webkit-transform: translateZ(400px);
-  -moz-transform: translateZ(400px);
-  -ms-transform: translateZ(400px);
-  -o-transform: translateZ(400px);
-  transform: translateZ(400px);
-}
-#moveDev .no-touch.no-preserve-3d .cd-floating-background {
-  position: relative;
+#moveDev .scene div.hands {
+  width: 1064px;
+  height: 640px;
+  background: url('../img/howToUse/hands.png') no-repeat top center;
+  z-index: 100;
+  left: 50%;
+  bottom: -340px;
+  margin-left: -532px;
 }
 #moveDev .moveDev {
   height: 100vh;
-  background-image: url('../img/howToUse/app1.png');
-  background-position: center 370px;
-  background-repeat: no-repeat;
-}
-#moveDev .moveDev.blackBgr {
-  background-color: #000;
-  background-image: none;
-}
-#moveDev .moveDev.blackBgr h4,
-#moveDev .moveDev.blackBgr p {
-  display: none;
 }
 #moveDev .inner {
   margin-top: 155px;
@@ -2054,7 +2010,7 @@ button {
   bottom: -20px;
   transition: all 1s ease-in-out;
 }
-#moveDev .howToUse .howToUse-block .rightHand.move {
+#moveDev .howToUse .howToUse-block .rightHand:hover {
   margin-left: 11px;
 }
 #moveDev .howToUse .howToUse-block p {
@@ -2069,24 +2025,8 @@ button {
 #moveDev .howToUse .howToUse-block .oculus {
   transition: all 1s ease-in-out;
 }
-#moveDev .howToUse .howToUse-block .oculus.move {
+#moveDev .howToUse .howToUse-block .oculus:hover {
   margin-left: 160px;
-}
-#moveDev .howToUse .circle {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  background: #44bbff;
-  box-shadow: 0 0 0 20px rgba(68, 187, 255, 0.4);
-  position: absolute;
-  left: calc(50% - 200px);
-  top: 100px;
-  transition: all 1s ease-in-out;
-}
-#moveDev .howToUse .circle.move {
-  left: 50%;
-  margin-left: 70px;
-  top: 40px;
 }
 #moveDev .howToUse .howToUse-left-block {
   float: left;
@@ -2106,6 +2046,22 @@ button {
   }
   #accessories .accessories-carousel div p {
     margin: 31px 30px 41px;
+  }
+  #app .app-desc {
+    margin-top: 50px;
+  }
+  #app .phone-style img {
+    height: 480px;
+    width: auto;
+  }
+  #app .phone-style.down .animate {
+    left: -95px;
+    width: 467px;
+    height: 467px;
+    box-shadow: 0 0 0 101px rgba(255, 255, 255, 0.3);
+  }
+  #app .phone-style.down .circle {
+    left: -150%;
   }
 }
 #appSlider {
