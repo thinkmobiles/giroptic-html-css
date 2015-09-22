@@ -1,3 +1,95 @@
+#pave2 {
+  background-color: @pav1-bg;
+  z-index: 6;
+
+  .counters {
+
+    &:after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+
+    .counter {
+      border-right: 1px solid @pave1-border;
+      padding: 65px 0 60px 0;
+
+      span {
+        display: block;
+        text-align: center;
+        font-family: "Zona-Light", sans-serif;
+        font-weight: 300;
+      }
+      .title {
+        color: @pave1-title;
+        .pxToEm(32);
+      }
+      .count {
+        color: @pave1-count;
+        .pxToEm(152);
+        img{
+          opacity: 0.2;
+          transition: all 0.3s ease-in-out;
+          transform: rotate(-45deg);
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+      .fps {
+        color: @pave1-fps;
+        .pxToEm(18)
+      }
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
+#patchwork {
+  .clearfix;
+  .patchwork-left-block, .patchwork-right-block {
+    padding: 0;
+    width: 50%;
+    max-height: 514px;
+    min-height: 454px;
+    position: relative;
+    img {
+      width: auto;
+      max-height: 454px;
+      position: absolute;
+      -ms-transform: scale(1);
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      z-index: 1;
+      opacity: 1;
+      &.scale {
+        transition: all 6s ease-in-out;
+        transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        -webkit-transform: scale(1.02);
+      }
+    }
+  }
+  .patchwork-left-block {
+    float: left;
+    background: url("../img/patchwork/left-bgr.jpg") no-repeat left top;
+    img{
+      top: 60px;
+      left: 115px;
+    }
+  }
+  .patchwork-right-block {
+    float: right;
+    background: url("../img/patchwork/left-bgr.jpg") no-repeat left top;
+    width: ~'calc(50% - 1px)';
+    img{
+      left: 52px;
+    }
+  }
+}
+
 #accessories {
   height: 100vh;
   position: relative;
@@ -166,10 +258,10 @@
       content: '';
       width: 100%;
       height: 100%;
-      background-color: rgba(0,0,0,.2);
+      background-color: #000;
       position: absolute;
       top: 0;
-      opacity: 1;
+      opacity: 0.3;
       z-index: 1;
     }
     &:hover:before {
@@ -238,6 +330,7 @@
   background-color: @app-bg;
   //height: 763px;
   height: 100vh;
+  overflow: hidden;
 
   .row {
     margin: 0;
@@ -292,7 +385,7 @@
   .phone-style{
     position: absolute;
     bottom: -584px;
-    left: calc(~'50% - 170px');
+    left: ~'calc(50% - 170px)';
     transition: bottom 3s;
     &.down{
       bottom: 0;
@@ -319,16 +412,17 @@
       }
       .circle{
         position: absolute;
-        width: 1079px;
-        height: 1079px;
-        top: 60px;
-        left: -110%;
+        width: 1194px;
+        height: 1194px;
+        top: 62px;
+        left: -430px;
         z-index: -2;
         background: url("../img/app-phone/round-bgr.png") no-repeat center center;
         -moz-animation: spin 16s infinite linear;
         -webkit-animation: spin 16s infinite linear;
         animation: spin 16s infinite linear;
         background-size: 0;
+        opacity: 0.18;
         &.scale {
           transition: all 3s ease-in-out;
           background-size: 100%;
@@ -364,95 +458,38 @@
   .row {
     margin: 0;
   }
-  .cd-background-wrapper {
-    background-color: #001426;
-    position: relative;
+  .scene {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
     overflow: hidden;
-  }
-  .no-touch .cd-background-wrapper {
-    -webkit-perspective: 4000px;
-    -moz-perspective: 4000px;
-    perspective: 4000px;
-  }
-  .cd-background-wrapper::before {
-    /* never visible - this is used in jQuery to check the device type */
-    content: 'web';
-    display: none;
-  }
-  .touch .cd-background-wrapper::before {
-    /* never visible - this is used in jQuery to check the device type */
-    content: 'mobile';
-  }
-
-  .cd-floating-background {
-    position: relative;
-  }
-  .cd-floating-background img {
-    display: block;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    background-color: rgba(255, 255, 255, 0.01);
-  }
-  .cd-floating-background img:not(:first-child) {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  .no-touch .cd-floating-background {
-    top: 0;
-    left: 0;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-  .no-touch .cd-floating-background.is-absolute {
-    position: absolute;
-  }
-  .no-touch .cd-floating-background img:first-child {
-    -webkit-transform: translateZ(50px);
-    -moz-transform: translateZ(50px);
-    -ms-transform: translateZ(50px);
-    -o-transform: translateZ(50px);
-    transform: translateZ(50px);
-  }
-  .no-touch .cd-floating-background img:nth-child(2) {
-    -webkit-transform: translateZ(290px);
-    -moz-transform: translateZ(290px);
-    -ms-transform: translateZ(290px);
-    -o-transform: translateZ(290px);
-    transform: translateZ(290px);
-  }
-  .no-touch .cd-floating-background img:nth-child(3) {
-    -webkit-transform: translateZ(400px);
-    -moz-transform: translateZ(400px);
-    -ms-transform: translateZ(400px);
-    -o-transform: translateZ(400px);
-    transform: translateZ(400px);
-  }
-  .no-touch.no-preserve-3d .cd-floating-background {
-    position: relative;
+    right: 0;
+    height: 100vh;
+    div{
+      position: absolute;
+      bottom: 0;
+      &.arrows {
+        width: 1266px;
+        left: 50%;
+        margin-left: -633px;
+        height: 435px;
+        bottom: 245px;
+        background: url('../img/howToUse/arrows.png') no-repeat center;
+      }
+      &.hands {
+        width: 1064px;
+        height: 640px;
+        background: url('../img/howToUse/hands.png') no-repeat top center;
+        z-index: 100;
+        left: 50%;
+        bottom: -340px;
+        margin-left: -532px;
+      }
+    }
   }
   .moveDev {
     height: 100vh;
-    background-image: url('../img/howToUse/app1.png');
-    background-position: center 370px;
-    background-repeat: no-repeat;
-
-    &.blackBgr{
-      background-color: #000;
-      background-image: none;
-      h4,p{
-        display: none;
-      }
-    }
   }
 
   .inner {
@@ -499,7 +536,7 @@
         margin-left: 61px;
         bottom: -20px;
         transition: all 1s ease-in-out;
-        &.move{
+        &:hover{
           margin-left: 11px;
         }
       }
@@ -515,25 +552,9 @@
       }
       .oculus{
         transition: all 1s ease-in-out;
-        &.move{
+        &:hover{
           margin-left: 160px;
         }
-      }
-    }
-    .circle{
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      background: #44bbff;
-      box-shadow: 0 0 0 20px rgba( 68, 187, 255, 0.4);
-      position: absolute;
-      left: ~'calc(50% - 200px)';
-      top: 100px;
-      transition: all 1s ease-in-out;
-      &.move{
-        left: 50%;
-        margin-left: 70px;
-        top: 40px;
       }
     }
     .howToUse-left-block {

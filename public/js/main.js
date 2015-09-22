@@ -62,6 +62,15 @@ $('#app .row').click(function(){
     }, 3000);
 });
 
+// --- Patchwork Section
+$('#patchwork').mouseup(function(){
+    setTimeout(function(){
+        $('img').animate(3000, function(){
+            $('img').addClass('scale');
+        });
+    }, 1000);
+});
+
 // --- How to use Section
 $('#moveDev').mouseup(function(){
     setTimeout(function(){
@@ -86,6 +95,25 @@ $('#moveDev').mouseup(function(){
             $('.moveDev').addClass('blackBgr');
         });
     }, 4000);
+});
+
+// --- 3D Effect
+$(window).on('mousemove', function(e) {
+    var w = $(window).width();
+    var h = $(window).height();
+    var offsetX = 0.5 - e.pageX / w;
+    var offsetY = 0.5 - e.pageY / h;
+
+    $(".parallax").each(function(i, el) {
+        var offset = parseInt($(el).data('offset'));
+        var translate = "translate3d(" + Math.round(offsetX * offset) + "px," + Math.round(offsetY * offset) + "px, 0px)";
+
+        $(el).css({
+            '-webkit-transform': translate,
+            'transform': translate,
+            'moz-transform': translate
+        });
+    });
 });
 
 // --- Send App Section
