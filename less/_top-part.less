@@ -3,6 +3,8 @@
 
 /*==========================================*/
 
+
+
 .is-min-height {
   min-height: 888px;
 }
@@ -157,6 +159,12 @@
   margin-bottom: -60px;
   position: fixed;
 
+  .roundet {
+    width: 0 !important;
+    height: 0 !important;
+    border-radius: 50%;
+  }
+
   .content {
     display: table;
     height: ~"calc(100vh - 265px)";
@@ -264,13 +272,13 @@
   }
 
   .home-first-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
     height: 100%;
     position: relative;
     width: 100%;
     top: -10px;
+    overflow: hidden;
+    transition: all 5s;
     .home-first-page-bg {
       background-image: url("../img/home/home-fp-bg.jpg");
       background-position: 50% 50%;
@@ -391,9 +399,30 @@
 #home-navbar {
   padding: 25px 0;
   color: @home-navbar-link;
+  z-index: 1000;
 
-  .logo img {
-    padding: 4px 0 3px;
+  .logo  {
+    a {
+      display: block;
+      font-family: "Zona Pro SemiBold", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      .pxToEm(22);
+      color: @home-navbar-text2;
+      position: relative;
+      &:before {
+        contetn: '';
+        width: 33px;
+        height: 33px;
+        display: block;
+        background-image: url('../img/home/sprite-logo.png');
+        background-position: 0 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+      }
+    }
   }
 
   .home-menu {
@@ -410,7 +439,7 @@
 
         a {
           font-family: "Zona Pro SemiBold", sans-serif;
-          color: @home-navbar-link;
+          color: @home-navbar-text2;
           font-weight: 600;
           .pxToEm(15);
         }

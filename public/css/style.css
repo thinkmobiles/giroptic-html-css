@@ -887,6 +887,11 @@ button {
   margin-bottom: -60px;
   position: fixed;
 }
+#home .roundet {
+  width: 0 !important;
+  height: 0 !important;
+  border-radius: 50%;
+}
 #home .content {
   display: table;
   height: calc(100vh - 265px);
@@ -1002,13 +1007,12 @@ button {
   opacity: 1 !important;
 }
 #home .home-first-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   position: relative;
   width: 100%;
   top: -10px;
+  overflow: hidden;
+  transition: all 5s;
 }
 #home .home-first-page .home-first-page-bg {
   background-image: url("../img/home/home-fp-bg.jpg");
@@ -1115,9 +1119,27 @@ button {
 #home-navbar {
   padding: 25px 0;
   color: #4b4b4b;
+  z-index: 1000;
 }
-#home-navbar .logo img {
-  padding: 4px 0 3px;
+#home-navbar .logo a {
+  display: block;
+  font-family: "Zona Pro SemiBold", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 2.2em;
+  color: #ffffff;
+  position: relative;
+}
+#home-navbar .logo a:before {
+  contetn: '';
+  width: 33px;
+  height: 33px;
+  display: block;
+  background-image: url('../img/home/sprite-logo.png');
+  background-position: 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #home-navbar .home-menu ul {
   list-style: none;
@@ -1147,7 +1169,7 @@ button {
 }
 #home-navbar .home-menu ul li a {
   font-family: "Zona Pro SemiBold", sans-serif;
-  color: #4b4b4b;
+  color: #ffffff;
   font-weight: 600;
   font-size: 1.5em;
 }
