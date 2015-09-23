@@ -63,7 +63,7 @@ $('#app .row').click(function(){
 });
 
 // --- Patchwork Section
-$('#patchwork').mouseenter(function(){
+$('#patchwork').click(function(){
     setTimeout(function(){
         $('img').animate(3000, function(){
             $('img').addClass('scale');

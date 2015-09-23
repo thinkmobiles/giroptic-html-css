@@ -1432,13 +1432,31 @@ button {
 #pave2 .counters .counter .count {
   color: #0d47a1;
   font-size: 15.2em;
+  position: relative;
 }
-#pave2 .counters .counter .count img {
-  opacity: 0.2;
-  transition: all 0.3s ease-in-out;
+#pave2 .counters .counter .count:after {
+  content: '';
+  position: absolute;
+  bottom: 26px;
+  left: 201px;
+  width: 159px;
+  height: 136px;
+  background-color: #b4e4ff;
+  z-index: -2;
 }
-#pave2 .counters .counter .count img:hover {
-  opacity: 1;
+#pave2 .counters .counter .count:before {
+  content: '';
+  position: absolute;
+  bottom: 26px;
+  left: 201px;
+  width: 159px;
+  height: 0;
+  transition: all 0.8s ease-in-out;
+  background-color: #0d47a1;
+  z-index: -1;
+}
+#pave2 .counters .counter .count:hover:before {
+  height: 136px;
 }
 #pave2 .counters .counter .fps {
   color: #b4e4ff;
@@ -2036,6 +2054,22 @@ button {
   background-image: url('../img/howToUse/second-bg.jpg');
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
+  #pave2 .counters .counter .count:after {
+    left: 134px;
+  }
+  #pave2 .counters .counter .count:before {
+    left: 134px;
+  }
+  #patchwork .patchwork-left-block,
+  #patchwork .patchwork-right-block {
+    background-size: cover;
+  }
+  #patchwork .patchwork-left-block img,
+  #patchwork .patchwork-right-block img {
+    width: 100%;
+    max-height: 454px;
+    left: 0;
+  }
   #accessories .bg-accessories {
     background-image: url('../img/accessories-bg1.jpg');
     height: 357px;
