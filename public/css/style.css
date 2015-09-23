@@ -1355,7 +1355,7 @@ button {
   text-align: center;
 }
 #function .slide-function .image img {
-  max-width: 540px;
+  max-width: 620px;
   width: 100%;
   vertical-align: middle;
   display: inline-block;
@@ -1414,13 +1414,101 @@ button {
 #function .slide-function:nth-child(3) .content .properties div {
   border: none;
   border-radius: 0;
-  height: auto;
+  height: 60px;
+  padding: 0;
   width: auto;
   display: inline-block;
   vertical-align: middle;
 }
-#function .slide-function:nth-child(3) .image img {
-  max-width: 620px;
+#function .slide-function:nth-child(3) .content .properties div img {
+  max-height: 100%;
+  float: left;
+}
+@media (max-width: 750px) {
+  #function .slide-function {
+    height: auto;
+    overflow: visible;
+  }
+  #function .slide-function .col-xs-10 {
+    padding: 0 40px;
+    width: 100% !important;
+  }
+  #function .slide-function .col-xs-offset-1 {
+    margin-left: 0% !important;
+  }
+  #function .slide-function .content {
+    padding: 80px 0;
+    text-align: left !important;
+  }
+  #function .slide-function .content .title {
+    font-size: 5.8em;
+    font-weight: 700;
+  }
+  #function .slide-function .content .body {
+    font-size: 2.6em;
+  }
+}
+@media (max-width: 768px) {
+  #function .slide-function {
+    height: 480px;
+    overflow: visible;
+  }
+  #function .slide-function .col-xs-10 {
+    width: 83.3333%;
+  }
+  #function .slide-function .col-xs-offset-1 {
+    margin-left: 8.3333%;
+  }
+  #function .slide-function .col-xs-12 {
+    width: 100%;
+  }
+  #function .slide-function .image img {
+    max-width: 320px;
+  }
+  #function .slide-function .content {
+    text-align: center;
+  }
+  #function .slide-function .content .title {
+    margin-bottom: 35px;
+  }
+  #function .slide-function .content .properties {
+    text-align: center;
+    margin-top: 35px;
+  }
+  #function .slide-function .content .properties div {
+    float: none;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  #function .slide-function > div {
+    padding: 0;
+  }
+  #function .slide-function .image img {
+    max-width: 480px;
+  }
+  #function .slide-function .content .title {
+    font-size: 3em;
+  }
+  #function .slide-function .content .properties div {
+    height: 83px;
+    width: 83px;
+    text-align: center;
+    margin-right: 10px;
+    padding: 10px;
+  }
+  #function .slide-function:nth-child(3) .content .properties div {
+    height: 50px;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #function .slide-function:nth-child(2) .title {
+    margin-right: 55px;
+  }
+  #function .slide-function:nth-child(3) .content .properties div {
+    height: 50px;
+  }
 }
 #pave2 {
   background-color: #44bbff;
@@ -1447,14 +1535,17 @@ button {
 }
 #pave2 .counters .counter .count {
   color: #0d47a1;
-  font-size: 15.2em;
+  width: 159px;
+  height: 136px;
+  margin: 55px auto 15px;
   position: relative;
 }
 #pave2 .counters .counter .count:after {
   content: '';
   position: absolute;
-  bottom: 26px;
-  left: 201px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 159px;
   height: 136px;
   background-color: #b4e4ff;
@@ -1463,8 +1554,9 @@ button {
 #pave2 .counters .counter .count:before {
   content: '';
   position: absolute;
-  bottom: 26px;
-  left: 201px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 159px;
   height: 0;
   transition: all 0.8s ease-in-out;
@@ -2070,12 +2162,6 @@ button {
   background-image: url('../img/howToUse/second-bg.jpg');
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
-  #pave2 .counters .counter .count:after {
-    left: 134px;
-  }
-  #pave2 .counters .counter .count:before {
-    left: 134px;
-  }
   #patchwork .patchwork-left-block,
   #patchwork .patchwork-right-block {
     background-size: cover;
@@ -2083,7 +2169,7 @@ button {
   #patchwork .patchwork-left-block img,
   #patchwork .patchwork-right-block img {
     width: 100%;
-    max-height: 454px;
+    height: 100%;
     left: 0;
   }
   #accessories .bg-accessories {
@@ -2111,6 +2197,90 @@ button {
   }
   #app .phone-style.down .circle {
     left: -150%;
+  }
+  #moveDev .inner {
+    margin-top: 55px;
+  }
+  #moveDev .scene div.arrows {
+    bottom: 145px;
+  }
+  #moveDev .scene div.hands {
+    bottom: -430px;
+    background-size: 100%;
+    width: 1004px;
+    margin-left: -502px;
+  }
+  #moveDev .howToUse .howToUse-block p {
+    padding: 45px 80px 5px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  #patchwork .patchwork-left-block,
+  #patchwork .patchwork-right-block {
+    background-size: cover;
+  }
+  #patchwork .patchwork-left-block img,
+  #patchwork .patchwork-right-block img {
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+  #accessories .bg-accessories {
+    background-image: url('../img/accessories-bg1.jpg');
+    height: 357px;
+  }
+  #accessories .accessories-carousel {
+    margin-top: -269px;
+  }
+  #accessories .accessories-carousel div p {
+    margin: 31px 30px 41px;
+  }
+  #app .app-desc {
+    margin-top: 50px;
+  }
+  #app .phone-style img {
+    height: 480px;
+    width: auto;
+  }
+  #app .phone-style.down .animate {
+    left: -95px;
+    width: 467px;
+    height: 467px;
+    box-shadow: 0 0 0 101px rgba(255, 255, 255, 0.3);
+  }
+  #app .phone-style.down .circle {
+    left: -150%;
+  }
+  #moveDev .inner {
+    margin-top: 55px;
+  }
+  #moveDev .scene div.arrows {
+    bottom: 145px;
+    width: 974px;
+    background-size: 100%;
+    margin-left: -487px;
+  }
+  #moveDev .scene div.hands {
+    bottom: -430px;
+    background-size: 100%;
+    width: 1004px;
+    margin-left: -502px;
+  }
+  #moveDev .howToUse .howToUse-block .rightHand {
+    bottom: -35px;
+    margin-left: 40px;
+  }
+  #moveDev .howToUse .howToUse-block p {
+    padding: 45px 20px 5px;
+  }
+  #moveDev .howToUse .howToUse-block .oculus {
+    margin-top: 20px;
+  }
+  #moveDev .howToUse .howToUse-block .oculus:hover {
+    margin-left: 100px;
   }
 }
 #appSlider {
