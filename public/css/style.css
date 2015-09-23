@@ -1035,13 +1035,14 @@ button {
   text-transform: uppercase;
   font-size: 2.2em;
   color: #ffffff;
+}
+#home-navbar .logo .imgSecondLogo {
   position: relative;
 }
-#home-navbar .logo a:before {
-  contetn: '';
+#home-navbar .logo .imgSecondLogo:before {
+  content: '';
   width: 33px;
   height: 33px;
-  display: block;
   background-image: url('../img/home/sprite-logo.png');
   background-position: 0 0;
   position: absolute;
@@ -1219,7 +1220,6 @@ button {
   font-family: "Zona Pro SemiBold", sans-serif;
   font-size: 2em;
   color: #ffffff;
-  font-weight: 300;
 }
 #player .tabs .tab img {
   max-width: 100%;

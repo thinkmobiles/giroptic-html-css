@@ -409,18 +409,18 @@
       text-transform: uppercase;
       .pxToEm(22);
       color: @home-navbar-text2;
+      }
+    .imgSecondLogo {
       position: relative;
       &:before {
-        contetn: '';
+        content: '';
         width: 33px;
         height: 33px;
-        display: block;
         background-image: url('../img/home/sprite-logo.png');
         background-position: 0 0;
         position: absolute;
         top: 0;
         left: 0;
-
       }
     }
   }
@@ -600,7 +600,6 @@
             font-family: "Zona Pro SemiBold", sans-serif;
             .pxToEm(20);
             color: @player-text2;
-          font-weight: 300;
         }
       }
 
@@ -616,8 +615,7 @@
 
       &:hover {
         height: 125px;
-       // border-bottom: 5px solid @player-border;
-        margin-top: 0px;
+          margin-top: 0px;
         img {
           -webkit-filter: brightness(.4);
           filter: brightness(.4);
