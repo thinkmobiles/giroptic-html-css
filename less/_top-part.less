@@ -573,6 +573,7 @@
 
   .tabs {
     position: absolute;
+    width: 1010px;
     top: ~"calc(100% - 195px)";
     -webkit-transition: padding-top 1s linear;
     -moz-transition: padding-top 1s linear;
@@ -581,6 +582,10 @@
     overflow: hidden;
     padding-top: 125px;
     height: 140px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 0;
     .hvr-underline-from-center {
       &:before {
         z-index: 9999;
@@ -588,20 +593,25 @@
     }
 
     .tab {
-      width: 26.2%;
+      width: 320px;
       height: 120px;
       float: left;
       text-align: left;
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      padding: 0;
-      margin: 0 3%;
+      padding: 0 ;
+      margin: 0 1%;
       margin-top: 20px;
       .box-sizing(border-box);
       transition: all linear .3s;
-
-      &>span {
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+       &>span {
         font-family: "Zona-Light", sans-serif;
         color: @player-text1;
         display: block;
@@ -743,3 +753,7 @@
 }
 
 /*== End Gallery ===============================*/
+
+@media (min-width: 1280px) {
+
+}

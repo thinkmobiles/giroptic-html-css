@@ -1189,6 +1189,7 @@ button {
 }
 #player .tabs {
   position: absolute;
+  width: 1010px;
   top: calc(100% - 195px);
   -webkit-transition: padding-top 1s linear;
   -moz-transition: padding-top 1s linear;
@@ -1197,25 +1198,35 @@ button {
   overflow: hidden;
   padding-top: 125px;
   height: 140px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: 0;
 }
 #player .tabs .hvr-underline-from-center:before {
   z-index: 9999;
 }
 #player .tabs .tab {
-  width: 26.2%;
+  width: 320px;
   height: 120px;
   float: left;
   text-align: left;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  padding: 0;
-  margin: 0 3%;
+  padding: 0 ;
+  margin: 0 1%;
   margin-top: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   transition: all linear .3s;
+}
+#player .tabs .tab:first-child {
+  margin-left: 0;
+}
+#player .tabs .tab:last-child {
+  margin-right: 0;
 }
 #player .tabs .tab > span {
   font-family: "Zona-Light", sans-serif;
