@@ -1438,7 +1438,9 @@ button {
 @media (max-width: 750px) {
   #function .slide-function {
     height: auto;
-    overflow: visible;
+  }
+  #function .slide-function > div {
+    min-height: 480px;
   }
   #function .slide-function .col-xs-10 {
     padding: 0 40px;
@@ -1461,8 +1463,10 @@ button {
 }
 @media (max-width: 768px) {
   #function .slide-function {
+    height: auto;
+  }
+  #function .slide-function > div {
     height: 480px;
-    overflow: visible;
   }
   #function .slide-function .col-xs-10 {
     width: 83.3333%;
