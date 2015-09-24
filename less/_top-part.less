@@ -148,7 +148,7 @@
 }
 
 #home {
-  height: 100vh;
+  height: 100%;
   background-color: @home-bg;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -410,17 +410,19 @@
       .pxToEm(22);
       color: @home-navbar-text2;
       }
+
     .imgSecondLogo {
       position: relative;
+      color:@home-navbar-text1;
       &:before {
         content: '';
         width: 33px;
-        height: 33px;
+        height: 31px;
         background-image: url('../img/home/sprite-logo.png');
         background-position: 0 0;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: -2px;
+        left: -40px;
       }
     }
   }
@@ -439,7 +441,7 @@
 
         a {
           font-family: "Zona Pro SemiBold", sans-serif;
-          color: @home-navbar-text2;
+          color: @home-navbar-text1;
           font-weight: 600;
           .pxToEm(15);
         }
@@ -481,10 +483,22 @@
   height: 100vh;
   z-index: 6;
 
+  .player-bg {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+
+    img {
+      width: 70%;
+    }
+  }
+
   img {
     position: absolute;
-    bottom: -70px;
-    left: 22%;
+    bottom: 0;
+    left: 14%;
     transform: scale(1);
     transition: transform 4s;
   }
@@ -501,7 +515,7 @@
     display: none;
     position: absolute;
     top: 30%;
-    left: ~"calc(50% - 147.5px)";
+    left: ~"calc(49% - 147.5px)";
     cursor: pointer;
     height: 320px;
     width: 320px;
@@ -559,6 +573,7 @@
 
   .tabs {
     position: absolute;
+    width: 1010px;
     top: ~"calc(100% - 195px)";
     -webkit-transition: padding-top 1s linear;
     -moz-transition: padding-top 1s linear;
@@ -567,6 +582,10 @@
     overflow: hidden;
     padding-top: 125px;
     height: 140px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 0;
     .hvr-underline-from-center {
       &:before {
         z-index: 9999;
@@ -574,20 +593,25 @@
     }
 
     .tab {
-      width: 26.2%;
+      width: 320px;
       height: 120px;
       float: left;
       text-align: left;
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      padding: 0;
-      margin: 0 3%;
+      padding: 0 ;
+      margin: 0 1%;
       margin-top: 20px;
       .box-sizing(border-box);
       transition: all linear .3s;
-
-      &>span {
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+       &>span {
         font-family: "Zona-Light", sans-serif;
         color: @player-text1;
         display: block;
@@ -729,3 +753,7 @@
 }
 
 /*== End Gallery ===============================*/
+
+@media (min-width: 1280px) {
+
+}

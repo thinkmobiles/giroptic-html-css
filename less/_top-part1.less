@@ -126,7 +126,10 @@
   #function {
     .slide-function {
       height: auto;
-      overflow: visible;
+      //overflow: visible;
+      &> div {
+        min-height: 480px;
+      }
       .col-xs-10 {
         padding: 0 40px;
         width: 100% !important;
@@ -151,8 +154,11 @@
 @media (max-width: 768px) {
   #function {
     .slide-function {
-      height: 480px;
-      overflow: visible;
+      height: auto;
+      //overflow: visible;
+      &> div {
+        height: 480px;
+      }
       .col-xs-10 {
         width: 83.3333%;
       }

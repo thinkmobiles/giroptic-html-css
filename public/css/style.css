@@ -783,7 +783,7 @@ button {
   top: -50px;
 }
 #home {
-  height: 100vh;
+  height: 100%;
   background-color: #44bbff;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -1038,16 +1038,17 @@ button {
 }
 #home-navbar .logo .imgSecondLogo {
   position: relative;
+  color: #3d3c3f;
 }
 #home-navbar .logo .imgSecondLogo:before {
   content: '';
   width: 33px;
-  height: 33px;
+  height: 31px;
   background-image: url('../img/home/sprite-logo.png');
   background-position: 0 0;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: -40px;
 }
 #home-navbar .home-menu ul {
   list-style: none;
@@ -1077,7 +1078,7 @@ button {
 }
 #home-navbar .home-menu ul li a {
   font-family: "Zona Pro SemiBold", sans-serif;
-  color: #ffffff;
+  color: #3d3c3f;
   font-weight: 600;
   font-size: 1.5em;
 }
@@ -1109,10 +1110,20 @@ button {
   height: 100vh;
   z-index: 6;
 }
+#player .player-bg {
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+#player .player-bg img {
+  width: 70%;
+}
 #player img {
   position: absolute;
-  bottom: -70px;
-  left: 22%;
+  bottom: 0;
+  left: 14%;
   transform: scale(1);
   transition: transform 4s;
 }
@@ -1127,7 +1138,7 @@ button {
   display: none;
   position: absolute;
   top: 30%;
-  left: calc(50% - 147.5px);
+  left: calc(49% - 147.5px);
   cursor: pointer;
   height: 320px;
   width: 320px;
@@ -1178,6 +1189,7 @@ button {
 }
 #player .tabs {
   position: absolute;
+  width: 1010px;
   top: calc(100% - 195px);
   -webkit-transition: padding-top 1s linear;
   -moz-transition: padding-top 1s linear;
@@ -1186,25 +1198,35 @@ button {
   overflow: hidden;
   padding-top: 125px;
   height: 140px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  padding: 0;
 }
 #player .tabs .hvr-underline-from-center:before {
   z-index: 9999;
 }
 #player .tabs .tab {
-  width: 26.2%;
+  width: 320px;
   height: 120px;
   float: left;
   text-align: left;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  padding: 0;
-  margin: 0 3%;
+  padding: 0 ;
+  margin: 0 1%;
   margin-top: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   transition: all linear .3s;
+}
+#player .tabs .tab:first-child {
+  margin-left: 0;
+}
+#player .tabs .tab:last-child {
+  margin-right: 0;
 }
 #player .tabs .tab > span {
   font-family: "Zona-Light", sans-serif;
@@ -1416,7 +1438,9 @@ button {
 @media (max-width: 750px) {
   #function .slide-function {
     height: auto;
-    overflow: visible;
+  }
+  #function .slide-function > div {
+    min-height: 480px;
   }
   #function .slide-function .col-xs-10 {
     padding: 0 40px;
@@ -1439,8 +1463,10 @@ button {
 }
 @media (max-width: 768px) {
   #function .slide-function {
+    height: auto;
+  }
+  #function .slide-function > div {
     height: 480px;
-    overflow: visible;
   }
   #function .slide-function .col-xs-10 {
     width: 83.3333%;
