@@ -29,6 +29,18 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
+    $("#pave2 .counters > .row").owlCarousel({
+        items: 3,
+        dots:true,
+        responsiveClass:true,
+        responsive:{
+            0:{items:1},
+            750:{items:1},
+            768:{items:1},
+            1024:{items:3, dots:false},
+            1680:{items:3, dots:false}
+        }
+    });
 });
 
 // --- Accessories block
