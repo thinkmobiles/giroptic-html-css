@@ -262,6 +262,12 @@
       width: 100%;
       overflow: hidden;
     }
+    .owl-item {
+      img {
+        width: auto;
+        display: inline-block;
+      }
+    }
     .owl-controls {
       position: absolute;
       left: 50%;
@@ -1073,7 +1079,7 @@
 }
 @media (max-width: 768px) {
   #appSlider {
-    min-height: 1100px;
+    min-height: 1000px;
     .app-desc {
       width: 86%;
       margin-left: 6%;
@@ -1081,8 +1087,11 @@
       margin-bottom: 40px;
       h4 {
         margin-bottom: 30px;
-        .pxToEm(48);
+        .pxToEm(36);
         line-height: 50px;
+      }
+      p {
+        margin-bottom: 40px;
       }
     }
     .app-wrapper {
@@ -1105,8 +1114,26 @@
       width: 100vw !important;
     }
   }
+  #paveOs {
+    .counters {
+      .counter {
+        .title {
+          .pxToEm(23);
+        }
+      }
+    }
+  }
   #speTech {
+    height: auto;
     padding: 60px 0;
+  }
+  #sendApp {
+    p {
+      .pxToEm(23);
+    }
+    &:before {
+      background-size: 100% 100%;
+    }
   }
   #footer {
     .follow-us {
@@ -1131,7 +1158,13 @@
   #appSlider {
     min-height: 1000px;
     .app-desc {
-      margin-top: 80px;
+      margin-top: 60px;
+      h4{
+        .pxToEm(36);
+      }
+      p {
+        margin-bottom: 40px;
+      }
     }
     .app-wrapper {
       .slider {
@@ -1146,6 +1179,13 @@
     }
   }
   #paveOs {
+    .counters {
+      .counter {
+        .title {
+          .pxToEm(27);
+        }
+      }
+    }
     .owl-carousel {
       .owl-stage {
         width: 100% !important;
@@ -1156,13 +1196,22 @@
     }
   }
   #sendApp {
+    p {
+      .pxToEm(26);
+    }
     &:before {
-      background-size: cover;
+      background-size: 100% 100%;
     }
   }
   #speTech {
     height: auto;
     padding: 60px 0 0;
+    .col-md-offset-1 {
+      margin-left: 5%;
+    }
+    .col-md-10 {
+      width: 90%;
+    }
   }
   #footer {
     .column {
@@ -1179,6 +1228,16 @@
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
+  #speTech {
+    height: auto;
+    padding: 60px 0 0;
+    .col-md-offset-1 {
+      margin-left: 5%;
+    }
+    .col-md-10 {
+      width: 90%;
+    }
+  }
   #footer {
     .col-md-10 {
       width: 100%;
@@ -1195,9 +1254,12 @@
 }
 @media (min-width: 992px) and (max-width: 1280px) {
   #appSlider {
-    min-height: 1000px;
+    min-height: 960px;
     .app-desc {
       margin-top: 40px;
+      h4 {
+        .pxToEm(36);
+      }
     }
     .app-wrapper {
      &:before {
@@ -1306,22 +1368,22 @@
 
 
 
-//.giroptic-header {
-//   display: none;
-// }
-//.section {
-//  display: none !important;
-//}
-//#appSlider, #paveOs, #sendApp, #speTech, #slideImg2, #camera, #footer {
-//  &.section {
-//    display: block !important;
-//  }
-//}
-///*#sendApp,*/ #slideImg2 {
-//  &.section {
-//    display: table !important;
-//  }
-//}
-//#main {
-//  padding: 0;
-//}
+.giroptic-header {
+   display: none;
+ }
+.section {
+  display: none !important;
+}
+#appSlider, #paveOs, #sendApp, #speTech, #slideImg2, #camera, #footer {
+  &.section {
+    display: block !important;
+  }
+}
+#sendApp, #slideImg2 {
+  &.section {
+    display: table !important;
+  }
+}
+#main {
+  padding: 0;
+}

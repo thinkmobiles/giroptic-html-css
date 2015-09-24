@@ -3,25 +3,21 @@
   position: relative;
   //height: 100vh;
   z-index: 6;
-
   .slide-function {
     height: 100vh;
     //height: 100%;
     overflow: hidden;
-
     &> div {
       height: 100%;
       display: table;
+      padding: 0;
     }
-
     .image, .content {
       display: table-cell;
       vertical-align: middle;
     }
-
     .image {
       text-align: center;
-
       img {
         max-width: 620px;
         width: 100%;
@@ -29,9 +25,7 @@
         display: inline-block;
       }
     }
-
     .content {
-
       .title {
         font-family: "Zona Pro", sans-serif;
         .pxToEm(32);
@@ -39,16 +33,20 @@
         color: @function-title;
         line-height: 1.389;
       }
+      h5 {
+        font-family: "Zona Pro", sans-serif;
+        color: @function-title;
+        line-height: 1.389;
+        .pxToEm(18);
+      }
       .body {
         .pxToEm(14);
         font-family: "Zona Pro", sans-serif;
         color: #898989;
         line-height: 1.875;
       }
-
       .properties {
         margin-top: 50px;
-
         div {
           border: 2px solid @function-forder;
           border-radius: 100%;
@@ -60,15 +58,13 @@
           float: left;
           margin-right: 18px;
           padding: 12px;
-
           p {
-            //color: #959595;
+            color: #4b4b4b;
           }
           span {
             color: @function-span;
           }
         }
-
         &:after {
           clear: both;
           content: '';
@@ -76,21 +72,17 @@
         }
       }
     }
-
     &:nth-child(1) {
-
       &> div:first-child {
         background: url('../img/function-bg1.jpg');
         background-size: cover;
       }
     }
     &:nth-child(2) {
-
        &> div:first-child {
          background: url('../img/function-bg2.jpg');
          background-size: cover;
        }
-
       .image {
         vertical-align: bottom;
       }
@@ -100,9 +92,8 @@
         background: url('../img/function-bg3.jpg');
         background-size: cover;
       }
-      .content {
+      .content:first-child {
         .properties {
-
           div {
             border: none;
             border-radius: 0;
@@ -111,7 +102,6 @@
             width: auto;
             display: inline-block;
             vertical-align: middle;
-
             img {
               max-height: 100%;
               float: left;
@@ -122,13 +112,43 @@
     }
   }
 }
+//.properties-mobile {
+//  .owl-carousel {
+//    .owl-stage-outer {
+//      width: ~"calc(100vw - 60px)" !important;
+//    }
+//  }
+//
+//  .counter {
+//    &> div {
+//      border-radius: 100%;
+//      background: #4bf;
+//      width: 100px;
+//      height: 100px;
+//    }
+//  }
+//}
 @media (max-width: 750px) {
   #function {
     .slide-function {
       height: auto;
-      //overflow: visible;
       &> div {
         min-height: 480px;
+      }
+      .hidden {
+        display: block !important;
+      }
+      .content {
+        width: 100%;
+        float: left;
+        &:last-child {
+          h5 {
+            .pxToEm(36)
+          }
+          .properties {
+            display: none;
+          }
+        }
       }
       .col-xs-10 {
         padding: 0 40px;
@@ -155,7 +175,6 @@
   #function {
     .slide-function {
       height: auto;
-      //overflow: visible;
       &> div {
         height: 480px;
       }
@@ -181,7 +200,6 @@
         .properties {
           text-align: center;
           margin-top: 35px;
-
           div {
             float: none;
             display: inline-block;
@@ -195,8 +213,11 @@
 @media (min-width:769px) and (max-width:1024px) {
   #function {
     .slide-function {
-      &> div {
-        padding: 0;
+      .col-md-offset-1 {
+        margin-left: 6%;
+      }
+      .col-md-4 {
+        width: 37%;
       }
       .image {
         img {
@@ -218,9 +239,8 @@
         }
       }
       &:nth-child(3) {
-        .content {
+        .content:first-child {
           .properties {
-
             div {
               height: 50px;
             }
@@ -233,16 +253,24 @@
 @media (min-width: 1025px) and (max-width: 1280px) {
   #function {
     .slide-function {
-      //&> div {
-      //  padding: 0;
-      //}
+      .col-md-offset-1 {
+        margin-left: 6%;
+      }
+      .col-md-4 {
+        width: 37%;
+      }
+      .image {
+        img {
+          max-width: 560px;
+        }
+      }
       &:nth-child(2) {
         .title {
           margin-right: 55px;
         }
       }
       &:nth-child(3) {
-        .content {
+        .content:first-child {
           .properties {
             div {
               height: 50px;

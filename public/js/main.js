@@ -29,6 +29,17 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
+    //$(".properties-mobile > .row").owlCarousel({
+    //    items: 4,
+    //    loop: true,
+    //    center: true,
+    //    dots:true,
+    //    responsiveClass:true,
+    //    responsive:{
+    //        0:{items:3},
+    //        750:{items:3},
+    //    }
+    //});
     $("#pave2 .counters > .row").owlCarousel({
         items: 3,
         dots:true,
