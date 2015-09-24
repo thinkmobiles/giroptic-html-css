@@ -1585,9 +1585,6 @@ button {
   color: #b4e4ff;
   font-size: 1.8em;
 }
-#pave2 .counters .counter:last-child {
-  border: none;
-}
 #patchwork {
   /* display: table */
   -height: 1%;
@@ -1595,6 +1592,7 @@ button {
   *zoom: 1;
   /*IE6-7*/
   display: table;
+  overflow: hidden;
 }
 #patchwork:after {
   /*content: '1 1';*/
@@ -2050,6 +2048,12 @@ button {
     -webkit-transform: rotate(360deg);
   }
 }
+#app .small-style {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
 #moveDev {
   background-color: #ebebeb;
   height: 100vh;
@@ -2314,7 +2318,7 @@ button {
     margin-left: 100px;
   }
 }
-@media (min-width: 751px) and (max-width: 768px) {
+@media (min-width: 750px) and (max-width: 768px) {
   .container {
     max-width: 100%;
   }
@@ -2345,6 +2349,23 @@ button {
   }
   #pave2 .owl-carousel .owl-dots .active span {
     background: transparent;
+  }
+  #moveDev {
+    overflow: hidden;
+  }
+  #moveDev .scene div.hands {
+    height: 630px;
+    margin-left: -375px;
+    width: 750px;
+  }
+  #moveDev .howToUse .howToUse-block {
+    width: 100%;
+  }
+  #app .phone-style {
+    display: none !important;
+  }
+  #app .small-style {
+    display: block;
   }
 }
 #appSlider {
