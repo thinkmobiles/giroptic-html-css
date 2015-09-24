@@ -1356,6 +1356,7 @@ button {
 #function .slide-function > div {
   height: 100%;
   display: table;
+  padding: 0;
 }
 #function .slide-function .image,
 #function .slide-function .content {
@@ -1378,6 +1379,12 @@ button {
   color: #4b4b4b;
   line-height: 1.389;
 }
+#function .slide-function .content h5 {
+  font-family: "Zona Pro", sans-serif;
+  color: #4b4b4b;
+  line-height: 1.389;
+  font-size: 1.8em;
+}
 #function .slide-function .content .body {
   font-size: 1.4em;
   font-family: "Zona Pro", sans-serif;
@@ -1398,6 +1405,9 @@ button {
   float: left;
   margin-right: 18px;
   padding: 12px;
+}
+#function .slide-function .content .properties div p {
+  color: #4b4b4b;
 }
 #function .slide-function .content .properties div span {
   color: #44bbff;
@@ -1422,7 +1432,7 @@ button {
   background: url('../img/function-bg3.jpg');
   background-size: cover;
 }
-#function .slide-function:nth-child(3) .content .properties div {
+#function .slide-function:nth-child(3) .content:first-child .properties div {
   border: none;
   border-radius: 0;
   height: 60px;
@@ -1431,7 +1441,7 @@ button {
   display: inline-block;
   vertical-align: middle;
 }
-#function .slide-function:nth-child(3) .content .properties div img {
+#function .slide-function:nth-child(3) .content:first-child .properties div img {
   max-height: 100%;
   float: left;
 }
@@ -1441,6 +1451,19 @@ button {
   }
   #function .slide-function > div {
     min-height: 480px;
+  }
+  #function .slide-function .hidden {
+    display: block !important;
+  }
+  #function .slide-function .content {
+    width: 100%;
+    float: left;
+  }
+  #function .slide-function .content:last-child h5 {
+    font-size: 3.6em;
+  }
+  #function .slide-function .content:last-child .properties {
+    display: none;
   }
   #function .slide-function .col-xs-10 {
     padding: 0 40px;
@@ -1497,8 +1520,11 @@ button {
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  #function .slide-function > div {
-    padding: 0;
+  #function .slide-function .col-md-offset-1 {
+    margin-left: 6%;
+  }
+  #function .slide-function .col-md-4 {
+    width: 37%;
   }
   #function .slide-function .image img {
     max-width: 480px;
@@ -1513,15 +1539,24 @@ button {
     margin-right: 10px;
     padding: 10px;
   }
-  #function .slide-function:nth-child(3) .content .properties div {
+  #function .slide-function:nth-child(3) .content:first-child .properties div {
     height: 50px;
   }
 }
 @media (min-width: 1025px) and (max-width: 1280px) {
+  #function .slide-function .col-md-offset-1 {
+    margin-left: 6%;
+  }
+  #function .slide-function .col-md-4 {
+    width: 37%;
+  }
+  #function .slide-function .image img {
+    max-width: 560px;
+  }
   #function .slide-function:nth-child(2) .title {
     margin-right: 55px;
   }
-  #function .slide-function:nth-child(3) .content .properties div {
+  #function .slide-function:nth-child(3) .content:first-child .properties div {
     height: 50px;
   }
 }
@@ -2632,6 +2667,10 @@ button {
   width: 100%;
   overflow: hidden;
 }
+#paveOs .owl-carousel .owl-item img {
+  width: auto;
+  display: inline-block;
+}
 #paveOs .owl-carousel .owl-controls {
   position: absolute;
   left: 50%;
@@ -3441,7 +3480,7 @@ button {
 }
 @media (max-width: 768px) {
   #appSlider {
-    min-height: 1100px;
+    min-height: 1000px;
   }
   #appSlider .app-desc {
     width: 86%;
@@ -3451,8 +3490,11 @@ button {
   }
   #appSlider .app-desc h4 {
     margin-bottom: 30px;
-    font-size: 4.8em;
+    font-size: 3.6em;
     line-height: 50px;
+  }
+  #appSlider .app-desc p {
+    margin-bottom: 40px;
   }
   #appSlider .app-wrapper .iphone-mockup {
     background-position: -25px 0 !important;
@@ -3469,8 +3511,18 @@ button {
   .owl-carousel .owl-stage-outer {
     width: 100vw !important;
   }
+  #paveOs .counters .counter .title {
+    font-size: 2.3em;
+  }
   #speTech {
+    height: auto;
     padding: 60px 0;
+  }
+  #sendApp p {
+    font-size: 2.3em;
+  }
+  #sendApp:before {
+    background-size: 100% 100%;
   }
   #footer .follow-us {
     padding-bottom: 40px;
@@ -3494,7 +3546,13 @@ button {
     min-height: 1000px;
   }
   #appSlider .app-desc {
-    margin-top: 80px;
+    margin-top: 60px;
+  }
+  #appSlider .app-desc h4 {
+    font-size: 3.6em;
+  }
+  #appSlider .app-desc p {
+    margin-bottom: 40px;
   }
   #appSlider .app-wrapper .slider {
     width: 285px;
@@ -3505,18 +3563,30 @@ button {
   #appSlider .app-wrapper:after {
     box-shadow: none;
   }
+  #paveOs .counters .counter .title {
+    font-size: 2.7em;
+  }
   #paveOs .owl-carousel .owl-stage {
     width: 100% !important;
   }
   #paveOs .owl-carousel .owl-item {
     width: 33.3333% !important;
   }
+  #sendApp p {
+    font-size: 2.6em;
+  }
   #sendApp:before {
-    background-size: cover;
+    background-size: 100% 100%;
   }
   #speTech {
     height: auto;
     padding: 60px 0 0;
+  }
+  #speTech .col-md-offset-1 {
+    margin-left: 5%;
+  }
+  #speTech .col-md-10 {
+    width: 90%;
   }
   #footer .column {
     width: 50%;
@@ -3531,6 +3601,16 @@ button {
   }
 }
 @media (min-width: 992px) and (max-width: 1024px) {
+  #speTech {
+    height: auto;
+    padding: 60px 0 0;
+  }
+  #speTech .col-md-offset-1 {
+    margin-left: 5%;
+  }
+  #speTech .col-md-10 {
+    width: 90%;
+  }
   #footer .col-md-10 {
     width: 100%;
   }
@@ -3543,10 +3623,13 @@ button {
 }
 @media (min-width: 992px) and (max-width: 1280px) {
   #appSlider {
-    min-height: 1000px;
+    min-height: 960px;
   }
   #appSlider .app-desc {
     margin-top: 40px;
+  }
+  #appSlider .app-desc h4 {
+    font-size: 3.6em;
   }
   #appSlider .app-wrapper:before {
     box-shadow: none;
@@ -3614,6 +3697,28 @@ button {
   #footer .column.logo-content {
     width: 30%;
   }
+}
+.giroptic-header {
+  display: none;
+}
+.section {
+  display: none !important;
+}
+#appSlider.section,
+#paveOs.section,
+#sendApp.section,
+#speTech.section,
+#slideImg2.section,
+#camera.section,
+#footer.section {
+  display: block !important;
+}
+#sendApp.section,
+#slideImg2.section {
+  display: table !important;
+}
+#main {
+  padding: 0;
 }
 @media (min-width: 768px) {
   .container {
