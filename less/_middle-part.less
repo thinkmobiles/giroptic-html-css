@@ -104,6 +104,9 @@
     width: ~'calc(50% - 1px)';
     img{
       left: 52px;
+      &:last-child{
+        display: none;
+      }
     }
   }
 }
@@ -778,7 +781,40 @@
   .container {
     max-width: 100%;
   }
+  #patchwork{
+    .patchwork-left-block,
+    .patchwork-right-block{
+      width: 100% !important;
+      img{
+        position: relative;
+        left: 190px;
+        top: 60px;
+      }
+    }
+    .patchwork-left-block{
+      img{
+        width: 467px;
+        top: 108px;
+        left: 140px
+      }
+    }
+    .patchwork-right-block {
+      img{
+        &:first-child{
+          display: none;
+        }
+        &:last-child{
+          display: block;
+        }
+      }
+    }
+  }
   #pave2{
+    .counters{
+      .counter{
+        padding-bottom: 93px;
+      }
+    }
     .owl-carousel {
       .owl-stage-outer {
         width: 100%;
@@ -816,7 +852,19 @@
   }
   #moveDev{
     overflow: hidden;
+    height: 870px;
+    .inner{
+      h4{
+        .pxToEm(50);
+        font-family: "Zona Pro SemiBold", sans-serif;
+        color: #4b4b4b;
+      }
+      p{
+        .pxToEm(31)
+      }
+    }
     .scene{
+      height: 1024px;
       div{
         &.hands{
           height: 630px;
@@ -828,10 +876,19 @@
     .howToUse{
       .howToUse-block{
         width: 100%;
+        p{
+          .pxToEm(31);
+          padding: 45px 30px 0;
+          line-height: 42px;
+        }
       }
+    }
+    .moveDev{
+      height: 870px;
     }
   }
   #app{
+    height: 1024px;
     .phone-style{
       display: none !important;
     }

@@ -1682,6 +1682,9 @@ button {
 #patchwork .patchwork-right-block img {
   left: 52px;
 }
+#patchwork .patchwork-right-block img:last-child {
+  display: none;
+}
 #accessories {
   height: 100vh;
   position: relative;
@@ -2357,6 +2360,30 @@ button {
   .container {
     max-width: 100%;
   }
+  #patchwork .patchwork-left-block,
+  #patchwork .patchwork-right-block {
+    width: 100% !important;
+  }
+  #patchwork .patchwork-left-block img,
+  #patchwork .patchwork-right-block img {
+    position: relative;
+    left: 190px;
+    top: 60px;
+  }
+  #patchwork .patchwork-left-block img {
+    width: 467px;
+    top: 108px;
+    left: 140px;
+  }
+  #patchwork .patchwork-right-block img:first-child {
+    display: none;
+  }
+  #patchwork .patchwork-right-block img:last-child {
+    display: block;
+  }
+  #pave2 .counters .counter {
+    padding-bottom: 93px;
+  }
   #pave2 .owl-carousel .owl-stage-outer {
     width: 100%;
     overflow: hidden;
@@ -2387,6 +2414,18 @@ button {
   }
   #moveDev {
     overflow: hidden;
+    height: 870px;
+  }
+  #moveDev .inner h4 {
+    font-size: 5em;
+    font-family: "Zona Pro SemiBold", sans-serif;
+    color: #4b4b4b;
+  }
+  #moveDev .inner p {
+    font-size: 3.1em;
+  }
+  #moveDev .scene {
+    height: 1024px;
   }
   #moveDev .scene div.hands {
     height: 630px;
@@ -2395,6 +2434,17 @@ button {
   }
   #moveDev .howToUse .howToUse-block {
     width: 100%;
+  }
+  #moveDev .howToUse .howToUse-block p {
+    font-size: 3.1em;
+    padding: 45px 30px 0;
+    line-height: 42px;
+  }
+  #moveDev .moveDev {
+    height: 870px;
+  }
+  #app {
+    height: 1024px;
   }
   #app .phone-style {
     display: none !important;
