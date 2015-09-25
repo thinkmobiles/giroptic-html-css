@@ -2263,6 +2263,9 @@ button {
     top: 40px;
     width: 980px;
   }
+  #pave2 .owl-carousel .owl-stage {
+    width: 100% !important;
+  }
   #moveDev .inner {
     margin-top: 55px;
   }
@@ -2326,6 +2329,9 @@ button {
     height: 980px;
     top: 40px;
     width: 980px;
+  }
+  #pave2 .owl-carousel .owl-stage {
+    width: 100% !important;
   }
   #moveDev .inner {
     margin-top: 55px;
