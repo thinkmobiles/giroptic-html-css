@@ -543,6 +543,7 @@
                     <div class="app-desc col-lg-offset-3 col-md-offset-2 col-sm-offset-1 col-xs-offset-1 col-lg-6 col-md-8 col-sm-10 col-xs-10">
                         <h4>The 360cam app allows you to:</h4>
                         <p>Remote control your camera and preview your footages</p>
+                        <p class="hidden">View, save and share your photos and videos</p>
                     </div>
                     <div class="app-wrapper col-lg-12 col-md-12">
                         <div class="slider">
@@ -749,17 +750,17 @@
                 <div class="inBox col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="inBox-btn">
                         <button type="button" id="inBoxToggle" class="inBox-toggle">
-                            <span class="sr-only">Toggle inBox</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
+                            <span class="glyphicon glyphicon-remove hidden"></span>
                         </button>
                     </div>
                     <div id="inBox-collapse" class="inBox-collapse collapse">
                         <div class="inBox-cnt row">
                             <h2>In the box</h2>
                             <div class="row">
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
                                             <img src="./public/img/bottom-part/inBox1.png" alt="" />
@@ -767,7 +768,7 @@
                                         <h4>Camera</h4>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
                                             <img src="./public/img/bottom-part/inBox2.png" alt="" />
@@ -775,7 +776,7 @@
                                         <h4>Lithium-ion battery</h4>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
                                             <img src="./public/img/bottom-part/inBox3.png" alt="" />
@@ -783,7 +784,7 @@
                                         <h4>Micro-USB cable</h4>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
                                             <img src="./public/img/bottom-part/inBox4.png" alt="" />
@@ -791,7 +792,7 @@
                                         <h4>Booster</h4>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
                                             <img src="./public/img/bottom-part/inBox5.png" alt="" />
@@ -799,7 +800,7 @@
                                         <h4>Micro-fiber bag</h4>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
                                             <img src="./public/img/bottom-part/inBox6.png" alt="" />
@@ -815,6 +816,10 @@
                     <div class="row">
                         <div class="content">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="visibleMobile">
+                                    <p class="stamp">Giroptic</p>
+                                    <h1 class="title">360CAM</h1>
+                                </div>
                                 <div class="cameraSlider">
                                     <div class="visual-camera">
                                         <img src="./public/img/bottom-part/slide1.png" />
@@ -835,19 +840,28 @@
                                             </li>
                                         </ul>
                                     </div>
+                                    <div class="controls visibleMobile">
+                                        <a href="#" class="btn-prev"></a>
+                                        <a href="#" class="btn-next"></a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-0">
+                            <div class="col-lg-3 col-md-4 col-sm-5 col-xs-12 col-lg-offset-1 col-md-offset-1 col-sm-offset-0 col-xs-offset-0">
+                                <div class="visibleMobile">
+                                    <span class="price">399 €</span>
+                                </div>
                                 <div class="buy-block">
                                     <div>
-                                        <p class="stamp">Giroptic</p>
-                                        <h1 class="title">
-                                            360CAM
-                                            <span class="price">399 €</span>
-                                        </h1>
+                                        <div class="hideMobile">
+                                            <p class="stamp">Giroptic</p>
+                                            <h1 class="title">
+                                                360CAM
+                                                <span class="price">399 €</span>
+                                            </h1>
+                                        </div>
                                         <h4 class="subtitle">Up. Down. All Around</h4>
                                         <p class="description">Pre-order your GIROPTIC 360cam today and join the GIROPTIC community to forever change the way we capture and experience our world.</p>
-                                        <div class="share">
+                                        <div class="share hideMobile">
                                             <div class="inTheBox">
                                                 <span>In the box</span>
                                             </div>

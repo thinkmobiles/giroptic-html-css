@@ -669,14 +669,71 @@
         padding: 0;
       }
     }
+    .hideMobile {
+      display: block !important;
+    }
+    .visibleMobile {
+      text-align: center;
+      display: none !important;
+
+      .stamp {
+        display: inline-block;
+        text-transform: uppercase;
+        font-family: "Zona Pro Bold", sans-serif;
+        .pxToEm(16);
+        color: @camera-stamp-text;
+        background-color: @camera-stamp-bg;
+        padding: 3px 9px;
+      }
+      .title {
+        color: @camera-content-text;
+        margin: 0 0 0.35em 0;
+        line-height: 0.85em;
+        font-weight: 100;
+        font-family: "Zona-Light", sans-serif;
+        .pxToEm(75);
+      }
+      .price {
+        font-weight: 100;
+        font-family: "Zona-Light", sans-serif;
+        font-size: 24px;
+      }
+    }
     .cameraSlider {
       height: 100%;
+      width: 100%;
+      display: table;
       position: relative;
       text-align: center;
       .visual-camera {
-        display: block;
-        height: 100%;
-        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        img {
+          max-width: 410px;
+          width: 100%;
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+    }
+    .controls {
+      a {
+        position: absolute;
+        content: '';
+        width: 60px;
+        height: 60px;
+        top: 50%;
+        margin-top: -30px;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+      }
+      .btn-prev {
+        background-image: url('../img/bottom-part/control-prev.png');
+        left: 20px;
+      }
+      .btn-next {
+        background-image: url('../img/bottom-part/control-next.png');
+        right: 20px;
       }
     }
     .points {
@@ -727,7 +784,7 @@
         margin: 0 0 0.35em 0;
         line-height: 0.85em;
         font-weight: 100;
-        font-family: "Zona Pro", sans-serif;
+        font-family: "Zona-Light", sans-serif;
         .pxToEm(74);
         .price {
           font-weight: 100;
@@ -832,7 +889,7 @@
       background-image: none;
       border: 1px solid transparent;
       border-radius: 4px;
-      span {
+      span.icon-bar {
         display: block;
         width: 36px;
         height: 4px;
@@ -841,6 +898,10 @@
       }
       .icon-bar + .icon-bar {
         margin-top: 6px;
+      }
+      .glyphicon-remove {
+        .pxToEm(24);
+        color: @inBox-bg;
       }
     }
     .inBox-collapse {
@@ -1077,9 +1138,18 @@
   background-position: center center;
   background-size: cover;
 }
+@media (max-width: 750px) {
+  #appSlider {
+    min-height: 1050px !important;
+    .app-desc {
+      width: 72%;
+      margin-left: 14%;
+    }
+  }
+}
 @media (max-width: 768px) {
   #appSlider {
-    min-height: 1000px;
+    min-height: 1050px;
     .app-desc {
       width: 86%;
       margin-left: 6%;
@@ -1133,6 +1203,75 @@
     }
     &:before {
       background-size: 100% 100%;
+    }
+  }
+  #camera {
+    .inBox {
+      &.col-sm-6 {
+        width: 100%;
+      }
+      .inBox-cnt {
+        h2 {
+          text-align: center;
+          .pxToEm(36);
+          margin: 40px 0 70px 0;
+        }
+      }
+    }
+    .content {
+      &> .col-sm-6 {
+       width: 100%;
+        height: auto;
+        padding: 0 15px !important;
+      }
+      &> .col-sm-5 {
+        width: 78%;
+        height: auto;
+        margin-left: 12%;
+        padding: 0 15px !important;
+      }
+      .hideMobile {
+        display: none !important;
+      }
+      .visibleMobile {
+        display: block !important;
+      }
+      .cameraSlider {
+        .visual-camera {
+          padding-top: 10px;
+          padding-bottom: 60px;
+          img {
+            max-width: 310px;
+          }
+        }
+        .points {
+          bottom: 10px;
+        }
+      }
+      .buy-block {
+        .subtitle {
+          margin: 10px 0 20px 0;
+        }
+        .subtitle, .description {
+          text-align: center;
+        }
+        .buy {
+          text-align: center;
+          .btn-buy {
+            .pxToEm(30);
+            width: 305px;
+            height: 62px;
+            padding: 10px 50px 10px 90px;
+            &:before {
+              left: 30px;
+              top: 14px;
+              width: 33px;
+              height: 32px;
+              background-image: url('../img/bottom-part/cartIconMobile.png');
+            }
+          }
+        }
+      }
     }
   }
   #footer {
@@ -1213,6 +1352,26 @@
       width: 90%;
     }
   }
+  #camera {
+    .content {
+      .cameraSlider {
+        .visual-camera {
+          img {
+            max-width: 310px;
+          }
+        }
+      }
+    }
+    .inBox {
+      .inBox-cnt {
+        .feature {
+          h4 {
+            margin: 15px 0;
+          }
+        }
+      }
+    }
+  }
   #footer {
     .column {
       width: 50%;
@@ -1236,6 +1395,36 @@
     }
     .col-md-10 {
       width: 90%;
+    }
+  }
+  #camera {
+    .col-md-4 {
+      width: 40%;
+    }
+    .col-md-offset-1 {
+      margin-left: 3%;
+    }
+    .content {
+      .buy-block {
+        .title {
+          .pxToEm(68);
+          .price {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .inBox {
+      .inBox-cnt {
+        .feature {
+          h4 {
+            margin: 15px 0;
+          }
+          img {
+            max-width: 100px;
+          }
+        }
+      }
     }
   }
   #footer {
@@ -1287,9 +1476,18 @@
   }
   #speTech {
     height: 100vh;
-    padding: 80px 0;
+    padding: 60px 0;
   }
   #camera {
+    .content {
+      .cameraSlider {
+        .visual-camera {
+          img {
+            max-width: 310px;
+          }
+        }
+      }
+    }
     .inBox {
       .inBox-cnt {
         .feature {
@@ -1320,6 +1518,14 @@
       &.logo-content {
         width: 30%;
       }
+    }
+  }
+  #speTech {
+    .col-lg-8 {
+      width: 83.3333%;
+    }
+    .col-lg-offset-2 {
+      margin-left: 8.3333%;
     }
   }
 }
@@ -1379,7 +1585,7 @@
 //    display: block !important;
 //  }
 //}
-//#sendApp, #slideImg2 {
+//#slideImg2 {
 //  &.section {
 //    display: table !important;
 //  }

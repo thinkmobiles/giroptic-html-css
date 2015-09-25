@@ -3124,15 +3124,69 @@ button {
 #camera .content > div:nth-child(2) {
   padding: 0;
 }
+#camera .content .hideMobile {
+  display: block !important;
+}
+#camera .content .visibleMobile {
+  text-align: center;
+  display: none !important;
+}
+#camera .content .visibleMobile .stamp {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Zona Pro Bold", sans-serif;
+  font-size: 1.6em;
+  color: #ffffff;
+  background-color: #4b4b4b;
+  padding: 3px 9px;
+}
+#camera .content .visibleMobile .title {
+  color: #4b4b4b;
+  margin: 0 0 0.35em 0;
+  line-height: 0.85em;
+  font-weight: 100;
+  font-family: "Zona-Light", sans-serif;
+  font-size: 7.5em;
+}
+#camera .content .visibleMobile .price {
+  font-weight: 100;
+  font-family: "Zona-Light", sans-serif;
+  font-size: 24px;
+}
 #camera .content .cameraSlider {
   height: 100%;
+  width: 100%;
+  display: table;
   position: relative;
   text-align: center;
 }
 #camera .content .cameraSlider .visual-camera {
-  display: block;
-  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+#camera .content .cameraSlider .visual-camera img {
+  max-width: 410px;
   width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+}
+#camera .content .controls a {
+  position: absolute;
+  content: '';
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  margin-top: -30px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+#camera .content .controls .btn-prev {
+  background-image: url('../img/bottom-part/control-prev.png');
+  left: 20px;
+}
+#camera .content .controls .btn-next {
+  background-image: url('../img/bottom-part/control-next.png');
+  right: 20px;
 }
 #camera .content .points {
   position: absolute;
@@ -3183,7 +3237,7 @@ button {
   margin: 0 0 0.35em 0;
   line-height: 0.85em;
   font-weight: 100;
-  font-family: "Zona Pro", sans-serif;
+  font-family: "Zona-Light", sans-serif;
   font-size: 7.4em;
 }
 #camera .content .buy-block .title .price {
@@ -3288,7 +3342,7 @@ button {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-#camera .inBox #inBoxToggle span {
+#camera .inBox #inBoxToggle span.icon-bar {
   display: block;
   width: 36px;
   height: 4px;
@@ -3297,6 +3351,10 @@ button {
 }
 #camera .inBox #inBoxToggle .icon-bar + .icon-bar {
   margin-top: 6px;
+}
+#camera .inBox #inBoxToggle .glyphicon-remove {
+  font-size: 2.4em;
+  color: #44bbff;
 }
 #camera .inBox .inBox-collapse {
   display: block;
@@ -3528,9 +3586,18 @@ button {
   background-position: center center;
   background-size: cover;
 }
+@media (max-width: 750px) {
+  #appSlider {
+    min-height: 1050px !important;
+  }
+  #appSlider .app-desc {
+    width: 72%;
+    margin-left: 14%;
+  }
+}
 @media (max-width: 768px) {
   #appSlider {
-    min-height: 1000px;
+    min-height: 1050px;
   }
   #appSlider .app-desc {
     width: 86%;
@@ -3573,6 +3640,64 @@ button {
   }
   #sendApp:before {
     background-size: 100% 100%;
+  }
+  #camera .inBox.col-sm-6 {
+    width: 100%;
+  }
+  #camera .inBox .inBox-cnt h2 {
+    text-align: center;
+    font-size: 3.6em;
+    margin: 40px 0 70px 0;
+  }
+  #camera .content > .col-sm-6 {
+    width: 100%;
+    height: auto;
+    padding: 0 15px !important;
+  }
+  #camera .content > .col-sm-5 {
+    width: 78%;
+    height: auto;
+    margin-left: 12%;
+    padding: 0 15px !important;
+  }
+  #camera .content .hideMobile {
+    display: none !important;
+  }
+  #camera .content .visibleMobile {
+    display: block !important;
+  }
+  #camera .content .cameraSlider .visual-camera {
+    padding-top: 10px;
+    padding-bottom: 60px;
+  }
+  #camera .content .cameraSlider .visual-camera img {
+    max-width: 310px;
+  }
+  #camera .content .cameraSlider .points {
+    bottom: 10px;
+  }
+  #camera .content .buy-block .subtitle {
+    margin: 10px 0 20px 0;
+  }
+  #camera .content .buy-block .subtitle,
+  #camera .content .buy-block .description {
+    text-align: center;
+  }
+  #camera .content .buy-block .buy {
+    text-align: center;
+  }
+  #camera .content .buy-block .buy .btn-buy {
+    font-size: 3em;
+    width: 305px;
+    height: 62px;
+    padding: 10px 50px 10px 90px;
+  }
+  #camera .content .buy-block .buy .btn-buy:before {
+    left: 30px;
+    top: 14px;
+    width: 33px;
+    height: 32px;
+    background-image: url('../img/bottom-part/cartIconMobile.png');
   }
   #footer .follow-us {
     padding-bottom: 40px;
@@ -3638,6 +3763,12 @@ button {
   #speTech .col-md-10 {
     width: 90%;
   }
+  #camera .content .cameraSlider .visual-camera img {
+    max-width: 310px;
+  }
+  #camera .inBox .inBox-cnt .feature h4 {
+    margin: 15px 0;
+  }
   #footer .column {
     width: 50%;
     padding: 0 15px;
@@ -3660,6 +3791,24 @@ button {
   }
   #speTech .col-md-10 {
     width: 90%;
+  }
+  #camera .col-md-4 {
+    width: 40%;
+  }
+  #camera .col-md-offset-1 {
+    margin-left: 3%;
+  }
+  #camera .content .buy-block .title {
+    font-size: 6.8em;
+  }
+  #camera .content .buy-block .title .price {
+    font-size: 20px;
+  }
+  #camera .inBox .inBox-cnt .feature h4 {
+    margin: 15px 0;
+  }
+  #camera .inBox .inBox-cnt .feature img {
+    max-width: 100px;
   }
   #footer .col-md-10 {
     width: 100%;
@@ -3698,7 +3847,10 @@ button {
   }
   #speTech {
     height: 100vh;
-    padding: 80px 0;
+    padding: 60px 0;
+  }
+  #camera .content .cameraSlider .visual-camera img {
+    max-width: 310px;
   }
   #camera .inBox .inBox-cnt .feature h4 {
     margin: 15px 0;
@@ -3716,6 +3868,12 @@ button {
   }
   #footer .column.logo-content {
     width: 30%;
+  }
+  #speTech .col-lg-8 {
+    width: 83.3333%;
+  }
+  #speTech .col-lg-offset-2 {
+    margin-left: 8.3333%;
   }
 }
 @media (min-width: 1281px) {
