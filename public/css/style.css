@@ -826,7 +826,7 @@ button {
 }
 #home .content .buy-block .title {
   color: #ffffff;
-  font-family: "Zona Pro", sans-serif;
+  font-family: "Zona-Light", sans-serif;
   margin: 0 0 0.35em 0;
   line-height: 0.85em;
   font-weight: 100;
@@ -1201,7 +1201,8 @@ button {
   margin: 0 auto;
   left: 0;
   right: 0;
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 #player .tabs .hvr-underline-from-center:before {
   z-index: 9999;
@@ -1344,6 +1345,54 @@ button {
   color: #fff;
 }
 /*== End Gallery ===============================*/
+@media (min-width: 1024px) {
+  #home-navbar .logo a {
+    font-size: 1.9em;
+    line-height: 31px;
+  }
+  .home-menu ul li a {
+    font-size: 1.4em;
+    line-height: 31px;
+  }
+  .btn-buy span {
+    top: 0;
+    -webkit-transition: top 500ms;
+    -moz-transition: top 500ms;
+    -o-transition: top 500ms;
+    transition: top 500ms;
+    display: block;
+    width: 180px;
+    margin: 10px auto;
+    height: 40px;
+    font-weight: 600;
+    border-radius: 100px;
+    text-transform: uppercase;
+    color: #44bbff;
+    padding: 5px 20px 5px 50px;
+    border: 2px solid;
+    border-color: #44bbff;
+    position: relative;
+  }
+  .btn-buy span:before {
+    position: absolute;
+    content: '';
+    top: 9px;
+    left: 20px;
+    width: 19px;
+    height: 19px;
+    background: url('../img/shopping-cart-blue.png') no-repeat 0 0;
+  }
+  .btn-buy span.active {
+    color: #4b4b4b;
+    border-color: #4b4b4b;
+  }
+  .btn-buy span.active:before {
+    background: url('../img/shopping-cart.png') no-repeat 0 0;
+  }
+  .btn-buy:hover span {
+    top: -50px;
+  }
+}
 #function {
   background-color: #ffffff;
   position: relative;
