@@ -52,6 +52,14 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
+    $('#camera .visual-camera > .slider').owlCarousel({
+        animateOut: 'slideOutDown',
+        animateIn: 'flipInX',
+        items:1,
+        margin:30,
+        stagePadding:30,
+        smartSpeed:450
+    });
 });
 
 // --- Accessories block
