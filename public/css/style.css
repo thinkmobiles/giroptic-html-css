@@ -3174,7 +3174,9 @@ button {
 #camera .content > div {
   position: relative;
   height: 100%;
-  max-height: 660px;
+}
+#camera .content > div:nth-child(1) {
+  overflow: hidden;
 }
 #camera .content > div:nth-child(2) {
   padding: 0;
@@ -3216,24 +3218,29 @@ button {
   text-align: center;
 }
 #camera .content .cameraSlider .visual-camera {
+  overflow: hidden;
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
+}
+#camera .content .cameraSlider .visual-camera .slider {
+  display: inline-block;
+  max-width: 610px;
 }
 #camera .content .cameraSlider .visual-camera img {
-  max-width: 410px;
+  max-width: 360px;
   width: 100%;
   vertical-align: middle;
   display: inline-block;
 }
 #camera .content .owl-stage-outer {
-  overflow: hidden;
-  max-width: 810px;
+  padding: 20px 0;
 }
 #camera .content .owl-controls {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: 0;
+  padding-top: 25px;
   text-align: center;
   z-index: 200;
 }
@@ -3249,6 +3256,28 @@ button {
 }
 #camera .content .owl-controls .owl-dot.active {
   border-color: #44bbff;
+  background: transparent;
+}
+#camera .content .owl-controls .owl-dot:focus,
+#camera .content .owl-controls .owl-dot:active {
+  background-color: #44bbff;
+  border-color: #44bbff;
+  position: relative;
+  width: 17px;
+  height: 17px;
+  z-index: 3;
+}
+#camera .content .owl-controls .owl-dot:focus:before,
+#camera .content .owl-controls .owl-dot:active:before {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  width: 31px;
+  height: 31px;
+  top: -9px;
+  left: -9px;
+  border-radius: 100%;
+  box-shadow: inset 0 0 10px 10px rgba(68, 187, 255, 0.3);
   background: transparent;
 }
 #camera .content .controls a {
@@ -3999,6 +4028,12 @@ button {
   }
   #footer .column.logo-content {
     width: 30%;
+  }
+}
+@media (min-width: 1366px) {
+  #speTech {
+    height: 100vh;
+    padding: 60px 0;
   }
 }
 @media (min-width: 768px) {
