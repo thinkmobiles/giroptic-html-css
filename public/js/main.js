@@ -52,9 +52,11 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
+    //camera
     $('#camera .visual-camera > .slider').owlCarousel({
         animateOut: 'bounceOutUp',
         animateIn: 'bounceInUp',
+        nav: true,
         items:1,
         loop: true,
         smartSpeed:1200

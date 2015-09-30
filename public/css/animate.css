@@ -879,61 +879,136 @@ Copyright (c) 2015 Daniel Eden
   animation-name: bounceInRight;
 }
 
+/*@-webkit-keyframes bounceInUp {*/
+  /*from, 60%, 75%, 90%, to {*/
+    /*-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1  .000);*/
+    /*animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);*/
+  /*}*/
+
+  /*from {*/
+    /*opacity: 0;*/
+    /*-webkit-transform: translate3d(0, 3000px, 0);*/
+    /*transform: translate3d(0, 3000px, 0);*/
+  /*}*/
+
+  /*60% {*/
+    /*opacity: 1;*/
+    /*-webkit-transform: translate3d(0, -20px, 0);*/
+    /*transform: translate3d(0, -20px, 0);*/
+  /*}*/
+
+  /*75% {*/
+    /*-webkit-transform: translate3d(0, 10px, 0);*/
+    /*transform: translate3d(0, 10px, 0);*/
+  /*}*/
+
+  /*90% {*/
+    /*-webkit-transform: translate3d(0, -5px, 0);*/
+    /*transform: translate3d(0, -5px, 0);*/
+  /*}*/
+
+  /*to {*/
+    /*-webkit-transform: translate3d(0, 0, 0);*/
+    /*transform: translate3d(0, 0, 0);*/
+  /*}*/
+/*}*/
+
+/*@keyframes bounceInUp {*/
+  /*from, 60%, 75%, 90%, to {*/
+    /*-webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);*/
+    /*animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);*/
+  /*}*/
+
+  /*from {*/
+    /*opacity: 0;*/
+    /*-webkit-transform: translate3d(0, 3000px, 0);*/
+    /*transform: translate3d(0, 3000px, 0);*/
+  /*}*/
+
+  /*60% {*/
+    /*opacity: 1;*/
+    /*-webkit-transform: translate3d(0, -20px, 0);*/
+    /*transform: translate3d(0, -20px, 0);*/
+  /*}*/
+
+  /*75% {*/
+    /*-webkit-transform: translate3d(0, 10px, 0);*/
+    /*transform: translate3d(0, 10px, 0);*/
+  /*}*/
+
+  /*90% {*/
+    /*-webkit-transform: translate3d(0, -5px, 0);*/
+    /*transform: translate3d(0, -5px, 0);*/
+  /*}*/
+
+  /*to {*/
+    /*-webkit-transform: translate3d(0, 0, 0);*/
+    /*transform: translate3d(0, 0, 0);*/
+  /*}*/
+/*}*/
+
+/*.bounceInUp {*/
+  /*-webkit-animation-name: bounceInUp;*/
+  /*animation-name: bounceInUp;*/
+  /*animation-duration: 800ms;*/
+  /*animation-delay: 250ms;*/
+/*}*/
+
 @-webkit-keyframes bounceInUp {
   from, 60%, 75%, 90%, to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1  .000);
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
   }
 
   from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 3000px, 0);
-    transform: translate3d(0, 3000px, 0);
+  opacity: 0;
+  -webkit-transform: translate3d(0, 3000px, 0);
+  transform: translate3d(0, 3000px, 0);
   }
 
   60% {
-    opacity: 1;
-    -webkit-transform: translate3d(0, -20px, 0);
-    transform: translate3d(0, -20px, 0);
+  opacity: 1;
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
   }
 
   75% {
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
+  -webkit-transform: translate3d(0, 0px, 0);
+  transform: translate3d(0, 0px, 0);
   }
 
   90% {
-    -webkit-transform: translate3d(0, -5px, 0);
-    transform: translate3d(0, -5px, 0);
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
   }
 
   to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes bounceInUp {
   from, 60%, 75%, 90%, to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
   }
 
   from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 3000px, 0);
-    transform: translate3d(0, 3000px, 0);
+  opacity: 0;
+  -webkit-transform: translate3d(0, 3000px, 0);
+  transform: translate3d(0, 3000px, 0);
   }
 
   60% {
     opacity: 1;
-    -webkit-transform: translate3d(0, -20px, 0);
-    transform: translate3d(0, -20px, 0);
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
   }
 
   75% {
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
+    -webkit-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
   }
 
   90% {
@@ -948,10 +1023,10 @@ Copyright (c) 2015 Daniel Eden
 }
 
 .bounceInUp {
-  -webkit-animation-name: bounceInUp;
-  animation-name: bounceInUp;
-  animation-duration: 800ms;
-  animation-delay: 250ms;
+-webkit-animation-name: bounceInUp;
+animation-name: bounceInUp;
+animation-duration: 800ms;
+animation-delay: 250ms;
 }
 
 @-webkit-keyframes bounceOut {
@@ -1106,16 +1181,58 @@ Copyright (c) 2015 Daniel Eden
   animation-name: bounceOutRight;
 }
 
+/*@-webkit-keyframes bounceOutUp {*/
+  /*20% {*/
+    /*-webkit-transform: translate3d(0, -10px, 0);*/
+    /*transform: translate3d(0, -10px, 0);*/
+  /*}*/
+
+  /*40%, 45% {*/
+    /*opacity: 1;*/
+    /*-webkit-transform: translate3d(0, 20px, 0);*/
+    /*transform: translate3d(0, 20px, 0);*/
+  /*}*/
+
+  /*to {*/
+    /*opacity: 0;*/
+    /*-webkit-transform: translate3d(0, -2000px, 0);*/
+    /*transform: translate3d(0, -2000px, 0);*/
+  /*}*/
+/*}*/
+
+/*@keyframes bounceOutUp {*/
+  /*20% {*/
+    /*-webkit-transform: translate3d(0, -10px, 0);*/
+    /*transform: translate3d(0, -10px, 0);*/
+  /*}*/
+
+  /*40%, 45% {*/
+    /*opacity: 1;*/
+    /*-webkit-transform: translate3d(0, 20px, 0);*/
+    /*transform: translate3d(0, 20px, 0);*/
+  /*}*/
+
+  /*to {*/
+    /*opacity: 0;*/
+    /*-webkit-transform: translate3d(0, -2000px, 0);*/
+    /*transform: translate3d(0, -2000px, 0);*/
+  /*}*/
+/*}*/
+
+/*.bounceOutUp {*/
+  /*-webkit-animation-name: bounceOutUp;*/
+  /*animation-name: bounceOutUp;*/
+/*}*/
 @-webkit-keyframes bounceOutUp {
   20% {
-    -webkit-transform: translate3d(0, -10px, 0);
-    transform: translate3d(0, -10px, 0);
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
   }
 
   40%, 45% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 20px, 0);
-    transform: translate3d(0, 20px, 0);
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
   }
 
   to {
@@ -1127,14 +1244,14 @@ Copyright (c) 2015 Daniel Eden
 
 @keyframes bounceOutUp {
   20% {
-    -webkit-transform: translate3d(0, -10px, 0);
-    transform: translate3d(0, -10px, 0);
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
   }
 
   40%, 45% {
     opacity: 1;
-    -webkit-transform: translate3d(0, 20px, 0);
-    transform: translate3d(0, 20px, 0);
+    -webkit-transform: translate3d(0, 15px, 0);
+    transform: translate3d(0, 15px, 0);
   }
 
   to {
