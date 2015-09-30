@@ -1772,6 +1772,7 @@ button {
   max-height: 514px;
   min-height: 454px;
   position: relative;
+  background-size: cover !important;
 }
 #patchwork .patchwork-left-block img,
 #patchwork .patchwork-right-block img {
@@ -1812,7 +1813,9 @@ button {
 }
 #accessories {
   height: 100vh;
+  overflow: hidden;
   position: relative;
+  width: 1680px;
   z-index: 6;
 }
 #accessories .bg-accessories {
@@ -1894,76 +1897,128 @@ button {
 #accessories .accessories-topImage a:active:before {
   content: "\e072";
 }
+#accessories .cameraImage {
+  position: absolute;
+  left: 50%;
+  width: auto;
+  top: 165px;
+  margin-left: -127px;
+  z-index: 10;
+}
 #accessories .accessories-carousel {
+  position: relative;
+}
+#accessories .accessories-carousel > div:first-child {
+  display: block;
+  position: relative;
+}
+#accessories .accessories-carousel > div:first-child .owl-stage-outer {
+  width: 1680px;
+}
+#accessories .accessories-carousel > div:first-child .owl-stage {
+  overflow-y: hidden;
+}
+#accessories .accessories-carousel > div:first-child .topImages {
+  -webkit-border-bottom-right-radius: 90% 100px;
+  -moz-border-bottom-right-radius: 90% 100px;
+  border-bottom-right-radius: 90% 100px;
+  -webkit-border-bottom-left-radius: 90% 100px;
+  -moz-border-bottom-left-radius: 90% 100px;
+  border-bottom-left-radius: 90% 100px;
+  height: 470px;
+  z-index: 1;
+  position: relative;
+  transition: background-image linear 3s;
+}
+#accessories .accessories-carousel > div:first-child .topImages img {
+  position: absolute;
+  left: 50%;
+  width: auto;
+  top: 370px;
+  margin-left: -100px;
+}
+#accessories .accessories-carousel > div:first-child .bgrImg3 img {
+  margin-left: -166px;
+}
+#accessories .accessories-carousel > div:first-child .smallText {
   text-align: center;
-  margin-top: -240px;
 }
-#accessories .accessories-carousel ul {
-  list-style: none;
+#accessories .accessories-carousel > div:first-child .smallText p {
+  color: #a0a0a0;
+  font-size: 1.6em;
+  font-family: "Zona Pro", sans-serif;
+  margin: 240px 0 41px;
+  line-height: 2em;
 }
-#accessories .accessories-carousel ul li {
-  display: inline-block;
-  margin-right: 9px;
+#accessories .accessories-carousel .owl-controls {
+  display: block;
+  z-index: 5;
+  position: absolute;
+  top: 640px;
+  left: 50%;
+  margin-left: -270px;
 }
-#accessories .accessories-carousel ul li a {
+#accessories .accessories-carousel .owl-controls .owl-dot {
   color: #d2d2d2;
   border: 2px solid #d2d2d2;
   -webkit-border-radius: 19px;
   -moz-border-radius: 19px;
   border-radius: 19px;
   display: block;
-  padding: 0 42px 0 17px;
+  width: 165px;
+  height: 38px;
+  float: left;
+  margin-right: 15px;
   font-family: "Zona Pro SemiBold", sans-serif;
 }
-#accessories .accessories-carousel ul li a .cls-1 {
+#accessories .accessories-carousel .owl-controls .owl-dot .cls-1 {
   fill: #d2d2d2;
 }
-#accessories .accessories-carousel ul li a:hover,
-#accessories .accessories-carousel ul li a.active {
+#accessories .accessories-carousel .owl-controls .owl-dot:hover,
+#accessories .accessories-carousel .owl-controls .owl-dot.active {
   color: #44bbff;
   border: 2px solid #44bbff;
 }
-#accessories .accessories-carousel ul li a:hover .cls-1,
-#accessories .accessories-carousel ul li a.active .cls-1 {
+#accessories .accessories-carousel .owl-controls .owl-dot:hover .cls-1,
+#accessories .accessories-carousel .owl-controls .owl-dot.active .cls-1 {
   fill: #44bbff;
 }
-#accessories .accessories-carousel ul li a svg {
-  float: left;
-  margin-top: 4px;
-  margin-right: 40px;
+#accessories .accessories-carousel .owl-controls .owl-dot:before {
+  content: '';
 }
-#accessories .accessories-carousel ul li:last-child a {
-  padding-right: 22px;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(1):before {
+  background: url("../img/accessories/cup.svg");
+  width: 22px;
+  height: 17px;
 }
-#accessories .accessories-carousel ul li:last-child a svg {
-  margin-right: 17px;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(2):before {
+  background: url("../img/accessories/ico.svg");
+  width: 14px;
+  height: 17px;
 }
-#accessories .accessories-carousel ul li.current a {
-  color: #44bbff;
-  border: 2px solid #44bbff;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(3):before {
+  background: url("../img/accessories/ico.svg");
+  width: 14px;
+  height: 17px;
 }
-#accessories .accessories-carousel ul li.current a .cls-1 {
-  fill: #44bbff;
+#accessories .accessories-carousel .owl-controls .owl-dot:after {
+  font-size: 14px;
+  line-height: 33px;
 }
-#accessories .accessories-carousel div {
-  display: none;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(1):after {
+  content: 'Battery';
+  padding-left: 64px;
 }
-#accessories .accessories-carousel div.current {
-  display: block;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(2):after {
+  content: 'Lightbud';
+  padding-left: 64px;
 }
-#accessories .accessories-carousel div p {
-  color: #a0a0a0;
-  font-size: 1.6em;
-  font-family: "Zona Pro", sans-serif;
-  margin: 31px 0 41px;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(3) {
+  width: 225px;
 }
-#accessories .accessories-carousel div a {
-  color: #44bbff;
-  text-decoration: underline;
-  font-size: 1.6em;
-}
-#accessories .accessories-carousel div a:hover {
-  color: #d2d2d2;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(3):after {
+  content: 'Ethernet Streaming';
+  padding-left: 48px;
 }
 #slideImg {
   height: 100vh;
@@ -3158,7 +3213,6 @@ button {
 }
 #speTech .speTech .description {
   position: relative;
-  top: 10%;
   transition: all 0.2s ease 0s;
 }
 #speTech .owl-carousel .owl-stage-outer {
@@ -3250,7 +3304,9 @@ button {
 #camera .content > div {
   position: relative;
   height: 100%;
-  max-height: 660px;
+}
+#camera .content > div:nth-child(1) {
+  overflow: hidden;
 }
 #camera .content > div:nth-child(2) {
   padding: 0;
@@ -3292,16 +3348,36 @@ button {
   text-align: center;
 }
 #camera .content .cameraSlider .visual-camera {
+  overflow: hidden;
   display: table-cell;
   vertical-align: middle;
+  text-align: center;
+}
+#camera .content .cameraSlider .visual-camera .slider {
+  display: inline-block;
+  max-width: 610px;
 }
 #camera .content .cameraSlider .visual-camera img {
-  max-width: 410px;
+  max-width: 360px;
   width: 100%;
   vertical-align: middle;
   display: inline-block;
 }
-#camera .content .controls a {
+#camera .content .owl-stage-outer {
+  padding: 20px 0;
+}
+#camera .content .owl-controls {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  padding-top: 25px;
+  text-align: center;
+  z-index: 200;
+}
+#camera .content .owl-controls .owl-nav {
+  display: none;
+}
+#camera .content .owl-controls .owl-nav > div {
   position: absolute;
   content: '';
   width: 60px;
@@ -3310,28 +3386,17 @@ button {
   margin-top: -30px;
   background-position: 0 0;
   background-repeat: no-repeat;
+  text-indent: -10000px;
 }
-#camera .content .controls .btn-prev {
+#camera .content .owl-controls .owl-nav .owl-prev {
   background-image: url('../img/bottom-part/control-prev.png');
   left: 20px;
 }
-#camera .content .controls .btn-next {
+#camera .content .owl-controls .owl-nav .owl-next {
   background-image: url('../img/bottom-part/control-next.png');
   right: 20px;
 }
-#camera .content .points {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-}
-#camera .content .points ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-#camera .content .points ul li {
+#camera .content .owl-controls .owl-dot {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -3341,8 +3406,31 @@ button {
   margin: 0 5px;
   border-radius: 100%;
 }
-#camera .content .points ul li.active {
+#camera .content .owl-controls .owl-dot.active {
   border-color: #44bbff;
+  background: transparent;
+}
+#camera .content .owl-controls .owl-dot:focus,
+#camera .content .owl-controls .owl-dot:active {
+  background-color: #44bbff;
+  border-color: #44bbff;
+  position: relative;
+  width: 17px;
+  height: 17px;
+  margin: 0 3px;
+  z-index: 3;
+}
+#camera .content .owl-controls .owl-dot:focus:before,
+#camera .content .owl-controls .owl-dot:active:before {
+  z-index: -1;
+  position: absolute;
+  content: '';
+  width: 31px;
+  height: 31px;
+  top: -9px;
+  left: -9px;
+  border-radius: 100%;
+  box-shadow: inset 0 0 10px 10px rgba(68, 187, 255, 0.3);
   background: transparent;
 }
 #camera .content .buy-block {
@@ -3456,7 +3544,6 @@ button {
   left: 0;
   display: block;
   height: 100%;
-  z-index: 120;
 }
 #camera .inBox .inBox-btn {
   position: absolute;
@@ -3464,7 +3551,7 @@ button {
   margin-top: 35px;
   top: 0;
   left: 0;
-  z-index: 120;
+  z-index: 220;
 }
 #camera .inBox #inBoxToggle {
   float: left;
@@ -3493,6 +3580,7 @@ button {
   width: 100%;
   position: absolute;
   top: 0;
+  z-index: 210;
   left: -100%;
 }
 #camera .inBox .inBox-cnt {
@@ -3794,18 +3882,19 @@ button {
   #camera .content .hideMobile {
     display: none !important;
   }
-  #camera .content .visibleMobile {
+  #camera .content .visibleMobile,
+  #camera .content .owl-nav {
     display: block !important;
+  }
+  #camera .content .owl-controls {
+    position: static;
   }
   #camera .content .cameraSlider .visual-camera {
     padding-top: 10px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
   #camera .content .cameraSlider .visual-camera img {
     max-width: 310px;
-  }
-  #camera .content .cameraSlider .points {
-    bottom: 10px;
   }
   #camera .content .buy-block .subtitle {
     margin: 10px 0 20px 0;
@@ -4006,6 +4095,19 @@ button {
   #speTech .col-lg-offset-2 {
     margin-left: 8.3333%;
   }
+  #camera .content .cameraSlider .visual-camera img {
+    max-width: 310px;
+  }
+  #camera .content > div:nth-child(2) {
+    margin-left: 5%;
+    width: 33%;
+  }
+  #camera .inBox .inBox-cnt .feature h4 {
+    margin: 10px 0;
+  }
+  #camera .inBox .inBox-cnt .feature img {
+    max-width: 100px;
+  }
 }
 @media (min-width: 1281px) {
   #appSlider {
@@ -4035,6 +4137,31 @@ button {
   }
   #footer .column.logo-content {
     width: 30%;
+  }
+}
+@media (min-width: 1281px) and (max-width: 1366px) {
+  #speTech {
+    height: 100vh;
+    padding: 60px 0;
+  }
+  #speTech .col-lg-8 {
+    width: 70.6667%;
+    margin-left: 13.6667%;
+  }
+  #speTech .speTech {
+    padding-bottom: 20px;
+  }
+  #camera .content .cameraSlider .visual-camera img {
+    max-width: 310px;
+  }
+  #camera .content > div:nth-child(2) {
+    width: 32%;
+  }
+  #camera .inBox .inBox-cnt .feature h4 {
+    margin: 10px 0;
+  }
+  #camera .inBox .inBox-cnt .feature img {
+    max-width: 100px;
   }
 }
 @media (min-width: 768px) {

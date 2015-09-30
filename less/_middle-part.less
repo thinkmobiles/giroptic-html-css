@@ -73,6 +73,7 @@
     max-height: 514px;
     min-height: 454px;
     position: relative;
+    background-size: cover !important;
     img {
       width: auto;
       top: -150px;
@@ -113,7 +114,9 @@
 
 #accessories {
   height: 100vh;
+  overflow: hidden;
   position: relative;
+  width: 1680px;
   z-index: 6;
 
   .bg-accessories {
@@ -193,72 +196,217 @@
       }
     }
   }
-  .accessories-carousel{
-    text-align: center;
-    margin-top: -240px;
-    ul{
-      list-style: none;
-      li{
-        display: inline-block;
-        margin-right: 9px;
-        a{
-          color: @accessories-link;
-          border: 2px solid @accessories-link;
-          .border-radius(19px);
-          display: block;
-          padding: 0 42px 0 17px;
-          font-family: "Zona Pro SemiBold", sans-serif;
-          .cls-1{
-            fill: @accessories-link;
-          }
-          &:hover,
-          &.active{
-            color: @accessories-link-h;
-            border: 2px solid @accessories-link-h;
-            .cls-1{
-              fill: @accessories-link-h;
-            }
-          }
-          svg{
-            float: left;
-            margin-top: 4px;
-            margin-right: 40px;
+  //.accessories-carousel{
+  //  text-align: center;
+  //  margin-top: -240px;
+  //  ul{
+  //    list-style: none;
+  //    li{
+  //      display: inline-block;
+  //      margin-right: 9px;
+  //      a{
+  //        color: @accessories-link;
+  //        border: 2px solid @accessories-link;
+  //        .border-radius(19px);
+  //        display: block;
+  //        padding: 0 42px 0 17px;
+  //        font-family: "Zona Pro SemiBold", sans-serif;
+  //        .cls-1{
+  //          fill: @accessories-link;
+  //        }
+  //        &:hover,
+  //        &.active{
+  //          color: @accessories-link-h;
+  //          border: 2px solid @accessories-link-h;
+  //          .cls-1{
+  //            fill: @accessories-link-h;
+  //          }
+  //        }
+  //        svg{
+  //          float: left;
+  //          margin-top: 4px;
+  //          margin-right: 40px;
+  //        }
+  //      }
+  //      &:last-child a{
+  //        padding-right: 22px;
+  //        svg{
+  //          margin-right: 17px;
+  //        }
+  //      }
+  //      &.current{
+  //        a{
+  //          color: @accessories-link-h;
+  //          border: 2px solid @accessories-link-h;
+  //          .cls-1{
+  //            fill: @accessories-link-h;
+  //          }
+  //        }
+  //      }
+  //    }
+  //  }
+  //  div {
+  //    display: none;
+  //    &.current{
+  //      display: block;
+  //    }
+  //    p {
+  //      color: @accessories-p;
+  //      .pxToEm(16);
+  //      font-family: "Zona Pro", sans-serif;
+  //      margin: 31px 0 41px;
+  //    }
+  //    a {
+  //      color: @accessories-link-h;
+  //      text-decoration: underline;
+  //      .pxToEm(16);
+  //      &:hover{
+  //        color: @accessories-link;
+  //      }
+  //    }
+  //  }
+  //}
+  .cameraImage{
+    position: absolute;
+    left: 50%;
+    width: auto;
+    top: 165px;
+    margin-left: -127px;
+    z-index: 10;
+  }
+  .accessories-carousel {
+    position: relative;
+    //&:before{
+    //  background: red none repeat scroll 0 0;
+    //  border-bottom-left-radius: 100% 100px;
+    //  border-bottom-right-radius: 100% 100px;
+    //  content: "";
+    //  display: block;
+    //  height: 100px;
+    //  position: absolute;
+    //  top: 370px;
+    //  width: 100%;
+    //  z-index: 3;
+    //}
+    //&:after{
+    //  background: blue;
+    //  content: "";
+    //  display: block;
+    //  height: 100px;
+    //  position: absolute;
+    //  top: 370px;
+    //  width: 100%;
+    //  z-index: 2;
+    //}
+    & > div{
+      &:first-child{
+        display: block;
+        position: relative;
+        .owl-stage-outer{
+          width: 1680px;
+        }
+        .owl-stage {
+          overflow-y: hidden;
+        }
+        .owl-stage-outer{
+
+        }
+        .topImages{
+          .border-radius-bottom-right(90% 100px);
+          .border-radius-bottom-left(90% 100px);
+          height: 470px;
+          z-index: 1;
+          position: relative;
+          transition: background-image linear 3s;
+          img{
+            position: absolute;
+            left: 50%;
+            width: auto;
+            top: 370px;
+            margin-left: -100px;
           }
         }
-        &:last-child a{
-          padding-right: 22px;
-          svg{
-            margin-right: 17px;
+        .bgrImg3{
+          img{
+            margin-left: -166px;
           }
         }
-        &.current{
-          a{
-            color: @accessories-link-h;
-            border: 2px solid @accessories-link-h;
-            .cls-1{
-              fill: @accessories-link-h;
-            }
+        .smallText{
+          text-align: center;
+          p{
+            color: @accessories-p;
+            .pxToEm(16);
+            font-family: "Zona Pro", sans-serif;
+            margin: 240px 0 41px;
+            line-height: 2em;
           }
         }
       }
     }
-    div {
-      display: none;
-      &.current{
+    .owl-controls{
+      display: block;
+      z-index: 5;
+      position: absolute;
+      top: 640px;
+      left: 50%;
+      margin-left: -270px;
+      .owl-dot{
+        color: @accessories-link;
+        border: 2px solid @accessories-link;
+        .border-radius(19px);
         display: block;
-      }
-      p {
-        color: @accessories-p;
-        .pxToEm(16);
-        font-family: "Zona Pro", sans-serif;
-        margin: 31px 0 41px;
-      }
-      a {
-        color: @accessories-link-h;
-        text-decoration: underline;
-        .pxToEm(16);
-        &:hover{
-          color: @accessories-link;
+        width: 165px;
+        height: 38px;
+        float: left;
+        margin-right: 15px;
+        font-family: "Zona Pro SemiBold", sans-serif;
+        .cls-1{
+          fill: @accessories-link;
+        }
+        &:hover,
+        &.active{
+          color: @accessories-link-h;
+          border: 2px solid @accessories-link-h;
+          .cls-1{
+            fill: @accessories-link-h;
+          }
+        }
+        &:before{
+          content: '';
+        }
+        &:nth-child(1):before{
+          background: url("../img/accessories/cup.svg");
+          width: 22px;
+          height: 17px;
+        }
+        &:nth-child(2):before{
+          background: url("../img/accessories/ico.svg");
+          width: 14px;
+          height: 17px;
+        }
+        &:nth-child(3):before{
+          background: url("../img/accessories/ico.svg");
+          width: 14px;
+          height: 17px;
+        }
+        &:after{
+          font-size: 14px;
+          line-height: 33px;
+        }
+        &:nth-child(1):after{
+          content: 'Battery';
+          padding-left: 64px;
+        }
+        &:nth-child(2):after{
+          content: 'Lightbud';
+          padding-left: 64px;
+        }
+        &:nth-child(3){
+          width: 225px;
+        }
+        &:nth-child(3):after{
+          content: 'Ethernet Streaming';
+          padding-left: 48px;
         }
       }
     }
