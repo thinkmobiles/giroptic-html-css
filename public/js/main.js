@@ -173,10 +173,3 @@ $('#inBoxToggle').click(function(){
     }
 });
 
-// --- Search Section
-$('#search-btn').bind('click', function(){
-    $('#search-block').animate({
-        opacity: '1',
-        zIndex: '1000'
-    }, 10);
-});

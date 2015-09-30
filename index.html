@@ -18,7 +18,15 @@
             <header id="header" class="giroptic-header" role="banner">
                 <nav id="navbar" role="menuitem" class="navbar">
                     <div class="toggle-navbar"></div>
-                     <ul class="col-lg-9 col-md-11 col-lg-offset-2 col-md-offset-1">
+                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                         <li class="item">
+                             <button type="button" id="inBoxItem" class="inBox-toggle">
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="glyphicon glyphicon-remove hidden"></span>
+                             </button>
+                        </li>
                         <li class="item">
                             <a href="#">
                                 <div>Discover</div>
@@ -83,30 +91,30 @@
                 <div class="container-fluid">
                     <div class="row section-nonactive">
                         <div class="home-first-page">
-                            <nav id="home-navbar" class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-11 col-sm-10" role="navigation">
-                                <div class="logo col-lg-2 col-md-2 col-sm-2">
-                                    <a href="#">Giroptic</a>
-                                </div>
-                                <div class="home-menu col-lg-9 col-md-9 col-sm-9">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Gallerie</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Download</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Accesoires</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Camera</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="search" class="search col-lg-1 col-md-1 col-sm-1">
-                                    <a href="#" id="search-btn"></a>
-                                </div>
-                            </nav>
+                            <!--&lt;!&ndash;<nav id="home-navbar" class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-11 col-sm-11" role="navigation">-->
+                                <!--<div class="logo col-lg-2 col-md-2 col-sm-2">-->
+                                    <!--<a href="#">Giroptic</a>-->
+                                <!--</div>-->
+                                <!--<div class="home-menu col-lg-9 col-md-9 col-sm-9">-->
+                                    <!--<ul>-->
+                                        <!--<li>-->
+                                            <!--<a href="#">Gallerie</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#">Download</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#">Accesoires</a>-->
+                                        <!--</li>-->
+                                        <!--<li>-->
+                                            <!--<a href="#">Camera</a>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash;<div id="search" class="search col-lg-1 col-md-1 col-sm-1">-->
+                                    <!--<a href="#" id="search-btn"></a>-->
+                                <!--</div>&ndash;&gt;-->
+                            <!--</nav>-->
                             <div class="home-first-page-bg is-min-height">
                                 <div class="first-page-contetn col-lg-6 col-md-6 col-sm-6 col-lg-offset-3 col-md-offset-3 col-sm-offset-3">
                                     <img src="./public/img/home/360Circle.png" id="circleCircle" class="cam-circle" alt="360 Cam"/>
@@ -124,8 +132,8 @@
                         </div>
                     </div>
                     <div class="row section-active is-min-height">
-                        <nav id="home-navbar" class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-10 col-sm-10" role="navigation">
-                            <div class="logo col-lg-2 col-md-2 col-sm-2">
+                        <nav id="home-navbar" class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-10 col-md-11 col-sm-11 col-xs-11" role="navigation">
+                            <div class="logo col-lg-2 col-md-2 col-sm-2 col-xs-2">
                                 <a href="#" class="imgSecondLogo">Giroptic</a>
                             </div>
                             <div class="home-menu col-lg-9 col-md-9 col-sm-9">
@@ -148,29 +156,33 @@
                                 <a href="#" id="search-btn"></a>
                             </div>
                         </nav>
-                        <div class="content col-lg-9 col-md-10 col-sm-9 col-lg-offset-1 col-md-offset-1">
-                            <div>
-                                <div class="visual-camera">
-                                    <img src="./public/img/home1.png" />
+                        <div class="content col-lg-9 col-md-10 col-sm-12 col-lg-offset-1 col-md-offset-1">
+                                <div>
+                                    <div class="visual-camera">
+                                        <img src="./public/img/home1.png" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                <div class="buy-block">
-                                    <div>
-                                        <p class="stamp">Giroptic</p>
-                                        <h1 class="title">360CAM</h1>
-                                        <h4 class="subtitle">Up. Down. All Around</h4>
-                                        <p class="description">Pre-order your GIROPTIC 360cam today and join the GIROPTIC community to forever change the way we capture and experience our world.</p>
-                                        <div class="buy">
-                                            <span class="price">399 €</span>
-                                            <button class="btn-buy">Buy it</button>
+                                <div>
+                                    <div class="buy-block">
+                                        <div>
+                                            <p class="stamp">Giroptic</p>
+                                            <h1 class="title">360CAM</h1>
+                                            <h4 class="subtitle">Up. Down. All Around</h4>
+                                            <p class="description">Pre-order your GIROPTIC 360cam today and join the GIROPTIC community to forever change the way we capture and experience our world.</p>
+                                            <div class="buy">
+                                                <span class="price">399 €</span>
+                                                <button class="btn-buy">Buy it</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="scroll">
-                                <p>Scroll to discover</p>
-                                <div class="scroll-btn"></div>
+                                <div>
+                                    <img src="./public/img/player1.png" alt="/"/>
+                                </div>
+                                <div class="scroll">
+                                    <p>Scroll to discover</p>
+                                    <div class="scroll-btn"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -186,7 +198,7 @@
                     <div id="thirdWave"></div>
                     <div id="fourthWave"></div>
                 </div>
-                <div class="tabs  col-sm-8 col-sm-offset-2">
+                <div class="tabs">
                     <div class="tab hvr-underline-from-center">
                         <span>Introducing the GIROPTIC 360cam</span>
                         <img src="./public/img/player-cam.jpg" alt=""/>

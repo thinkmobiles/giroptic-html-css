@@ -54,6 +54,22 @@ var scrolling = function(){
     }
 };
 
+// --- Search Section
+$('#search-btn').on('click', function(){
+    console.log('dsdsd');
+    $('#search-block').animate({
+        opacity: '1',
+        zIndex: '1000'
+    }, 10);
+});
+
+$('#search-block').on('click', function(){
+    console.log('dsdsd');
+    $('#search-block').animate({
+        opacity: '0',
+        zIndex: '-1'
+    }, 10);
+});
 
 
 $(window).on('scroll', scrolling);
