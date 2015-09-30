@@ -1,6 +1,6 @@
 // --- App Carousel Section
 $(document).ready(function() {
-    $(".owl-carousel").owlCarousel({
+    $("#appSlider .owl-carousel").owlCarousel({
         items: 5,
         loop: true,
         center: true,
@@ -60,9 +60,8 @@ $(document).ready(function() {
         loop: true,
         smartSpeed:1200
     });
-    $("#accessories .accessories-carousel").owlCarousel({
-        items: 1,
-        loop: true
+    $("#accessories .accessories-carousel .owl-carousel").owlCarousel({
+        items: 1
     });
 });
 

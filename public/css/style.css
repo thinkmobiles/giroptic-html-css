@@ -2500,6 +2500,9 @@ button {
     width: 100%;
     overflow: hidden;
   }
+  #pave2 .owl-carousel .owl-stage {
+    width: 100%;
+  }
   #pave2 .owl-carousel .owl-controls {
     position: absolute;
     left: 50%;
@@ -2563,6 +2566,34 @@ button {
   }
   #app .small-style {
     display: block;
+  }
+}
+#pave2 .counters:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+#pave2 .counters .counter {
+  position: relative;
+  overflow: hidden;
+  height: 365px;
+}
+#pave2 .owl-carousel .owl-stage-outer {
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 769px) {
+  #pave2 .owl-carousel .owl-stage {
+    width: 100% !important;
+  }
+  #pave2 .owl-carousel .owl-item {
+    width: 33.3333% !important;
+  }
+  #accessories .owl-carousel .owl-stage {
+    width: 100% !important;
+  }
+  #accessories .owl-carousel .owl-item {
+    width: 100% !important;
   }
 }
 #appSlider {
