@@ -1647,6 +1647,7 @@ button {
   max-height: 514px;
   min-height: 454px;
   position: relative;
+  background-size: cover !important;
 }
 #patchwork .patchwork-left-block img,
 #patchwork .patchwork-right-block img {
@@ -1687,7 +1688,9 @@ button {
 }
 #accessories {
   height: 100vh;
+  overflow: hidden;
   position: relative;
+  width: 1680px;
   z-index: 6;
 }
 #accessories .bg-accessories {
@@ -1769,76 +1772,128 @@ button {
 #accessories .accessories-topImage a:active:before {
   content: "\e072";
 }
+#accessories .cameraImage {
+  position: absolute;
+  left: 50%;
+  width: auto;
+  top: 165px;
+  margin-left: -127px;
+  z-index: 10;
+}
 #accessories .accessories-carousel {
+  position: relative;
+}
+#accessories .accessories-carousel > div:first-child {
+  display: block;
+  position: relative;
+}
+#accessories .accessories-carousel > div:first-child .owl-stage-outer {
+  width: 1680px;
+}
+#accessories .accessories-carousel > div:first-child .owl-stage {
+  overflow-y: hidden;
+}
+#accessories .accessories-carousel > div:first-child .topImages {
+  -webkit-border-bottom-right-radius: 90% 100px;
+  -moz-border-bottom-right-radius: 90% 100px;
+  border-bottom-right-radius: 90% 100px;
+  -webkit-border-bottom-left-radius: 90% 100px;
+  -moz-border-bottom-left-radius: 90% 100px;
+  border-bottom-left-radius: 90% 100px;
+  height: 470px;
+  z-index: 1;
+  position: relative;
+  transition: background-image linear 3s;
+}
+#accessories .accessories-carousel > div:first-child .topImages img {
+  position: absolute;
+  left: 50%;
+  width: auto;
+  top: 370px;
+  margin-left: -100px;
+}
+#accessories .accessories-carousel > div:first-child .bgrImg3 img {
+  margin-left: -166px;
+}
+#accessories .accessories-carousel > div:first-child .smallText {
   text-align: center;
-  margin-top: -240px;
 }
-#accessories .accessories-carousel ul {
-  list-style: none;
+#accessories .accessories-carousel > div:first-child .smallText p {
+  color: #a0a0a0;
+  font-size: 1.6em;
+  font-family: "Zona Pro", sans-serif;
+  margin: 240px 0 41px;
+  line-height: 2em;
 }
-#accessories .accessories-carousel ul li {
-  display: inline-block;
-  margin-right: 9px;
+#accessories .accessories-carousel .owl-controls {
+  display: block;
+  z-index: 5;
+  position: absolute;
+  top: 640px;
+  left: 50%;
+  margin-left: -270px;
 }
-#accessories .accessories-carousel ul li a {
+#accessories .accessories-carousel .owl-controls .owl-dot {
   color: #d2d2d2;
   border: 2px solid #d2d2d2;
   -webkit-border-radius: 19px;
   -moz-border-radius: 19px;
   border-radius: 19px;
   display: block;
-  padding: 0 42px 0 17px;
+  width: 165px;
+  height: 38px;
+  float: left;
+  margin-right: 15px;
   font-family: "Zona Pro SemiBold", sans-serif;
 }
-#accessories .accessories-carousel ul li a .cls-1 {
+#accessories .accessories-carousel .owl-controls .owl-dot .cls-1 {
   fill: #d2d2d2;
 }
-#accessories .accessories-carousel ul li a:hover,
-#accessories .accessories-carousel ul li a.active {
+#accessories .accessories-carousel .owl-controls .owl-dot:hover,
+#accessories .accessories-carousel .owl-controls .owl-dot.active {
   color: #44bbff;
   border: 2px solid #44bbff;
 }
-#accessories .accessories-carousel ul li a:hover .cls-1,
-#accessories .accessories-carousel ul li a.active .cls-1 {
+#accessories .accessories-carousel .owl-controls .owl-dot:hover .cls-1,
+#accessories .accessories-carousel .owl-controls .owl-dot.active .cls-1 {
   fill: #44bbff;
 }
-#accessories .accessories-carousel ul li a svg {
-  float: left;
-  margin-top: 4px;
-  margin-right: 40px;
+#accessories .accessories-carousel .owl-controls .owl-dot:before {
+  content: '';
 }
-#accessories .accessories-carousel ul li:last-child a {
-  padding-right: 22px;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(1):before {
+  background: url("../img/accessories/cup.svg");
+  width: 22px;
+  height: 17px;
 }
-#accessories .accessories-carousel ul li:last-child a svg {
-  margin-right: 17px;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(2):before {
+  background: url("../img/accessories/ico.svg");
+  width: 14px;
+  height: 17px;
 }
-#accessories .accessories-carousel ul li.current a {
-  color: #44bbff;
-  border: 2px solid #44bbff;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(3):before {
+  background: url("../img/accessories/ico.svg");
+  width: 14px;
+  height: 17px;
 }
-#accessories .accessories-carousel ul li.current a .cls-1 {
-  fill: #44bbff;
+#accessories .accessories-carousel .owl-controls .owl-dot:after {
+  font-size: 14px;
+  line-height: 33px;
 }
-#accessories .accessories-carousel div {
-  display: none;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(1):after {
+  content: 'Battery';
+  padding-left: 64px;
 }
-#accessories .accessories-carousel div.current {
-  display: block;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(2):after {
+  content: 'Lightbud';
+  padding-left: 64px;
 }
-#accessories .accessories-carousel div p {
-  color: #a0a0a0;
-  font-size: 1.6em;
-  font-family: "Zona Pro", sans-serif;
-  margin: 31px 0 41px;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(3) {
+  width: 225px;
 }
-#accessories .accessories-carousel div a {
-  color: #44bbff;
-  text-decoration: underline;
-  font-size: 1.6em;
-}
-#accessories .accessories-carousel div a:hover {
-  color: #d2d2d2;
+#accessories .accessories-carousel .owl-controls .owl-dot:nth-child(3):after {
+  content: 'Ethernet Streaming';
+  padding-left: 48px;
 }
 #slideImg {
   height: 100vh;

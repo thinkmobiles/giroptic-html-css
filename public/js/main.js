@@ -52,6 +52,10 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
+    $("#accessories .accessories-carousel").owlCarousel({
+        items: 1,
+        loop: true
+    });
 });
 
 // --- Accessories block
