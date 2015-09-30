@@ -1739,7 +1739,6 @@ button {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  width: 1680px;
   z-index: 6;
 }
 #accessories .bg-accessories {
@@ -1837,7 +1836,8 @@ button {
   position: relative;
 }
 #accessories .accessories-carousel > div:first-child .owl-stage-outer {
-  width: 1680px;
+  width: 100%;
+  overflow: hidden;
 }
 #accessories .accessories-carousel > div:first-child .owl-stage {
   overflow-y: hidden;
@@ -2367,7 +2367,8 @@ button {
     top: 40px;
     width: 980px;
   }
-  #pave2 .owl-carousel .owl-stage {
+  #pave2 .owl-carousel .owl-stage,
+  #accessories .owl-carousel .owl-stage {
     width: 100% !important;
   }
   #moveDev .inner {
@@ -2434,7 +2435,8 @@ button {
     top: 40px;
     width: 980px;
   }
-  #pave2 .owl-carousel .owl-stage {
+  #pave2 .owl-carousel .owl-stage,
+  #accessories .owl-carousel .owl-stage {
     width: 100% !important;
   }
   #moveDev .inner {
