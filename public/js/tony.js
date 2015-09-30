@@ -15,7 +15,6 @@ $(window).on('load', function() {
 
 
     showPlayer();
-    ochko();
 });
 
 
@@ -55,26 +54,7 @@ var scrolling = function(){
     }
 };
 
-var ochko = function(){
-  //var section =  $('.home-first-page');
-  //var widthEl = $('.home-first-page').width();
-  //var heightEl = $('.home-first-page').height();
-  //var halfWidth = widthEl/2;
-  //var halfHeight = heightEl/2;
-  //  var topPos =
-  //
-  //  section.css({
-  //      position: 'absolute',
-  //      width: widthEl,
-  //      height: heightEl,
-  //      top: heightEl - halfHeight,
-  //      left: widthEl - halfWidth,
-  //      borderTopLeftRadius: 50,
-  //      borderTopRightRadius: 50,
-  //      borderBottomLeftRadius: 50,
-  //      borderBottomRightRadius: 50
-  //  });
-};
+
 
 $(window).on('scroll', scrolling);
 
