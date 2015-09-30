@@ -52,7 +52,6 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
-    //camera
     $('#camera .visual-camera > .slider').owlCarousel({
         animateOut: 'bounceOutUp',
         animateIn: 'bounceInUp',
@@ -125,7 +124,6 @@ $(window).on('mousemove', function(e) {
         });
     });
 });
-
 // --- Send App Section
 $('#sendAppBtn').click(function(){
     $('#sendAppBtn').addClass('hidden');
@@ -142,7 +140,6 @@ $('#sendAppBtn').click(function(){
         });
     });
 });
-
 // --- Spec Tech Section
 $('#speTech').click(function(){
     $('.speTech .icons').addClass('iconsClick');
@@ -155,7 +152,6 @@ $('#speTech').click(function(){
 });
 // --- Parallax effect
 myParaxify = paraxify('.paraxify');
-
 // --- Camera section
 $('#inBoxToggle').click(function(){
     if ($('#inBox-collapse').hasClass('in')) {
@@ -185,7 +181,6 @@ $('#inBoxToggle').click(function(){
         }, 850);
     }
 });
-
 // --- Search Section
 $('#search-btn').bind('click', function(){
     $('#search-block').animate({
