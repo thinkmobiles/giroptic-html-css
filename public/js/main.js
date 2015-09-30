@@ -1,6 +1,6 @@
 // --- App Carousel Section
 $(document).ready(function() {
-    $(".owl-carousel").owlCarousel({
+    $("#appSlider .owl-carousel").owlCarousel({
         items: 5,
         loop: true,
         center: true,
@@ -52,7 +52,6 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
-    //camera
     $('#camera .visual-camera > .slider').owlCarousel({
         animateOut: 'bounceOutUp',
         animateIn: 'bounceInUp',
@@ -62,7 +61,8 @@ $(document).ready(function() {
         smartSpeed:1200
     });
     $("#accessories .accessories-carousel .owl-carousel").owlCarousel({
-        items: 1
+        items: 1,
+        loop: true
     });
 });
 
