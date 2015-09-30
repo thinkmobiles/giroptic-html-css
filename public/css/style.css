@@ -1838,7 +1838,6 @@ button {
   height: 100vh;
   overflow: hidden;
   position: relative;
-  width: 1680px;
   z-index: 6;
 }
 #accessories .bg-accessories {
@@ -1936,7 +1935,8 @@ button {
   position: relative;
 }
 #accessories .accessories-carousel > div:first-child .owl-stage-outer {
-  width: 1680px;
+  width: 100%;
+  overflow: hidden;
 }
 #accessories .accessories-carousel > div:first-child .owl-stage {
   overflow-y: hidden;
@@ -2466,7 +2466,8 @@ button {
     top: 40px;
     width: 980px;
   }
-  #pave2 .owl-carousel .owl-stage {
+  #pave2 .owl-carousel .owl-stage,
+  #accessories .owl-carousel .owl-stage {
     width: 100% !important;
   }
   #moveDev .inner {
@@ -2533,7 +2534,8 @@ button {
     top: 40px;
     width: 980px;
   }
-  #pave2 .owl-carousel .owl-stage {
+  #pave2 .owl-carousel .owl-stage,
+  #accessories .owl-carousel .owl-stage {
     width: 100% !important;
   }
   #moveDev .inner {
@@ -2596,6 +2598,9 @@ button {
   #pave2 .owl-carousel .owl-stage-outer {
     width: 100%;
     overflow: hidden;
+  }
+  #pave2 .owl-carousel .owl-stage {
+    width: 100%;
   }
   #pave2 .owl-carousel .owl-controls {
     position: absolute;
@@ -2660,6 +2665,34 @@ button {
   }
   #app .small-style {
     display: block;
+  }
+}
+#pave2 .counters:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+#pave2 .counters .counter {
+  position: relative;
+  overflow: hidden;
+  height: 365px;
+}
+#pave2 .owl-carousel .owl-stage-outer {
+  width: 100%;
+  overflow: hidden;
+}
+@media (min-width: 769px) {
+  #pave2 .owl-carousel .owl-stage {
+    width: 100% !important;
+  }
+  #pave2 .owl-carousel .owl-item {
+    width: 33.3333% !important;
+  }
+  #accessories .owl-carousel .owl-stage {
+    width: 100% !important;
+  }
+  #accessories .owl-carousel .owl-item {
+    width: 100% !important;
   }
 }
 #appSlider {

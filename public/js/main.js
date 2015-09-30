@@ -61,9 +61,8 @@ $(document).ready(function() {
         loop: true,
         smartSpeed:1200
     });
-    $("#accessories .accessories-carousel").owlCarousel({
-        items: 1,
-        loop: true
+    $("#accessories .accessories-carousel .owl-carousel").owlCarousel({
+        items: 1
     });
 });
 

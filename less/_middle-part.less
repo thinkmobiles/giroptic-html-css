@@ -116,8 +116,9 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
-  width: 1680px;
   z-index: 6;
+  //width: 100%;
+  //max-width: 100vw;
 
   .bg-accessories {
     background-image: url('../img/accessories-bg1.jpg');
@@ -303,7 +304,8 @@
         display: block;
         position: relative;
         .owl-stage-outer{
-          width: 1680px;
+          width: 100%;
+          overflow: hidden;
         }
         .owl-stage {
           overflow-y: hidden;
@@ -411,6 +413,10 @@
       }
     }
   }
+  //.owl-stage-outer {
+  //  width: 100% !important;
+  //  overflow: hidden;
+  //}
 }
 
 #slideImg {
@@ -801,7 +807,7 @@
       }
     }
   }
-  #pave2 {
+  #pave2, #accessories {
     .owl-carousel {
       .owl-stage {
         width: 100% !important;
@@ -893,7 +899,7 @@
       }
     }
   }
-  #pave2 {
+  #pave2, #accessories {
     .owl-carousel {
       .owl-stage {
         width: 100% !important;
@@ -981,6 +987,9 @@
       .owl-stage-outer {
         width: 100%;
         overflow: hidden;
+      }
+      .owl-stage {
+        width: 100%;
       }
       .owl-controls {
         position: absolute;
@@ -1075,3 +1084,45 @@
 //#main {
 //  padding: 0;
 //}
+#pave2 {
+  .counters {
+    &:after {
+      clear: both;
+      content: '';
+      display: table;
+    }
+    .counter {
+      position: relative;
+      overflow: hidden;
+      height: 365px;
+    }
+  }
+  .owl-carousel {
+    .owl-stage-outer {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+}
+@media (min-width: 769px) {
+  #pave2 {
+    .owl-carousel {
+      .owl-stage {
+        width: 100% !important;
+      }
+      .owl-item {
+        width: 33.3333% !important;
+      }
+    }
+  }
+  #accessories {
+    .owl-carousel {
+      .owl-stage {
+        width: 100% !important;
+      }
+      .owl-item {
+        width: 100% !important;
+      }
+    }
+  }
+}
