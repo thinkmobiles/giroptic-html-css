@@ -63,26 +63,6 @@
         text-align: center;
         border-left: 1px solid;
         border-color: @header-border1;
-
-        .items {
-          di
-          .inBox-toggle {
-              float: left;
-              background-color: transparent;
-              background-image: none;
-              border: 1px solid transparent;
-              border-radius: 4px;
-              span.icon-bar {
-                display: block;
-                width: 36px;
-                height: 4px;
-                border-radius: 3px;
-                background-color: #44bbff;
-              }
-
-            }
-        }
-
         a {
           .pxToEm(14);
           cursor: pointer;
@@ -112,6 +92,31 @@
         &:last-child {
           vertical-align: top;
           text-align: center;
+        }
+      }
+      .items {
+        display: block;
+        width: 34px;
+        height: 100%;
+        margin-right: 5px;
+        .inBox-toggle {
+          float: left;
+          background-color: transparent;
+          background-image: none;
+          border: 1px solid transparent;
+          border-radius: 4px;
+          width: 32px;
+          height: 32px;
+          margin-top: 15px;
+          span.icon-bar {
+            display: block;
+            width: 36px;
+            height: 4px;
+            border-radius: 3px;
+            background-color: #44bbff;
+            margin-bottom: 5px;
+          }
+
         }
       }
     }
@@ -817,6 +822,9 @@
     .btn-buy {
       span {
         width: 125px;
+        &::before {
+          background: none;
+        }
       }
     }
   }
@@ -922,6 +930,23 @@
         }
       }
 
+    }
+  }
+
+  #header {
+    .btn-buy {
+      span {
+        width: 100px;
+        padding: 5px 0;
+        &::before {
+          background: none;
+        }
+      }
+      span.active {
+        &::before {
+          background: none;
+        }
+      }
     }
   }
 
