@@ -1914,18 +1914,15 @@ button {
 #accessories .accessories-carousel {
   position: relative;
 }
-#accessories .accessories-carousel > div:first-child {
+#accessories .accessories-carousel .owl-carousel {
   display: block;
   position: relative;
 }
-#accessories .accessories-carousel > div:first-child .owl-stage-outer {
+#accessories .accessories-carousel .owl-carousel .owl-stage-outer {
   width: 100%;
   overflow: hidden;
 }
-#accessories .accessories-carousel > div:first-child .owl-stage {
-  overflow-y: hidden;
-}
-#accessories .accessories-carousel > div:first-child .topImages {
+#accessories .accessories-carousel .topImages {
   -webkit-border-bottom-right-radius: 90% 100px;
   -moz-border-bottom-right-radius: 90% 100px;
   border-bottom-right-radius: 90% 100px;
@@ -1935,23 +1932,23 @@ button {
   height: 470px;
   z-index: 1;
   position: relative;
-  background-size: cover;
   transition: background-image 3s linear 3s;
+  background-size: cover;
 }
-#accessories .accessories-carousel > div:first-child .topImages img {
+#accessories .accessories-carousel .topImages img {
   position: absolute;
   left: 50%;
   width: auto;
   top: 370px;
   margin-left: -100px;
 }
-#accessories .accessories-carousel > div:first-child .bgrImg3 img {
+#accessories .accessories-carousel .bgrImg3 img {
   margin-left: -166px;
 }
-#accessories .accessories-carousel > div:first-child .smallText {
+#accessories .accessories-carousel .smallText {
   text-align: center;
 }
-#accessories .accessories-carousel > div:first-child .smallText p {
+#accessories .accessories-carousel .smallText p {
   color: #a0a0a0;
   font-size: 1.6em;
   font-family: "Zona Pro", sans-serif;
@@ -1967,7 +1964,7 @@ button {
   margin-left: -270px;
 }
 #accessories .accessories-carousel .owl-controls .owl-nav {
-  display: none !important;
+  display: none;
 }
 #accessories .accessories-carousel .owl-controls .owl-dot {
   color: #d2d2d2;
@@ -2444,7 +2441,7 @@ button {
     height: 357px;
   }
   #accessories .accessories-carousel {
-    margin-top: -269px;
+    margin-top: -169px;
   }
   #accessories .accessories-carousel div p {
     margin: 31px 30px 41px;
@@ -2470,10 +2467,6 @@ button {
     height: 980px;
     top: 40px;
     width: 980px;
-  }
-  #pave2 .owl-carousel .owl-stage,
-  #accessories .owl-carousel .owl-stage {
-    width: 100% !important;
   }
   #moveDev .inner {
     margin-top: 55px;
@@ -2512,7 +2505,7 @@ button {
     height: 357px;
   }
   #accessories .accessories-carousel {
-    margin-top: -269px;
+    margin-top: -169px;
   }
   #accessories .accessories-carousel div p {
     margin: 31px 30px 41px;
@@ -2538,10 +2531,6 @@ button {
     height: 980px;
     top: 40px;
     width: 980px;
-  }
-  #pave2 .owl-carousel .owl-stage,
-  #accessories .owl-carousel .owl-stage {
-    width: 100% !important;
   }
   #moveDev .inner {
     margin-top: 55px;
@@ -2687,11 +2676,8 @@ button {
   #pave2 .owl-carousel .owl-item {
     width: 33.3333% !important;
   }
-  #accessories .owl-carousel .owl-stage {
-    width: 100% !important;
-  }
-  #accessories .owl-carousel .owl-item {
-    width: 100% !important;
+  #accessories .owl-carousel .owl-stage-outer {
+    max-width: calc(100vw - 17px);
   }
 }
 #appSlider {
@@ -3409,8 +3395,9 @@ button {
   text-align: center;
 }
 #camera .content .cameraSlider .visual-camera .slider {
-  display: inline-block;
+  display: block;
   max-width: 610px;
+  overflow: hidden;
 }
 #camera .content .cameraSlider .visual-camera img {
   max-width: 360px;
