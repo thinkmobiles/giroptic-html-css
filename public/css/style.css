@@ -2993,6 +2993,7 @@ button {
   background: transparent;
 }
 #sendApp {
+  background-color: #fff;
   z-index: 5;
   overflow: hidden;
   position: relative;
