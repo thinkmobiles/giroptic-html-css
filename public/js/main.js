@@ -58,8 +58,8 @@ $(document).ready(function() {
         loop: true,
         animateOut: 'bounceOutUp',
         animateIn: 'bounceInUp',
-        mouseDrag: false
-        //smartSpeed:1200
+        mouseDrag: false,
+        smartSpeed:1200
     });
     $("#accessories .accessories-carousel .owl-carousel").owlCarousel({
         items: 1,
