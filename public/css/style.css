@@ -2847,6 +2847,9 @@ button {
   background-color: #ff6d00;
   z-index: 6;
 }
+#paveOs .counters a {
+  font-size: 10px;
+}
 #paveOs .counters:after {
   clear: both;
   content: '';
@@ -2867,6 +2870,19 @@ button {
   -moz-transition: top 0.6s ease 0s;
   transition: top 0.6s ease 0s;
 }
+#paveOs .counters .counter > a.active {
+  position: relative;
+  top: 0;
+  height: 365px;
+  display: block;
+  -webkit-transition: top 0.6s ease 0s;
+  -moz-transition: top 0.6s ease 0s;
+  transition: top 0.6s ease 0s;
+}
+#paveOs .counters .counter > a.active > div {
+  height: 365px;
+  padding: 65px 0 60px 0;
+}
 #paveOs .counters .counter span {
   display: block;
   text-align: center;
@@ -2877,6 +2893,7 @@ button {
   color: #ffffff;
   font-size: 3.2em;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 #paveOs .counters .counter .count {
   color: #0d47a1;
@@ -2918,6 +2935,9 @@ button {
   width: 100%;
 }
 #paveOs .counters .counter:hover > div {
+  top: -365px;
+}
+#paveOs .counters .counter:hover > a.active {
   top: -365px;
 }
 #paveOs .counters .counter:hover .active .title {
@@ -3115,30 +3135,30 @@ button {
 #sendApp .sendForm input.placeholder::-webkit-input-placeholder {
   opacity: 1;
   color: #d2d2d2;
-  -webkit-transition: all 2s ease 2s;
-  -moz-transition: all 2s ease 2s;
-  transition: all 2s ease 2s;
+  -webkit-transition: all 1s ease 1s;
+  -moz-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
 }
 #sendApp .sendForm input.placeholder::-moz-placeholder {
   opacity: 1;
   color: #d2d2d2;
-  -webkit-transition: all 2s ease 2s;
-  -moz-transition: all 2s ease 2s;
-  transition: all 2s ease 2s;
+  -webkit-transition: all 1s ease 1s;
+  -moz-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
 }
 #sendApp .sendForm input.placeholder:-moz-placeholder {
   opacity: 1;
   color: #d2d2d2;
-  -webkit-transition: all 2s ease 2s;
-  -moz-transition: all 2s ease 2s;
-  transition: all 2s ease 2s;
+  -webkit-transition: all 1s ease 1s;
+  -moz-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
 }
 #sendApp .sendForm input.placeholder:-ms-input-placeholder {
   opacity: 1;
   color: #d2d2d2;
-  -webkit-transition: all 2s ease 2s;
-  -moz-transition: all 2s ease 2s;
-  transition: all 2s ease 2s;
+  -webkit-transition: all 1s ease 1s;
+  -moz-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
 }
 #speTech {
   z-index: 6;
@@ -3258,6 +3278,8 @@ button {
 }
 #speTech .speTech .description {
   position: relative;
+  top: 10%;
+  opacity: 0;
   transition: all 0.2s ease 0s;
 }
 #speTech .owl-carousel .owl-stage-outer {
@@ -3402,6 +3424,7 @@ button {
   display: block;
   max-width: 610px;
   overflow: hidden;
+  margin: 0 auto;
 }
 #camera .content .cameraSlider .visual-camera img {
   max-width: 360px;
@@ -3526,6 +3549,7 @@ button {
   border-top: 1px solid #e6e6e7;
 }
 #camera .content .buy-block .share .inTheBox {
+  cursor: pointer;
   position: relative;
 }
 #camera .content .buy-block .share .inTheBox:before {
@@ -3599,24 +3623,14 @@ button {
   left: 0;
   z-index: 220;
 }
-#camera .inBox #inBoxToggle {
+#camera .inBox #inBoxClose {
   float: left;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
 }
-#camera .inBox #inBoxToggle span.icon-bar {
-  display: block;
-  width: 36px;
-  height: 4px;
-  border-radius: 3px;
-  background-color: #44bbff;
-}
-#camera .inBox #inBoxToggle .icon-bar + .icon-bar {
-  margin-top: 6px;
-}
-#camera .inBox #inBoxToggle .glyphicon-remove {
+#camera .inBox #inBoxClose .glyphicon-remove {
   font-size: 2.4em;
   color: #44bbff;
 }
