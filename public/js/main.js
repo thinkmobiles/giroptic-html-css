@@ -59,6 +59,16 @@ $(document).ready(function() {
         animateOut: 'bounceOutUp',
         animateIn: 'bounceInUp',
         mouseDrag: false,
+        responsiveClass:true,
+        responsive:{
+            0:{items:1},
+            768:{items:1},
+            769:{items:1},
+            992:{items:1},
+            1024:{items:1},
+            1280:{items:1},
+            1980:{items:1}
+        },
         smartSpeed:1200
     });
     $("#accessories .accessories-carousel .owl-carousel").owlCarousel({
@@ -134,10 +144,10 @@ $('#sendAppBtn').click(function(){
     $('#sendForm .btn-send').animate({
         right: "0%",
         marginRight: "0"
-    }, 3000, function(){
+    }, 800, function(){
         $('#sendForm .input-sm').animate({
             opacity: "1"
-        }, 800, function(){
+        }, 200, function(){
             $('#sendForm .input-sm').addClass('placeholder');
         });
     });
@@ -184,6 +194,14 @@ $('#inBoxToggle').click(function(){
             $('#inBoxToggle .glyphicon-remove').removeClass('hidden');
         }, 850);
     }
+});
+$('#inBoxClose').click(function(){
+    $('#inBox-collapse').animate({
+        left: '-100%'
+    }, 800);
+    $('#inBox-collapse').removeClass('in');
+    $('.inBox-cnt .feature').css('top', '10%');
+    $('.inBox-cnt .feature').css('opacity', '0');
 });
 $(function() {
     $('.item a[href*=#]:not([href=#])').click(function() {

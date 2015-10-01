@@ -584,19 +584,19 @@
                             <div class="iphone-mockup"></div>
                             <figure class="owl-carousel">
                                 <div class="item">
-                                    <img src="./public/img/app/slide1.png" alt="" />
+                                    <img src="./public/img/app/slide1.png" alt="app-slide1" />
                                 </div>
                                 <div class="item">
-                                    <img src="./public/img/app/slide5.png" alt="" />
+                                    <img src="./public/img/app/slide5.png" alt="app-slide2" />
                                 </div>
                                 <div class="item">
-                                    <img src="./public/img/app/slide4.png" alt="" />
+                                    <img src="./public/img/app/slide4.png" alt="app-slide3" />
                                 </div>
                                 <div class="item">
-                                    <img src="./public/img/app/slide3.png" alt="" />
+                                    <img src="./public/img/app/slide3.png" alt="app-slide4" />
                                 </div>
                                 <div class="item">
-                                    <img src="./public/img/app/slide2.png" alt="" />
+                                    <img src="./public/img/app/slide2.png" alt="app-slide5" />
                                 </div>
                             </figure>
                         </div>
@@ -614,13 +614,15 @@
                                 </span>
                                 <span class="download">Download</span>
                             </div>
-                            <div class="active">
-                                <span class="title">iOs</span>
-                                <span class="count">
-                                    <img src="./public/img/bottom-part/ios-h.png" alt="iOs" />
-                                </span>
-                                <span class="download">Download</span>
-                            </div>
+                            <a class="active" href="https://itunes.apple.com/us/app/360cam/id878223339?mt=8" target="_blank">
+                                <div>
+                                    <span class="title">iOs</span>
+                                    <span class="count">
+                                        <img src="./public/img/bottom-part/ios-h.png" alt="iOs" />
+                                    </span>
+                                    <span class="download">Download</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="counter col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div>
@@ -630,13 +632,15 @@
                                 </span>
                                 <span class="download">Download</span>
                             </div>
-                            <div class="active">
-                                <span class="title">Android</span>
-                                <span class="count">
-                                    <img src="./public/img/bottom-part/android-h.png" alt="Android" />
-                                </span>
-                                <span class="download">Download</span>
-                            </div>
+                            <a class="active" href="https://play.google.com/store/apps/details?id=fr.giroptic.cam" target="_blank">
+                                <div>
+                                    <span class="title">Android</span>
+                                    <span class="count">
+                                        <img src="./public/img/bottom-part/android-h.png" alt="Android" />
+                                    </span>
+                                    <span class="download">Download</span>
+                                </div>
+                            </a>
                         </div>
                         <div class="counter col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div>
@@ -646,13 +650,15 @@
                                 </span>
                                 <span class="download">Download</span>
                             </div>
-                            <div class="active">
-                                <span class="title">Windows Phone</span>
-                                <span class="count">
-                                    <img src="./public/img/bottom-part/winphone-h.png" alt="Windows Phone" />
-                                </span>
-                                <span class="download">Download</span>
-                            </div>
+                            <a class="active" href="https://www.microsoft.com/en-us/store/apps/360cam/9nblggh2m38n" target="_blank">
+                                <div>
+                                    <span class="title">Windows Phone</span>
+                                    <span class="count">
+                                        <img src="./public/img/bottom-part/winphone-h.png" alt="Windows Phone" />
+                                    </span>
+                                    <span class="download">Download</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -667,7 +673,7 @@
                             <button id="sendAppBtn" class="btn-sendApp">Send me the app</button>
                             <form action="" method="post" id="sendForm" class="sendForm hidden">
                                 <input class="input-sm" type="text" value="" placeholder="Saissisez votre Adresse mail" onfocus="this.placeholder='';" onblur="this.placeholder='Saissisez votre Adresse mail'" />
-                                <button class="btn-send" type="submit">Send</button>
+                                <button class="btn-send" type="button">Send</button>
                             </form>
                         </div>
                     </div>
@@ -782,22 +788,22 @@
             </section>
             <section id="camera" class="section">
                 <div class="inBox col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                    <div class="inBox-btn">
-                        <button type="button" id="inBoxToggle" class="inBox-toggle">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="glyphicon glyphicon-remove hidden"></span>
-                        </button>
-                    </div>
                     <div id="inBox-collapse" class="inBox-collapse collapse">
+                        <div class="inBox-btn">
+                            <button type="button" id="inBoxClose" class="inBox-toggle">
+                                <span class="icon-bar hidden"></span>
+                                <span class="icon-bar hidden"></span>
+                                <span class="icon-bar hidden"></span>
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </div>
                         <div class="inBox-cnt row">
                             <h2>In the box</h2>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
-                                            <img src="./public/img/bottom-part/inBox1.png" alt="" />
+                                            <img src="./public/img/bottom-part/inBox1.png" alt="Camera" />
                                         </div>
                                         <h4>Camera</h4>
                                     </div>
@@ -805,7 +811,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
-                                            <img src="./public/img/bottom-part/inBox2.png" alt="" />
+                                            <img src="./public/img/bottom-part/inBox2.png" alt="Lithium-ion battery" />
                                         </div>
                                         <h4>Lithium-ion battery</h4>
                                     </div>
@@ -813,7 +819,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
-                                            <img src="./public/img/bottom-part/inBox3.png" alt="" />
+                                            <img src="./public/img/bottom-part/inBox3.png" alt="Micro-USB cable" />
                                         </div>
                                         <h4>Micro-USB cable</h4>
                                     </div>
@@ -821,7 +827,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
-                                            <img src="./public/img/bottom-part/inBox4.png" alt="" />
+                                            <img src="./public/img/bottom-part/inBox4.png" alt="Booster" />
                                         </div>
                                         <h4>Booster</h4>
                                     </div>
@@ -829,7 +835,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
-                                            <img src="./public/img/bottom-part/inBox5.png" alt="" />
+                                            <img src="./public/img/bottom-part/inBox5.png" alt="Micro-fiber bag" />
                                         </div>
                                         <h4>Micro-fiber bag</h4>
                                     </div>
@@ -837,7 +843,7 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                                     <div class="feature">
                                         <div class="image">
-                                            <img src="./public/img/bottom-part/inBox6.png" alt="" />
+                                            <img src="./public/img/bottom-part/inBox6.png" alt="Quickstart" />
                                         </div>
                                         <h4>Quickstart</h4>
                                     </div>
@@ -857,10 +863,10 @@
                                 <div class="cameraSlider">
                                     <div class="visual-camera">
                                         <div class="slider">
-                                            <div class="slide"><img src="./public/img/bottom-part/slide1.png" /></div>
-                                            <div class="slide"><img src="./public/img/bottom-part/slide1.png" /></div>
-                                            <div class="slide"><img src="./public/img/bottom-part/slide1.png" /></div>
-                                            <div class="slide"><img src="./public/img/bottom-part/slide1.png" /></div>
+                                            <div class="slide"><img src="./public/img/bottom-part/slide1.png" alt="slide" /></div>
+                                            <div class="slide"><img src="./public/img/bottom-part/slide1.png" alt="slide" /></div>
+                                            <div class="slide"><img src="./public/img/bottom-part/slide1.png" alt="slide" /></div>
+                                            <div class="slide"><img src="./public/img/bottom-part/slide1.png" alt="slide" /></div>
                                         </div>
                                     </div>
                                 </div>
@@ -881,7 +887,7 @@
                                         <h4 class="subtitle">Up. Down. All Around</h4>
                                         <p class="description">Pre-order your GIROPTIC 360cam today and join the GIROPTIC community to forever change the way we capture and experience our world.</p>
                                         <div class="share hideMobile">
-                                            <div class="inTheBox">
+                                            <div class="inTheBox" id="inBoxToggle">
                                                 <span>In the box</span>
                                             </div>
                                             <div class="share-btn">
@@ -986,7 +992,7 @@
                         </div>
                     </div>
                     <div class="copyright col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <span>2015 &copy; GIROPTIC SA. All Rights Reseved. Legal disclaimer</span>
+                        <span>2015 &copy; GIROPTIC INC. All Rights Reseved. Legal disclaimer</span>
                     </div>
                 </div>
             </footer>
