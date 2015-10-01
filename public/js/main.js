@@ -1,3 +1,11 @@
+function windowSize(){
+    if ($(window).width() <= '768'){
+        $('#accessories').css('max-width', '100vw');
+    } else {
+        $('#accessories').css('max-width', $(window).width());
+    }
+}
+$(window).on('load resize',windowSize);
 // --- App Carousel Section
 $(document).ready(function() {
     $("#appSlider .owl-carousel").owlCarousel({
@@ -29,17 +37,6 @@ $(document).ready(function() {
             1680:{items:3, dots:false}
         }
     });
-    //$(".properties-mobile > .row").owlCarousel({
-    //    items: 4,
-    //    loop: true,
-    //    center: true,
-    //    dots:true,
-    //    responsiveClass:true,
-    //    responsive:{
-    //        0:{items:3},
-    //        750:{items:3},
-    //    }
-    //});
     $("#pave2 .counters > .row").owlCarousel({
         items: 3,
         dots:true,
@@ -73,10 +70,20 @@ $(document).ready(function() {
     });
     $("#accessories .accessories-carousel .owl-carousel").owlCarousel({
         items: 1,
+        mouseDrag: false,
+        responsiveClass:true,
+        responsive:{
+            0:{items:1},
+            768:{items:1},
+            769:{items:1},
+            992:{items:1},
+            1024:{items:1},
+            1280:{items:1},
+            1680:{items:1}
+        },
         loop: true
     });
 });
-
 // --- Accessories block
 $('ul.tabs li').click(function(){
     var tab_id = $(this).attr('data-tab');
@@ -87,12 +94,6 @@ $('ul.tabs li').click(function(){
     $(this).addClass('current');
     $("#"+tab_id).addClass('current');
 });
-//$('.bxslider').bxSlider({
-//    auto: true,
-//    autoControls: true
-//});
-
-
 // --- Application Section
 $('#app .row').click(function(){
     $(".phone-style").addClass('down');
@@ -107,7 +108,6 @@ $('#app .row').click(function(){
         });
     }, 3000);
 });
-
 // --- Patchwork Section
 $('#patchwork').click(function(){
     setTimeout(function(){
@@ -116,7 +116,6 @@ $('#patchwork').click(function(){
         });
     }, 1000);
 });
-
 // --- 3D Effect
 $(window).on('mousemove', function(e) {
     var w = $(window).width();
@@ -135,8 +134,6 @@ $(window).on('mousemove', function(e) {
         });
     });
 });
-
-// --- Send App Section
 $('#sendAppBtn').click(function(){
     $('#sendAppBtn').addClass('hidden');
     $('#sendForm').removeClass('hidden');
@@ -152,8 +149,6 @@ $('#sendAppBtn').click(function(){
         });
     });
 });
-
-// --- Spec Tech Section
 $('#speTech').click(function(){
     $('.speTech .icons').addClass('iconsClick');
     setTimeout(function(){
@@ -163,10 +158,7 @@ $('#speTech').click(function(){
         }, 200);
     }, 800);
 });
-// --- Parallax effect
 myParaxify = paraxify('.paraxify');
-
-// --- Camera section
 $('#inBoxToggle').click(function(){
     if ($('#inBox-collapse').hasClass('in')) {
         $('#inBox-collapse').animate({
@@ -189,10 +181,6 @@ $('#inBoxToggle').click(function(){
                 opacity: '1'
             }, 200);
         });
-        setTimeout(function(){
-            $('#inBoxToggle .icon-bar').addClass('hidden');
-            $('#inBoxToggle .glyphicon-remove').removeClass('hidden');
-        }, 850);
     }
 });
 $('#inBoxClose').click(function(){

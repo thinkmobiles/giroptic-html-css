@@ -2676,8 +2676,16 @@ button {
   #pave2 .owl-carousel .owl-item {
     width: 33.3333% !important;
   }
-  #accessories .owl-carousel .owl-stage-outer {
+  #accessories {
     max-width: calc(100vw - 17px);
+    overflow: hidden !important;
+  }
+  #accessories .owl-carousel .owl-stage-outer {
+    width: 100%;
+    overflow: hidden !important;
+  }
+  #accessories .owl-carousel .owl-stage {
+    overflow: hidden !important;
   }
 }
 #appSlider {
@@ -3417,7 +3425,7 @@ button {
 }
 #camera .content .cameraSlider .visual-camera .slider {
   display: block;
-  max-width: 610px;
+  max-width: 480px;
   overflow: hidden;
   margin: 0 auto;
 }

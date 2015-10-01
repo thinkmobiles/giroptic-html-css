@@ -1073,17 +1073,15 @@
     }
   }
   #accessories {
-    .owl-carousel {
-      //.owl-stage {
-      //  width: 100% !important;
-      //}
-      //.owl-item {
-      //  width: 100% !important;
-      //}
-    }
+    max-width: ~"calc(100vw - 17px)" ;
+    overflow: hidden !important;
     .owl-carousel {
       .owl-stage-outer {
-        max-width: ~"calc(100vw - 17px)";
+        width: 100%;
+        overflow: hidden !important;
+      }
+      .owl-stage {
+        overflow: hidden !important;
       }
     }
   }
