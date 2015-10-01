@@ -53,12 +53,13 @@ $(document).ready(function() {
         }
     });
     $('#camera .visual-camera > .slider').owlCarousel({
+        items:1,
+        nav: true,
+        loop: true,
         animateOut: 'bounceOutUp',
         animateIn: 'bounceInUp',
-        nav: true,
-        items:1,
-        loop: true,
-        smartSpeed:1200
+        mouseDrag: false
+        //smartSpeed:1200
     });
     $("#accessories .accessories-carousel .owl-carousel").owlCarousel({
         items: 1,
