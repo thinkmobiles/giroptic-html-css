@@ -271,73 +271,42 @@
   }
   .accessories-carousel {
     position: relative;
-    //&:before{
-    //  background: red none repeat scroll 0 0;
-    //  border-bottom-left-radius: 100% 100px;
-    //  border-bottom-right-radius: 100% 100px;
-    //  content: "";
-    //  display: block;
-    //  height: 100px;
-    //  position: absolute;
-    //  top: 370px;
-    //  width: 100%;
-    //  z-index: 3;
-    //}
-    //&:after{
-    //  background: blue;
-    //  content: "";
-    //  display: block;
-    //  height: 100px;
-    //  position: absolute;
-    //  top: 370px;
-    //  width: 100%;
-    //  z-index: 2;
-    //}
-    & > div{
-      &:first-child{
-        display: block;
-        position: relative;
-        .owl-stage-outer{
-          width: 100%;
-          overflow: hidden;
-        }
-        .owl-stage {
-          overflow-y: hidden;
-        }
-        .owl-stage-outer{
-
-        }
-        .topImages{
-          .border-radius-bottom-right(90% 100px);
-          .border-radius-bottom-left(90% 100px);
-          height: 470px;
-          z-index: 1;
-          position: relative;
-          background-size: cover;
-          transition: background-image 3s linear 3s;
-          img{
-            position: absolute;
-            left: 50%;
-            width: auto;
-            top: 370px;
-            margin-left: -100px;
-          }
-        }
-        .bgrImg3{
-          img{
-            margin-left: -166px;
-          }
-        }
-        .smallText{
-          text-align: center;
-          p{
-            color: @accessories-p;
-            .pxToEm(16);
-            font-family: "Zona Pro", sans-serif;
-            margin: 240px 0 41px;
-            line-height: 2em;
-          }
-        }
+    .owl-carousel {
+      display: block;
+      position: relative;
+      .owl-stage-outer{
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+    .topImages{
+      .border-radius-bottom-right(90% 100px);
+      .border-radius-bottom-left(90% 100px);
+      height: 470px;
+      z-index: 1;
+      position: relative;
+      transition: background-image linear 3s;
+      img{
+        position: absolute;
+        left: 50%;
+        width: auto;
+        top: 370px;
+        margin-left: -100px;
+      }
+    }
+    .bgrImg3{
+      img{
+        margin-left: -166px;
+      }
+    }
+    .smallText{
+      text-align: center;
+      p{
+        color: @accessories-p;
+        .pxToEm(16);
+        font-family: "Zona Pro", sans-serif;
+        margin: 240px 0 41px;
+        line-height: 2em;
       }
     }
     .owl-controls{
@@ -347,8 +316,8 @@
       top: 640px;
       left: 50%;
       margin-left: -270px;
-      .owl-nav{
-        display: none !important;
+      .owl-nav {
+        display: none;
       }
       .owl-dot{
         color: @accessories-link;
@@ -428,10 +397,6 @@
       }
     }
   }
-  //.owl-stage-outer {
-  //  width: 100% !important;
-  //  overflow: hidden;
-  //}
 }
 
 #slideImg {
@@ -788,7 +753,7 @@
       height: 357px;
     }
     .accessories-carousel {
-      margin-top: -269px;
+      margin-top: -169px;
       div {
         p {
           margin: 31px 30px 41px;
@@ -819,13 +784,6 @@
           top: 40px;
           width: 980px;
         }
-      }
-    }
-  }
-  #pave2, #accessories {
-    .owl-carousel {
-      .owl-stage {
-        width: 100% !important;
       }
     }
   }
@@ -880,7 +838,7 @@
       height: 357px;
     }
     .accessories-carousel {
-      margin-top: -269px;
+      margin-top: -169px;
       div {
         p {
           margin: 31px 30px 41px;
@@ -911,13 +869,6 @@
           top: 40px;
           width: 980px;
         }
-      }
-    }
-  }
-  #pave2, #accessories {
-    .owl-carousel {
-      .owl-stage {
-        width: 100% !important;
       }
     }
   }
@@ -1122,11 +1073,16 @@
   }
   #accessories {
     .owl-carousel {
-      .owl-stage {
-        width: 100% !important;
-      }
-      .owl-item {
-        width: 100% !important;
+      //.owl-stage {
+      //  width: 100% !important;
+      //}
+      //.owl-item {
+      //  width: 100% !important;
+      //}
+    }
+    .owl-carousel {
+      .owl-stage-outer {
+        max-width: ~"calc(100vw - 17px)";
       }
     }
   }

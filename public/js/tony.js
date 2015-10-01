@@ -47,7 +47,7 @@ function videoAnimate() {
 
 var scrolling = function(){
     if($(window).scrollTop() > 837){
-        console.log('max');
+        //console.log('max');
         videoAnimate();
     } else {
         console.log('min')
@@ -56,7 +56,7 @@ var scrolling = function(){
 
 // --- Search Section
 $('#search-btn').on('click', function(){
-    console.log('dsdsd');
+    //console.log('dsdsd');
     $('#search-block').animate({
         opacity: '1',
         zIndex: '1000'
@@ -64,7 +64,7 @@ $('#search-btn').on('click', function(){
 });
 
 $('#search-block').on('click', function(){
-    console.log('dsdsd');
+    //console.log('dsdsd');
     $('#search-block').animate({
         opacity: '0',
         zIndex: '-1'
