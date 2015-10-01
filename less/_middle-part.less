@@ -70,44 +70,38 @@
   .patchwork-left-block, .patchwork-right-block {
     padding: 0;
     width: 50%;
-    max-height: 514px;
-    min-height: 454px;
+    min-height: 455px;
     position: relative;
     background-size: cover !important;
     img {
       width: auto;
-      top: -150px;
       position: absolute;
-      -ms-transform: scale(1);
-      -webkit-transform: scale(1);
-      transform: scale(1);
+      //-ms-transform: scale(1);
+      //-webkit-transform: scale(1);
+      //transform: scale(1);
       z-index: 1;
       opacity: 1;
       &.scale {
-        transition: all 6s ease-in-out;
-        transform: scale(1.02);
-        -ms-transform: scale(1.02);
-        -webkit-transform: scale(1.02);
+        //transition: all 6s ease-in-out;
+        //transform: scale(1.02);
+        //-ms-transform: scale(1.02);
+        //-webkit-transform: scale(1.02);
       }
     }
   }
   .patchwork-left-block {
     float: left;
-    background: url("../img/patchwork/left-bgr.jpg") no-repeat left top;
+    background: url("../img/patchwork/left-bgr.png") no-repeat left top;
     img{
-      top: 60px;
+      top: 33px;
       left: 115px;
     }
   }
   .patchwork-right-block {
     float: right;
-    background: url("../img/patchwork/left-bgr.jpg") no-repeat left top;
-    width: ~'calc(50% - 1px)';
+    background: url("../img/patchwork/left-bgr.png") no-repeat left top;
     img{
-      left: 52px;
-      &:last-child{
-        display: none;
-      }
+      left: 152px;
     }
   }
 }
@@ -291,7 +285,8 @@
       height: 470px;
       z-index: 1;
       position: relative;
-      transition: background-image linear 3s;
+      transition: background-image 3s linear 3s;
+      background-size: cover;
       img{
         position: absolute;
         left: 50%;
@@ -330,6 +325,7 @@
         border: 2px solid @accessories-link;
         .border-radius(19px);
         display: block;
+        position: relative;
         width: 165px;
         height: 38px;
         float: left;
@@ -348,21 +344,37 @@
         }
         &:before{
           content: '';
+          position: absolute;
+          left: 15px;
+          top: 9px;
+          z-index: 7;
         }
         &:nth-child(1):before{
-          background: url("../img/accessories/cup.svg");
+          background: url("../img/accessories/cup.png");
           width: 22px;
           height: 17px;
         }
+        &.active:nth-child(1):before,
+        &:hover:nth-child(1):before{
+          background: url("../img/accessories/cup-active.png");
+        }
         &:nth-child(2):before{
-          background: url("../img/accessories/ico.svg");
+          background: url("../img/accessories/loc.png");
           width: 14px;
           height: 17px;
         }
+        &.active:nth-child(2):before,
+        &:hover:nth-child(2):before{
+          background: url("../img/accessories/loc-active.png");
+        }
         &:nth-child(3):before{
-          background: url("../img/accessories/ico.svg");
+          background: url("../img/accessories/loc.png");
           width: 14px;
           height: 17px;
+        }
+        &.active:nth-child(3):before,
+        &:hover:nth-child(3):before{
+          background: url("../img/accessories/loc-active.png");
         }
         &:after{
           font-size: 14px;
@@ -601,7 +613,7 @@
 }
 #moveDev {
   background-color: @moveDev-bg;
-  height: 100vh;
+  height: auto;
   position: relative;
   display: table;
 
@@ -919,16 +931,6 @@
         width: 467px;
         top: 108px;
         left: 140px
-      }
-    }
-    .patchwork-right-block {
-      img{
-        &:first-child{
-          display: none;
-        }
-        &:last-child{
-          display: block;
-        }
       }
     }
   }

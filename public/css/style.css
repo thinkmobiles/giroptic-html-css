@@ -1802,47 +1802,31 @@ button {
 #patchwork .patchwork-right-block {
   padding: 0;
   width: 50%;
-  max-height: 514px;
-  min-height: 454px;
+  min-height: 455px;
   position: relative;
   background-size: cover !important;
 }
 #patchwork .patchwork-left-block img,
 #patchwork .patchwork-right-block img {
   width: auto;
-  top: -150px;
   position: absolute;
-  -ms-transform: scale(1);
-  -webkit-transform: scale(1);
-  transform: scale(1);
   z-index: 1;
   opacity: 1;
 }
-#patchwork .patchwork-left-block img.scale,
-#patchwork .patchwork-right-block img.scale {
-  transition: all 6s ease-in-out;
-  transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -webkit-transform: scale(1.02);
-}
 #patchwork .patchwork-left-block {
   float: left;
-  background: url("../img/patchwork/left-bgr.jpg") no-repeat left top;
+  background: url("../img/patchwork/left-bgr.png") no-repeat left top;
 }
 #patchwork .patchwork-left-block img {
-  top: 60px;
+  top: 33px;
   left: 115px;
 }
 #patchwork .patchwork-right-block {
   float: right;
-  background: url("../img/patchwork/left-bgr.jpg") no-repeat left top;
-  width: calc(50% - 1px);
+  background: url("../img/patchwork/left-bgr.png") no-repeat left top;
 }
 #patchwork .patchwork-right-block img {
-  left: 52px;
-}
-#patchwork .patchwork-right-block img:last-child {
-  display: none;
+  left: 152px;
 }
 #accessories {
   height: 100vh;
@@ -1958,7 +1942,8 @@ button {
   height: 470px;
   z-index: 1;
   position: relative;
-  transition: background-image linear 3s;
+  transition: background-image 3s linear 3s;
+  background-size: cover;
 }
 #accessories .accessories-carousel .topImages img {
   position: absolute;
@@ -1998,6 +1983,7 @@ button {
   -moz-border-radius: 19px;
   border-radius: 19px;
   display: block;
+  position: relative;
   width: 165px;
   height: 38px;
   float: left;
@@ -2018,21 +2004,37 @@ button {
 }
 #accessories .accessories-carousel .owl-controls .owl-dot:before {
   content: '';
+  position: absolute;
+  left: 15px;
+  top: 9px;
+  z-index: 7;
 }
 #accessories .accessories-carousel .owl-controls .owl-dot:nth-child(1):before {
-  background: url("../img/accessories/cup.svg");
+  background: url("../img/accessories/cup.png");
   width: 22px;
   height: 17px;
 }
+#accessories .accessories-carousel .owl-controls .owl-dot.active:nth-child(1):before,
+#accessories .accessories-carousel .owl-controls .owl-dot:hover:nth-child(1):before {
+  background: url("../img/accessories/cup-active.png");
+}
 #accessories .accessories-carousel .owl-controls .owl-dot:nth-child(2):before {
-  background: url("../img/accessories/ico.svg");
+  background: url("../img/accessories/loc.png");
   width: 14px;
   height: 17px;
 }
+#accessories .accessories-carousel .owl-controls .owl-dot.active:nth-child(2):before,
+#accessories .accessories-carousel .owl-controls .owl-dot:hover:nth-child(2):before {
+  background: url("../img/accessories/loc-active.png");
+}
 #accessories .accessories-carousel .owl-controls .owl-dot:nth-child(3):before {
-  background: url("../img/accessories/ico.svg");
+  background: url("../img/accessories/loc.png");
   width: 14px;
   height: 17px;
+}
+#accessories .accessories-carousel .owl-controls .owl-dot.active:nth-child(3):before,
+#accessories .accessories-carousel .owl-controls .owl-dot:hover:nth-child(3):before {
+  background: url("../img/accessories/loc-active.png");
 }
 #accessories .accessories-carousel .owl-controls .owl-dot:after {
   font-size: 14px;
@@ -2307,7 +2309,7 @@ button {
 }
 #moveDev {
   background-color: #ebebeb;
-  height: 100vh;
+  height: auto;
   position: relative;
   display: table;
 }
@@ -2588,12 +2590,6 @@ button {
     top: 108px;
     left: 140px;
   }
-  #patchwork .patchwork-right-block img:first-child {
-    display: none;
-  }
-  #patchwork .patchwork-right-block img:last-child {
-    display: block;
-  }
   #pave2 .counters .counter {
     padding-bottom: 93px;
   }
@@ -2857,6 +2853,9 @@ button {
   background-color: #ff6d00;
   z-index: 6;
 }
+#paveOs .counters a {
+  font-size: 10px;
+}
 #paveOs .counters:after {
   clear: both;
   content: '';
@@ -2877,6 +2876,19 @@ button {
   -moz-transition: top 0.6s ease 0s;
   transition: top 0.6s ease 0s;
 }
+#paveOs .counters .counter > a.active {
+  position: relative;
+  top: 0;
+  height: 365px;
+  display: block;
+  -webkit-transition: top 0.6s ease 0s;
+  -moz-transition: top 0.6s ease 0s;
+  transition: top 0.6s ease 0s;
+}
+#paveOs .counters .counter > a.active > div {
+  height: 365px;
+  padding: 65px 0 60px 0;
+}
 #paveOs .counters .counter span {
   display: block;
   text-align: center;
@@ -2887,6 +2899,7 @@ button {
   color: #ffffff;
   font-size: 3.2em;
   margin-bottom: 20px;
+  line-height: 1.5;
 }
 #paveOs .counters .counter .count {
   color: #0d47a1;
@@ -2928,6 +2941,9 @@ button {
   width: 100%;
 }
 #paveOs .counters .counter:hover > div {
+  top: -365px;
+}
+#paveOs .counters .counter:hover > a.active {
   top: -365px;
 }
 #paveOs .counters .counter:hover .active .title {
@@ -2987,6 +3003,7 @@ button {
   background: transparent;
 }
 #sendApp {
+  background-color: #fff;
   z-index: 5;
   overflow: hidden;
   position: relative;
@@ -3125,30 +3142,30 @@ button {
 #sendApp .sendForm input.placeholder::-webkit-input-placeholder {
   opacity: 1;
   color: #d2d2d2;
-  -webkit-transition: all 2s ease 2s;
-  -moz-transition: all 2s ease 2s;
-  transition: all 2s ease 2s;
+  -webkit-transition: all 1s ease 1s;
+  -moz-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
 }
 #sendApp .sendForm input.placeholder::-moz-placeholder {
   opacity: 1;
   color: #d2d2d2;
-  -webkit-transition: all 2s ease 2s;
-  -moz-transition: all 2s ease 2s;
-  transition: all 2s ease 2s;
+  -webkit-transition: all 1s ease 1s;
+  -moz-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
 }
 #sendApp .sendForm input.placeholder:-moz-placeholder {
   opacity: 1;
   color: #d2d2d2;
-  -webkit-transition: all 2s ease 2s;
-  -moz-transition: all 2s ease 2s;
-  transition: all 2s ease 2s;
+  -webkit-transition: all 1s ease 1s;
+  -moz-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
 }
 #sendApp .sendForm input.placeholder:-ms-input-placeholder {
   opacity: 1;
   color: #d2d2d2;
-  -webkit-transition: all 2s ease 2s;
-  -moz-transition: all 2s ease 2s;
-  transition: all 2s ease 2s;
+  -webkit-transition: all 1s ease 1s;
+  -moz-transition: all 1s ease 1s;
+  transition: all 1s ease 1s;
 }
 #speTech {
   z-index: 6;
@@ -3268,6 +3285,8 @@ button {
 }
 #speTech .speTech .description {
   position: relative;
+  top: 10%;
+  opacity: 0;
   transition: all 0.2s ease 0s;
 }
 #speTech .owl-carousel .owl-stage-outer {
@@ -3409,8 +3428,10 @@ button {
   text-align: center;
 }
 #camera .content .cameraSlider .visual-camera .slider {
-  display: inline-block;
+  display: block;
   max-width: 610px;
+  overflow: hidden;
+  margin: 0 auto;
 }
 #camera .content .cameraSlider .visual-camera img {
   max-width: 360px;
@@ -3535,6 +3556,7 @@ button {
   border-top: 1px solid #e6e6e7;
 }
 #camera .content .buy-block .share .inTheBox {
+  cursor: pointer;
   position: relative;
 }
 #camera .content .buy-block .share .inTheBox:before {
@@ -3608,24 +3630,14 @@ button {
   left: 0;
   z-index: 220;
 }
-#camera .inBox #inBoxToggle {
+#camera .inBox #inBoxClose {
   float: left;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
 }
-#camera .inBox #inBoxToggle span.icon-bar {
-  display: block;
-  width: 36px;
-  height: 4px;
-  border-radius: 3px;
-  background-color: #44bbff;
-}
-#camera .inBox #inBoxToggle .icon-bar + .icon-bar {
-  margin-top: 6px;
-}
-#camera .inBox #inBoxToggle .glyphicon-remove {
+#camera .inBox #inBoxClose .glyphicon-remove {
   font-size: 2.4em;
   color: #44bbff;
 }
