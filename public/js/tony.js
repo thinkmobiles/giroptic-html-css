@@ -47,7 +47,6 @@ function videoAnimate() {
 
 var scrolling = function(){
     if($(window).scrollTop() > 837){
-        //console.log('max');
         videoAnimate();
     } else {
         console.log('min')
@@ -71,6 +70,26 @@ $('#search-block').on('click', function(){
     }, 10);
 });
 
+// --- open Mobile menu
+$('#forMobile').on('click', function() {
+    $('#menuPopUp').addClass('activePop');
+    $('#menuPopUp').show();
+});
+
+// --- close Mobile menu
+$('#menuPopUp').on('click', function() {
+    $('#menuPopUp').hide();
+    $('#menuPopUp').removeClass('activePop');
+});
+
+$('#my-affix').affix({
+    offset: {
+        top: 100
+        , bottom: function () {
+            return (this.bottom = $('.footer').outerHeight(true))
+        }
+    }
+})
 
 $(window).on('scroll', scrolling);
 

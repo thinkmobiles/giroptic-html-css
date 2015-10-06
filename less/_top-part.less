@@ -494,7 +494,7 @@
       .clearfix;
 
       li {
-        float: right;
+        float: left;
         margin: 0 5%;
         text-transform: uppercase;
 
@@ -813,6 +813,40 @@
 
 /*== End Gallery ===============================*/
 
+#home-navbar {
+  .activePop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .8);
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    .home-menu {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ul {
+        display: block;
+        width: 40%;
+        margin: 0 auto;
+        li {
+          float: none;
+          text-align: center;
+          a {
+            color: @home-scroll;
+            line-height: 6;
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
 @media (min-width: 769px) and (max-width: 1024px) {
 
   .is-min-height {
@@ -887,7 +921,7 @@
 
   #home-navbar {
     .home-menu, #search {
-      //display: none;
+      display: none;
     }
     #forMobile {
       display: block !important;
