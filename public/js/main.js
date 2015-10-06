@@ -6,6 +6,7 @@ function windowSize(){
     }
 }
 $(window).on('load resize',windowSize);
+
 // --- App Carousel Section
 $(document).ready(function() {
     $("#appSlider .owl-carousel").owlCarousel({
@@ -84,6 +85,7 @@ $(document).ready(function() {
         loop: true
     });
 });
+
 // --- Accessories block
 $('ul.tabs li').click(function(){
     var tab_id = $(this).attr('data-tab');
@@ -108,6 +110,7 @@ $('#app .row').click(function(){
         });
     }, 3000);
 });
+
 // --- Patchwork Section
 $('#patchwork').click(function(){
     setTimeout(function(){
@@ -149,6 +152,7 @@ $('#sendAppBtn').click(function(){
         });
     });
 });
+
 $('#speTech').click(function(){
     $('.speTech .icons').addClass('iconsClick');
     setTimeout(function(){
@@ -158,6 +162,7 @@ $('#speTech').click(function(){
         }, 200);
     }, 800);
 });
+
 myParaxify = paraxify('.paraxify');
 $('#inBoxToggle').click(function(){
     if ($('#inBox-collapse').hasClass('in')) {
@@ -183,6 +188,7 @@ $('#inBoxToggle').click(function(){
         });
     }
 });
+
 $('#inBoxClose').click(function(){
     $('#inBox-collapse').animate({
         left: '-100%'
@@ -191,6 +197,7 @@ $('#inBoxClose').click(function(){
     $('.inBox-cnt .feature').css('top', '10%');
     $('.inBox-cnt .feature').css('opacity', '0');
 });
+
 $(function() {
     $('.item a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
