@@ -85,17 +85,6 @@ $(document).ready(function() {
         loop: true
     });
 });
-
-// --- Accessories block
-$('ul.tabs li').click(function(){
-    var tab_id = $(this).attr('data-tab');
-
-    $('ul.tabs li').removeClass('current');
-    $('.tab-content').removeClass('current');
-
-    $(this).addClass('current');
-    $("#"+tab_id).addClass('current');
-});
 // --- Application Section
 $('#app .row').click(function(){
     $(".phone-style").addClass('down');
