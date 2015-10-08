@@ -1602,34 +1602,38 @@ button {
   #home-navbar #forMobile {
     display: block !important;
   }
-  #player .player-bg {
-    width: 80%;
+  #player {
+    overflow: hidden;
+    background-image: none;
+    height: auto;
   }
-  #player .player-bg img {
-    width: 80%;
-    left: 10%;
-    bottom: 358px;
+  #player .player-bg {
+    display: none;
   }
   #player .player-bg #play {
-    top: 15%;
-  }
-  #player #play {
-    top: 15%;
+    display: none;
   }
   #player .tabs {
     width: 100%;
-    top: auto;
-    bottom: 0;
-    height: auto;
-    padding-top: 0;
+    top: 0;
+    height: inherit;
+    position: static;
+    padding: 0;
   }
   #player .tabs .tab {
     width: 100%;
     margin: 0;
+    height: 397px;
+  }
+  #player .tabs .tab span {
+    text-align: center;
   }
   #player .tabs .tab img {
     width: 100%;
     opacity: 1;
+  }
+  #player .tabs .tab:hover {
+    height: 397px;
   }
   #home .content .scroll {
     bottom: 50px;
@@ -1661,15 +1665,8 @@ button {
     width: 80%;
     margin: 0 9%;
   }
-  #header .btn-buy span {
-    width: 100px;
-    padding: 5px 0;
-  }
-  #header .btn-buy span::before {
-    background: none;
-  }
-  #header .btn-buy span.active::before {
-    background: none;
+  #header {
+    display: none;
   }
   #pave1 .counters .counter .count {
     color: #0d47a1;
