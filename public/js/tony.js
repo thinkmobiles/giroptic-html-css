@@ -58,7 +58,7 @@ $(window).on('load', function() {
 
 });
 
-
+//--Scrolling Events
 function videoAnimate() {
     var play = $('#play');
     var playImg = $('.playerImg');
@@ -82,10 +82,42 @@ function videoAnimate() {
     });
 };
 
+function appPhoneAnimate(){
+    $(".phone-style").addClass('down');
+    setTimeout(function(){
+        $('.animate').animate(3000, function(){
+            $('.animate').addClass('scale');
+        });
+    }, 3000);
+    setTimeout(function(){
+        $('.circle').animate(3000, function(){
+            $('.circle').addClass('scale');
+        });
+    }, 3000);
+};
+
+function speTechAnimate(){
+    $('.speTech .icons').addClass('iconsClick');
+    setTimeout(function(){
+        $('.speTech .description').animate({
+            top: "0",
+            opacity: "1"
+        }, 200);
+    }, 800);
+};
+
 var scrolling = function(){
     if($(document).width() >= 750) {
-        if($(window).scrollTop() > 837){
+        var topScroll = $(window).scrollTop() + $('header').height();
+
+        if($(window).scrollTop() >= $('#player').offset().top){
             videoAnimate();
+        }
+        if(topScroll >= $("#app").offset().top){
+            appPhoneAnimate();
+        }
+        if(topScroll >= $("#speTech").offset().top){
+            speTechAnimate();
         }
     }
 
@@ -93,4 +125,4 @@ var scrolling = function(){
 
 $(window).on('scroll', scrolling);
 
-$('#play').on('click', videoAnimate);
+//$('#play').on('click', videoAnimate);
