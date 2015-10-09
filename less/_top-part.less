@@ -1045,32 +1045,39 @@
   }
 
   #player {
+    overflow: hidden;
+    background-image: none;
+    height: auto;
     .player-bg {
-      width: 80%;
-      img {
-        width: 80%;
-        left: 10%;
-        bottom: 358px;
-      }
+      display: none;
       #play {
-        top: 15%;
+        display: none;
       }
-    }
-    #play {
-      top: 15%;
     }
     .tabs {
       width: 100%;
-      top: auto;
-      bottom: 0;
-      height: auto;
-      padding-top: 0;
+      top: 0;
+      height: inherit;
+      position: static;
+      padding: 0;
       .tab {
         width: 100%;
         margin: 0;
+        height: 397px;
+        padding: 21% 0;
+        span {
+          text-align: center;
+          .pxToEm(24);
+          &:first-child {
+            .pxToEm(48);
+          }
+        }
         img {
           width: 100%;
           opacity: 1;
+        }
+        &:hover {
+          height: 397px;
         }
       }
     }
@@ -1165,20 +1172,7 @@
   }
 
   #header {
-    .btn-buy {
-      span {
-        width: 100px;
-        padding: 5px 0;
-        &::before {
-          background: none;
-        }
-      }
-      span.active {
-        &::before {
-          background: none;
-        }
-      }
-    }
+    display: none;
   }
 
   #pave1 {
