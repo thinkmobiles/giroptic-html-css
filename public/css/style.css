@@ -2674,7 +2674,7 @@ button {
     left: 0;
   }
   #patchwork .patchwork-left-block img {
-    top: 0;
+    top: 33px;
   }
   #accessories .bg-accessories {
     background-image: url('../img/accessories-bg1.jpg');
@@ -2738,11 +2738,10 @@ button {
     left: 0;
   }
   #patchwork .patchwork-left-block img {
-    top: 80px;
+    top: 95px;
   }
-  #accessories .bg-accessories {
-    background-image: url('../img/accessories-bg1.jpg');
-    height: 357px;
+  #accessories .cameraImage {
+    top: 10px;
   }
   #accessories .accessories-carousel {
     margin-top: -169px;
@@ -2812,13 +2811,14 @@ button {
   #patchwork .patchwork-left-block img,
   #patchwork .patchwork-right-block img {
     position: relative;
-    left: 190px;
-    top: 60px;
   }
   #patchwork .patchwork-left-block img {
-    width: 467px;
-    top: 108px;
-    left: 140px;
+    top: 30px;
+    left: 80px;
+  }
+  #patchwork .patchwork-right-block img {
+    left: 105px;
+    top: -3px;
   }
   #pave2 .counters .counter {
     padding-bottom: 93px;
