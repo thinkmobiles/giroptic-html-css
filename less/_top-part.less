@@ -738,10 +738,42 @@
       display: table;
     }
 
+    .owl-carousel {
+      overflow: hidden;
+       .owl-controls {
+         position: absolute;
+         left: 50%;
+         margin-left: -61px;
+         bottom: 25px;
+         .owl-dots {
+           .owl-dot {
+             float: left;
+             margin-left: 30px;
+             &:first-child {
+               margin: 0;
+             }
+           }
+           span {
+             background: #fff;
+             display: block;
+             border-radius: 100%;
+             border: 2px solid #fff;
+             width: 21px;
+             height: 21px;
+           }
+           .active {
+             span {
+               background: transparent;
+             }
+           }
+         }
+       }
+    }
+
     .counter {
       border-right: 1px solid @pave1-border;
       padding: 65px 0 60px 0;
-
+      width: 100%;
       span {
         display: block;
         text-align: center;

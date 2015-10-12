@@ -84,6 +84,18 @@ $(document).ready(function() {
         },
         loop: true
     });
+    $('#pave1 .counters .owl-carousel').owlCarousel({
+        items: 3,
+        dots:true,
+        responsiveClass:true,
+        responsive:{
+            0:{items:1},
+            750:{items:1},
+            768:{items:3, dots:false},
+            1024:{items:3, dots:false},
+            1680:{items:3, dots:false}
+        }
+    })
 });
 // --- Application Section
 //$('#app .row').click(function(){

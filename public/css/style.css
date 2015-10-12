@@ -1381,9 +1381,37 @@ button {
   content: '';
   display: table;
 }
+#pave1 .counters .owl-carousel {
+  overflow: hidden;
+}
+#pave1 .counters .owl-carousel .owl-controls {
+  position: absolute;
+  left: 50%;
+  margin-left: -61px;
+  bottom: 25px;
+}
+#pave1 .counters .owl-carousel .owl-controls .owl-dots .owl-dot {
+  float: left;
+  margin-left: 30px;
+}
+#pave1 .counters .owl-carousel .owl-controls .owl-dots .owl-dot:first-child {
+  margin: 0;
+}
+#pave1 .counters .owl-carousel .owl-controls .owl-dots span {
+  background: #fff;
+  display: block;
+  border-radius: 100%;
+  border: 2px solid #fff;
+  width: 21px;
+  height: 21px;
+}
+#pave1 .counters .owl-carousel .owl-controls .owl-dots .active span {
+  background: transparent;
+}
 #pave1 .counters .counter {
   border-right: 1px solid #69c9ff;
   padding: 65px 0 60px 0;
+  width: 100%;
 }
 #pave1 .counters .counter span {
   display: block;

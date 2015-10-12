@@ -38,7 +38,6 @@ $('#menuPopUp').on('click', function() {
 // Founction Section
 $(window).on('load', function() {
 
-
     var showPlayer = function() {
       var player = $('#circleCircle');
       var playerText = $('.first-page-desc');
@@ -66,7 +65,7 @@ function videoAnimate() {
     var secondWave = $('#secondWave');
     var thirdWave = $('#thirdWave');
     var fourthWave = $('#fourthWave');
-    var height = $(window).height();
+
 
     play.show();
     playImg.addClass('playerAnim');
@@ -124,5 +123,3 @@ var scrolling = function(){
 };
 
 $(window).on('scroll', scrolling);
-
-//$('#play').on('click', videoAnimate);
