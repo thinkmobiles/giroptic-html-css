@@ -1119,6 +1119,57 @@ button {
 #sub-header ul li:hover {
   background-color: #3a3a3a;
 }
+#sub-header .lang {
+  position: relative;
+  z-index: 1001;
+}
+#sub-header .lang .slct {
+  display: block;
+  background-position: 290px -145px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #ffffff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+#sub-header .lang .slct.active {
+  border-bottom: none;
+}
+#sub-header .lang .drop {
+  margin: 0;
+  padding: 0;
+  width: 99%;
+  border-top: none;
+  display: none;
+  position: absolute;
+  background: #4b4b4b;
+  overflow: hidden;
+  z-index: 999;
+}
+#sub-header .lang .drop li {
+  list-style: none;
+  cursor: pointer;
+  display: block;
+  color: #444;
+  background-color: ;
+  background-position: 10px -119px;
+  margin-bottom: 0;
+}
+#sub-header .lang .drop li a {
+  font-size: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+#sub-header .lang .drop li:hover {
+  background-color: #3a3a3a;
+}
+#sub-header .lang .drop li:last-child {
+  width: 100%;
+}
 #sub-header .social {
   background: url('../img/share.jpg') no-repeat 0 0;
   position: relative;
@@ -1787,6 +1838,86 @@ button {
   width: 100%;
   vertical-align: middle;
   display: inline-block;
+}
+#function .slide-function .image .scrolling {
+  height: 38px;
+  max-width: 620px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: relative;
+}
+#function .slide-function .image .scrolling img {
+  display: none;
+  width: 38px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 500;
+}
+#function .slide-function .image .scrolling .nav {
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  overflow: hidden;
+}
+#function .slide-function .image .scrolling .nav.activate {
+  position: absolute;
+  display: none;
+  top: 0;
+}
+#function .slide-function .image .scrolling .nav.activate:after,
+#function .slide-function .image .scrolling .nav.activate:before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border: 1px solid #44bbff;
+  border-radius: 50%;
+  background-color: #44bbff;
+  position: absolute;
+  top: calc(50% - 3px);
+}
+#function .slide-function .image .scrolling .nav.activate:after {
+  right: 0;
+}
+#function .slide-function .image .scrolling .nav.activate:before {
+  left: 0;
+}
+#function .slide-function .image .scrolling .nav .left {
+  float: left;
+}
+#function .slide-function .image .scrolling .nav .left .line {
+  right: 0;
+}
+#function .slide-function .image .scrolling .nav .right {
+  float: right !important;
+}
+#function .slide-function .image .scrolling .nav .right .line {
+  left: 0;
+}
+#function .slide-function .image .scrolling .nav .left,
+#function .slide-function .image .scrolling .nav .right {
+  position: relative;
+  height: inherit;
+  width: 50%;
+  top: 0;
+}
+#function .slide-function .image .scrolling .nav .left .line,
+#function .slide-function .image .scrolling .nav .right .line {
+  position: absolute;
+  top: calc(50% - 1px);
+  background-color: #44bbff;
+  transition: all 2s;
+  width: 0;
+  height: 2px;
+}
+#function .slide-function .image .scrolling .nav .left .line.lineActive,
+#function .slide-function .image .scrolling .nav .right .line.lineActive {
+  width: 100%;
 }
 #function .slide-function .content .title {
   font-family: "Zona Pro", sans-serif;

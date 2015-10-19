@@ -70,13 +70,23 @@
             <section id="home" class="section">
                 <div id="sub-header">
                     <ul>
-                        <li class="country">
-                            <a href="#">
-                                <div class="sub-header_active-country">France</div>
-                                <div class="sub-header_nonactive-country">English</div>
-                                <div class="sub-header_nonactive-country">Español</div>
-                            </a>
+                        <!--<li class="country">-->
+                            <!--<a href="#">-->
+                                <!--<div class="sub-header_active-country">France</div>-->
+                                <!--<div class="sub-header_nonactive-country">English</div>-->
+                                <!--<div class="sub-header_nonactive-country">Español</div>-->
+                            <!--</a>-->
+                        <!--</li>-->
+                        <li class="lang">
+                            <a href="javascript:void(0);" class="slct">France</a>
+                            <ul class="drop">
+                                <li><a href="">France</a></li>
+                                <li><a href="">English</a></li>
+                                <li><a href="">Español</a></li>
+                            </ul>
+                            <input type="hidden" id="select" />
                         </li>
+
                         <li>
                             <a href="#">
                                 <div>Mon panier</div>
@@ -226,21 +236,6 @@
                                 <span class="count">360</span>
                                 <span class="fps">degrees</span>
                             </div>
-                            <!--<div class="counter col-lg-4 col-md-4 col-sm-4 col-xs-4">-->
-                                <!--<span class="title">Video</span>-->
-                                <!--<span class="count">2k</span>-->
-                                <!--<span class="fps">20-30fps</span>-->
-                            <!--</div>-->
-                            <!--<div class="counter col-lg-4 col-md-4 col-sm-4 col-xs-4">-->
-                                <!--<span class="title">Photo</span>-->
-                                <!--<span class="count">4k</span>-->
-                                <!--<span class="fps">20-30fps</span>-->
-                            <!--</div>-->
-                            <!--<div class="counter col-lg-4 col-md-4 col-sm-4 col-xs-4">-->
-                                <!--<span class="title">FOV</span>-->
-                                <!--<span class="count">360</span>-->
-                                <!--<span class="fps">degrees</span>-->
-                            <!--</div>-->
                         </div>
                     </div>
                 </div>
@@ -252,10 +247,23 @@
                 </div>
             </section>
             <section id="function" class="section">
-                <div class="slide-function">
+                <div class="slide-function giropticFirst">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="image">
-                            <img src="./public/img/function-1.png" alt="function" />
+                            <img src="public/img/function/function-0.png" alt="function" />
+                            <img src="public/img/function/function-0-caption.png" alt="function" class="image-caption" style="display: none"/>
+                            <img src="public/img/function/function-1.png" alt="function"  style="display: none"/>
+                            <div class="scrolling">
+                                <img src="public/img/function/scroll-arr.png" alt="/"/>
+                                <div class="nav">
+                                    <div class="left">
+                                        <div class="line"></div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="line"></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-10 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1">
@@ -281,7 +289,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-function">
+                <div class="slide-function giropticSecond">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="image">
                             <img src="./public/img/function-2.png" alt="function" />
@@ -311,7 +319,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-function">
+                <div class="slide-function giropticThird">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="image">
                             <img src="./public/img/function-3.png" alt="function" />
