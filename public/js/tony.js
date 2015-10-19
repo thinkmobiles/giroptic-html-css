@@ -1,7 +1,6 @@
 /**
  * Created by TONY on 15.09.2015.
  */
-
 //Home Section
 
 // --- Search Section
@@ -34,6 +33,43 @@ $('#menuPopUp').on('click', function() {
     }
 });
 
+// Select
+$('.slct').click(function(){
+
+    var dropBlock = $(this).parent().find('.drop');
+
+    if( dropBlock.is(':hidden') ) {
+        dropBlock.slideDown();
+
+
+        $(this).addClass('active');
+
+
+        $('.drop').find('li').click(function(){
+
+
+            var selectResult = $(this).html();
+
+
+            $(this).parent().parent().find('input').val(selectResult);
+
+
+            $(this).parent().parent().find('.slct').removeClass('active').html(selectResult);
+
+
+            dropBlock.slideUp();
+        });
+
+
+    } else {
+        $(this).removeClass('active');
+        dropBlock.slideUp();
+    }
+
+
+    return false;
+});
+
 
 // Founction Section
 $(window).on('load', function() {
@@ -56,6 +92,50 @@ $(window).on('load', function() {
 
 
 });
+
+//--Function Section
+var countImg = 0;
+var fuctionGiroptic = function(e) {
+    var elem = $(e.target);
+
+    var images = $('.giropticFirst .image img');
+    $('giropticFirst').focus();
+
+    if(countImg == 0) {
+        images.eq(countImg).hide();
+        countImg++;
+        images.eq(countImg).fadeIn();
+    } else if(countImg == 1){
+        images.eq(countImg).hide();
+        countImg++;
+        images.eq(countImg).fadeIn();
+        $('.scrolling img').fadeIn(600, function() {
+            $('.scrolling .nav')
+                .addClass('activate')
+                .fadeIn();
+
+            $('.scrolling .nav .left .line').addClass('lineActive');
+            $('.scrolling .nav .right .line').addClass('lineActive');
+
+            elem.unbind("wheel");
+            elem.unbind("onwheel");
+            elem.unbind("onmousewheel");
+            elem.unbind("mousewheel");
+            elem.unbind("MozMousePixelScroll");
+
+            document.onmousewheel=document.onwheel=function(){
+                return true;
+            };
+            document.addEventListener("MozMousePixelScroll",function(){return true},true);
+            document.onkeydown=function(e) {
+                if (e.keyCode>=33&&e.keyCode<=40) return true;
+            }
+        });
+    }
+};
+
+
+$('.giropticFirst').on('click', fuctionGiroptic);
 
 //--Scrolling Events
 function videoAnimate() {
@@ -81,6 +161,8 @@ function videoAnimate() {
     });
 };
 
+
+
 function appPhoneAnimate(){
     $(".phone-style").addClass('down');
     setTimeout(function(){
@@ -105,12 +187,28 @@ function speTechAnimate(){
     }, 800);
 };
 
-var scrolling = function(){
+var scrolling = function(e){
     if($(document).width() >= 750) {
         var topScroll = $(window).scrollTop() + $('header').height();
 
         if($(window).scrollTop() >= $('#player').offset().top){
             videoAnimate();
+        }
+        if($(window).scrollTop() >= $('#function').offset().top && $(window).scrollTop() < $('#function').offset().top + 120){
+            var elem = $(e.target);
+
+            elem.bind("wheel", fuctionGiroptic);
+            elem.bind("onwheel", fuctionGiroptic);
+            elem.bind("onmousewheel", fuctionGiroptic);
+            elem.bind("mousewheel", fuctionGiroptic);
+            elem.bind("MozMousePixelScroll", fuctionGiroptic);
+            document.onmousewheel=document.onwheel=function(){
+                return false;
+            };
+            document.addEventListener("MozMousePixelScroll",function(){return false},false);
+            document.onkeydown=function(e) {
+                if (e.keyCode>=33&&e.keyCode<=40) return false;
+            }
         }
         if(topScroll >= $("#app").offset().top){
             appPhoneAnimate();
@@ -122,4 +220,4 @@ var scrolling = function(){
 
 };
 
-$(window).on('scroll', scrolling);
+$(document).on('scroll', scrolling);
