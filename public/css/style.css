@@ -1929,6 +1929,10 @@ button {
   margin-bottom: 50px;
   color: #4b4b4b;
   line-height: 1.389;
+  margin-top: 1000px;
+  -webkit-transition: all 2s ease-in;
+  -moz-transition: all 2s ease-in;
+  transition: all 2s ease-in;
 }
 #function .slide-function .content h5 {
   font-family: "Zona Pro", sans-serif;
@@ -1976,9 +1980,6 @@ button {
   background: url('../img/function-bg2.jpg');
   background-size: cover;
 }
-#function .slide-function:nth-child(2) .image {
-  vertical-align: bottom;
-}
 #function .slide-function:nth-child(3) > div:first-child {
   background: url('../img/function-bg3.jpg');
   background-size: cover;
@@ -1995,6 +1996,19 @@ button {
 #function .slide-function:nth-child(3) .content:first-child .properties div img {
   max-height: 100%;
   float: left;
+}
+#function .slide-function .subImg {
+  position: absolute;
+  bottom: ;
+}
+#function .slide-function .image .nonActive {
+  display: none;
+}
+#function .slide-function .image .active {
+  position: absolute;
+  bottom: 65px;
+  left: 0;
+  width: 35%;
 }
 @media (max-width: 750px) {
   #function .slide-function {
@@ -2058,6 +2072,7 @@ button {
     text-align: center;
   }
   #function .slide-function .content .title {
+    margin-top: 0;
     margin-bottom: 35px;
   }
   #function .slide-function .content .properties {

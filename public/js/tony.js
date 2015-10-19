@@ -102,6 +102,7 @@ var fuctionGiroptic = function(e) {
     $('giropticFirst').focus();
 
     if(countImg == 0) {
+        $('.slide-function  .title').css('margin-top', 0);
         images.eq(countImg).hide();
         countImg++;
         images.eq(countImg).fadeIn();
@@ -117,20 +118,25 @@ var fuctionGiroptic = function(e) {
             $('.scrolling .nav .left .line').addClass('lineActive');
             $('.scrolling .nav .right .line').addClass('lineActive');
 
-            elem.unbind("wheel");
-            elem.unbind("onwheel");
-            elem.unbind("onmousewheel");
-            elem.unbind("mousewheel");
-            elem.unbind("MozMousePixelScroll");
-
-            document.onmousewheel=document.onwheel=function(){
-                return true;
-            };
-            document.addEventListener("MozMousePixelScroll",function(){return true},true);
-            document.onkeydown=function(e) {
-                if (e.keyCode>=33&&e.keyCode<=40) return true;
-            }
+            activateScrolling(elem);
         });
+    }
+};
+
+var activateScrolling = function(elem) {
+    var element = elem;
+    element.unbind("wheel");
+    element.unbind("onwheel");
+    element.unbind("onmousewheel");
+    element.unbind("mousewheel");
+    element.unbind("MozMousePixelScroll");
+
+    document.onmousewheel=document.onwheel=function(){
+        return true;
+    };
+    document.addEventListener("MozMousePixelScroll",function(){return true},true);
+    document.onkeydown=function(e) {
+        if (e.keyCode>=33&&e.keyCode<=40) return true;
     }
 };
 
@@ -194,21 +200,25 @@ var scrolling = function(e){
         if($(window).scrollTop() >= $('#player').offset().top){
             videoAnimate();
         }
-        if($(window).scrollTop() >= $('#function').offset().top && $(window).scrollTop() < $('#function').offset().top + 120){
-            var elem = $(e.target);
+        if($(window).scrollTop() >= $('.giropticFirst').offset().top - 60){
 
-            elem.bind("wheel", fuctionGiroptic);
-            elem.bind("onwheel", fuctionGiroptic);
-            elem.bind("onmousewheel", fuctionGiroptic);
-            elem.bind("mousewheel", fuctionGiroptic);
-            elem.bind("MozMousePixelScroll", fuctionGiroptic);
-            document.onmousewheel=document.onwheel=function(){
-                return false;
-            };
-            document.addEventListener("MozMousePixelScroll",function(){return false},false);
-            document.onkeydown=function(e) {
-                if (e.keyCode>=33&&e.keyCode<=40) return false;
+            if(countImg !== 2) {
+                var elem = $(e.target);
+
+                elem.bind("wheel", fuctionGiroptic);
+                elem.bind("onwheel", fuctionGiroptic);
+                elem.bind("onmousewheel", fuctionGiroptic);
+                elem.bind("mousewheel", fuctionGiroptic);
+                elem.bind("MozMousePixelScroll", fuctionGiroptic);
+                document.onmousewheel=document.onwheel=function(){
+                    return false;
+                };
+                document.addEventListener("MozMousePixelScroll",function(){return false},false);
+                document.onkeydown=function(e) {
+                    if (e.keyCode>=33&&e.keyCode<=40) return false;
+                }
             }
+
         }
         if(topScroll >= $("#app").offset().top){
             appPhoneAnimate();
@@ -216,6 +226,7 @@ var scrolling = function(e){
         if(topScroll >= $("#speTech").offset().top){
             speTechAnimate();
         }
+
     }
 
 };
