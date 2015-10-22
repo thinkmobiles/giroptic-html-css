@@ -99,7 +99,6 @@ var fuctionGiroptic = function(e) {
     var elem = $(e.target);
 
     var images = $('.giropticFirst .image img');
-    $('giropticFirst').focus();
 
     if(countImg == 0) {
         $('.slide-function  .title').css('margin-top', 0);
@@ -120,6 +119,21 @@ var fuctionGiroptic = function(e) {
 
             activateScrolling(elem);
         });
+    }
+};
+
+var unActivateScrolling = function(elem) {
+    elem.bind("wheel", fuctionGiroptic);
+    elem.bind("onwheel", fuctionGiroptic);
+    elem.bind("onmousewheel", fuctionGiroptic);
+    elem.bind("mousewheel", fuctionGiroptic);
+    elem.bind("MozMousePixelScroll", fuctionGiroptic);
+    document.onmousewheel=document.onwheel=function(){
+        return false;
+    };
+    document.addEventListener("MozMousePixelScroll",function(){return false},false);
+    document.onkeydown=function(e) {
+        if (e.keyCode>=33&&e.keyCode<=40) return false;
     }
 };
 
@@ -194,29 +208,23 @@ function speTechAnimate(){
 };
 
 var scrolling = function(e){
+
     if($(document).width() >= 750) {
         var topScroll = $(window).scrollTop() + $('header').height();
+        var win = $(window).scrollTop();
 
-        if($(window).scrollTop() >= $('#player').offset().top){
+        //if(win >= 0 && win<150) {
+        //     scrollingPage(event);
+        //}
+        if(win >= $('#player').offset().top){
             videoAnimate();
         }
-        if($(window).scrollTop() >= $('.giropticFirst').offset().top - 60){
+        if(win >= $('.giropticFirst').offset().top - 60){
 
             if(countImg !== 2) {
                 var elem = $(e.target);
+                unActivateScrolling(elem);
 
-                elem.bind("wheel", fuctionGiroptic);
-                elem.bind("onwheel", fuctionGiroptic);
-                elem.bind("onmousewheel", fuctionGiroptic);
-                elem.bind("mousewheel", fuctionGiroptic);
-                elem.bind("MozMousePixelScroll", fuctionGiroptic);
-                document.onmousewheel=document.onwheel=function(){
-                    return false;
-                };
-                document.addEventListener("MozMousePixelScroll",function(){return false},false);
-                document.onkeydown=function(e) {
-                    if (e.keyCode>=33&&e.keyCode<=40) return false;
-                }
             }
 
         }
@@ -231,4 +239,13 @@ var scrolling = function(e){
 
 };
 
+//var scrollingPage = function(event){
+//    event.preventDefault();
+//    var kids = $('#main').children('section');
+//    var top = kids.eq(1).offset().top;
+//    $('body,html').animate({scrollTop: top}, 1000);
+//};
+
+
 $(document).on('scroll', scrolling);
+

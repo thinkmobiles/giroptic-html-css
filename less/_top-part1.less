@@ -1,7 +1,7 @@
 #function {
   background-color: @function-bg;
   position: relative;
-  //height: 100vh;
+
   z-index: 6;
   .slide-function {
     height: 100vh;
@@ -18,10 +18,13 @@
     .image {
       text-align: center;
       img {
+        @imgWidth: 310px;
         max-width: 620px;
         width: 100%;
         vertical-align: middle;
         display: inline-block;
+        position: relative;
+        z-index: 150;
       }
       .scrolling {
         height: 38px;
@@ -161,6 +164,7 @@
        &> div:first-child {
          background: url('../img/function-bg2.jpg');
          background-size: cover;
+         position: relative;
        }
     }
     &:nth-child(3) {
@@ -191,7 +195,13 @@
   .slide-function {
     .subImg {
       position: absolute;
-      bottom: ;
+      bottom: 7%;
+      max-width: 550px;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      overflow: hidden;
     }
       .image {
         .nonActive {

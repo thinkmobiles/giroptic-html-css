@@ -95,8 +95,38 @@ $(document).ready(function() {
             1024:{items:3, dots:false},
             1680:{items:3, dots:false}
         }
-    })
+    });
+
+    var carusel = $('#function .giropticSecond .subImg');
+    carusel.owlCarousel({
+        item: 1,
+        //nav: true,
+        dots: false,
+        responsiveClass:true,
+        responsive:{
+            0:{items:1},
+            750:{items:1},
+            768:{items:1},
+            1024:{items:1},
+            1680:{items:1}
+        }
+    });
+
+    var caruselStage = $('#function .giropticSecond .image');
+    caruselStage.on('mousewheel', function (e) {
+        var ab = $(e.originalEvent.deltaY);
+        if (ab[0] > 0) {
+            carusel.trigger('next.owl');
+        } else {
+            carusel.trigger('prev.owl');
+        }
+        e.preventDefault();
+    });
+
 });
+
+
+
 // --- Application Section
 //$('#app .row').click(function(){
 //    $(".phone-style").addClass('down');
