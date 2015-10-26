@@ -3115,6 +3115,460 @@ button {
     overflow: hidden !important;
   }
 }
+#main.product-page {
+  padding-top: 700px;
+}
+#main.product-page #home {
+  height: 700px;
+}
+#main.product-page #header {
+  top: 700px;
+}
+#home.product-page {
+  background: url("../img/product-page/home-bgr.png") no-repeat left top #ffffff;
+  background-size: cover;
+  height: 700px;
+}
+#home.product-page #sliderTop {
+  max-width: 1210px;
+  margin: 0 auto;
+}
+#home.product-page #sliderTop .slider {
+  width: 620px;
+  float: left;
+}
+#home.product-page #sliderTop .header-right-block {
+  overflow: hidden;
+  float: right;
+}
+#home.product-page #sliderTop .bx-wrapper {
+  float: left;
+  width: 300px;
+  padding-top: 130px;
+  margin-left: 110px;
+}
+#home.product-page #sliderTop #bx-pager {
+  float: left;
+  padding-top: 150px;
+  width: 80px;
+}
+#home.product-page #sliderTop #bx-pager a {
+  display: block;
+  width: 78px;
+  height: 49px;
+  border: 1px solid #eee;
+  text-align: center;
+  margin-bottom: 7px;
+}
+#home.product-page #sliderTop #bx-pager a:hover,
+#home.product-page #sliderTop #bx-pager a.active {
+  border-color: #4bf;
+}
+#home.product-page #sliderTop #bx-pager a img {
+  height: 49px;
+  width: auto;
+}
+#home.product-page #sliderTop .add-to-cart-block {
+  float: left;
+  width: 500px;
+  padding-left: 37px;
+}
+#home.product-page #sliderTop .add-to-cart-block h1 {
+  color: #4b4b4b;
+  font-size: 54pt;
+  font-family: "Zona Pro SemiBold";
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eeeeee;
+}
+#home.product-page #sliderTop .add-to-cart-block p.info {
+  font: 9pt/19px "Zona-Light";
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 20px;
+}
+#home.product-page #sliderTop .add-to-cart-block p.price-stock {
+  overflow: hidden;
+  border-bottom: 1px solid #eeeeee;
+}
+#home.product-page #sliderTop .add-to-cart-block p.price-stock .price {
+  display: block;
+  float: left;
+  font: 16pt/50px "Zona Pro SemiBold";
+  color: #4b4b4b;
+}
+#home.product-page #sliderTop .add-to-cart-block p.price-stock .stock {
+  display: block;
+  float: right;
+  font: 12pt/50px "Zona Pro";
+  color: #55b534;
+}
+#home.product-page #sliderTop .add-to-cart-block .buy-form ul {
+  list-style-type: none;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+}
+#home.product-page #sliderTop .add-to-cart-block .buy-form ul li {
+  display: block;
+  float: left;
+}
+#home.product-page #sliderTop .add-to-cart-block .buy-form ul li a {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#home.product-page #sliderTop .add-to-cart-block .buy-form ul li a.more,
+#home.product-page #sliderTop .add-to-cart-block .buy-form ul li a.less {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  background: #4b4b4b;
+  color: #fff;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+}
+#home.product-page #sliderTop .add-to-cart-block .buy-form ul li a.add-to-cart {
+  background: url("../img/product-page/shipping-cart.png") no-repeat 32px 16px #4b4b4b;
+  border: none;
+  border-radius: 25px;
+  width: 240px;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 80px;
+  color: #fff;
+  margin-left: 13px;
+  display: block;
+  text-align: center;
+}
+#home.product-page #sliderTop .add-to-cart-block .buy-form ul li a:hover {
+  background-color: #4bf;
+}
+#home.product-page #sliderTop .add-to-cart-block .buy-form ul li input {
+  background: #eeeeee;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  line-height: 30px;
+  color: #5b5b5b;
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  border: none;
+  margin: 5px 10px 0;
+}
+#sidebar {
+  z-index: 10;
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+  width: 350px;
+  display: none;
+}
+.inside-tab {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.tab-content {
+  display: none;
+}
+.tab-content.current {
+  display: block;
+}
+#header #navbar li.current a div.active {
+  color: #44bbff !important;
+}
+#header #navbar li.current a div {
+  top: -60px !important;
+}
+#first-tab {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  padding: 70px 0;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+#first-tab .inside-tab .products-gallery {
+  overflow: hidden;
+}
+#first-tab .inside-tab .products-gallery > div {
+  width: 190px;
+  height: 190px;
+  float: left;
+  background: #fff;
+  margin: 5px;
+  position: relative;
+}
+#first-tab .inside-tab .products-gallery > div .image {
+  position: relative;
+  min-height: 160px;
+}
+#first-tab .inside-tab .products-gallery > div .image img {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+#first-tab .inside-tab .products-gallery > div span {
+  display: block;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  font: 8pt/15px "Zona-Light";
+  color: #959595;
+}
+#first-tab .inside-tab .products-gallery .big-image {
+  width: 590px;
+  height: 390px;
+}
+#first-tab .inside-tab .products-gallery .big-image .image {
+  min-height: 355px;
+}
+#second-tab {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  padding: 70px 0;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+#second-tab .inside-tab h2 {
+  font: 22px "Zona Pro SemiBold";
+  color: #4b4b4b;
+  margin-bottom: 20px;
+}
+#second-tab .inside-tab p {
+  font: 8pt/15px "Zona-Light";
+  color: #959595;
+  margin-bottom: 30px;
+}
+#second-tab .inside-tab ul {
+  list-style-type: none;
+}
+#second-tab .inside-tab ul li {
+  padding-left: 110px;
+  min-height: 115px;
+  font: 8pt/15px "Zona-Light";
+  color: #959595;
+  position: relative;
+}
+#second-tab .inside-tab ul li:before {
+  content: "";
+  height: 76px;
+  width: 76px;
+  background: #a0a0a0;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#spe-tech {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  padding: 70px 0;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+#spe-tech .inside-tab .table-box h2 {
+  color: #44bbff;
+  font: 18pt "Zona Pro SemiBold";
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#spe-tech .inside-tab .table-box table {
+  width: 100%;
+}
+#spe-tech .inside-tab .table-box table tr {
+  background: #fff;
+  border-bottom: 12px solid #f7f7f7;
+}
+#spe-tech .inside-tab .table-box table tr th {
+  width: 33%;
+  height: 40px;
+  padding-left: 20px;
+  font: 10pt/40px "Zona Pro SemiBold", sans-serif;
+  color: #4b4b4b;
+}
+#spe-tech .inside-tab .table-box table tr td {
+  width: 33%;
+  height: 40px;
+  font: 10pt/40px "Zona-Light", sans-serif;
+  color: #959595;
+}
+#recommended-products {
+  z-index: 6;
+  position: relative;
+  height: 700px;
+  padding: 70px 0;
+  overflow: hidden;
+  background: #fff;
+}
+#recommended-products .inside-recommendation {
+  width: 1210px;
+  margin: 0 auto;
+}
+#recommended-products .inside-recommendation h2 {
+  font: 22pt/30px "Zona Pro SemiBold", sans-serif;
+  text-align: center;
+  margin-bottom: 70px;
+}
+#recommended-products .inside-recommendation .recommended-block {
+  position: relative;
+  overflow: hidden;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box {
+  background: #eeeeee;
+  width: 280px;
+  height: 395px;
+  float: left;
+  position: relative;
+  margin: 0 10px;
+  padding: 20px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box:before {
+  content: '+';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  border: 10px solid rgba(0, 0, 0, 0);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -webkit-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  color: #4bf;
+  font: 58px/51px "Zona-Light";
+  cursor: pointer;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box > span {
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 242px;
+  border-radius: 15px;
+  height: 33px;
+  font: 9pt/33px "Zona Pro SemiBold";
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 1;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box > span.new {
+  background: #44bbff;
+  color: #fff;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box > span.best {
+  border: 1px solid #ff6d00;
+  color: #ff6d00;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box .image {
+  position: relative;
+  text-align: center;
+  min-height: 270px;
+  vertical-align: bottom;
+  padding-top: 70px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box .product-info-box {
+  position: absolute;
+  bottom: -40px;
+  width: calc(100% - 40px);
+  -webkit-transition: bottom 0.2s;
+  -moz-transition: bottom 0.2s;
+  transition: bottom 0.2s;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box .product-info-box h3 {
+  font: 12pt/33px "Zona Pro SemiBold";
+  margin-bottom: 0px;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box .product-info-box .price-info {
+  overflow: hidden;
+  margin-bottom: 18px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box .product-info-box .price-info .price {
+  font: 10pt/22px "Zona Pro SemiBold";
+  color: #4bf;
+  border: 1px solid #4bf;
+  border-radius: 13px;
+  float: left;
+  display: block;
+  height: 25px;
+  width: 87px;
+  text-align: center;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box .product-info-box .price-info .info {
+  font: 10pt/22px "Zona-Light";
+  color: #a0a0a0;
+  display: block;
+  float: right;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box .product-info-box a {
+  border: none;
+  border-radius: 25px;
+  width: 100%;
+  height: 38px;
+  font: 10pt/38px "Zona Pro SemiBold";
+  color: #fff;
+  background: #4bf;
+  display: block;
+  text-align: center;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box:hover {
+  background: #dedede;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box:hover:before {
+  opacity: 1;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box:hover > span {
+  opacity: 0;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box:hover .image {
+  min-height: 250px;
+  padding-top: 50px;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box:hover .product-info-box {
+  bottom: 15px;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box:hover .product-info-box .price-info {
+  margin-bottom: 13px;
+}
+#recommended-products .inside-recommendation .recommended-block .recommended-box.hover {
+  opacity: 0.5;
+}
 #appSlider {
   background-color: #ffffff;
   height: 100vh;
