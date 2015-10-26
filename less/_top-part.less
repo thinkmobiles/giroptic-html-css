@@ -450,6 +450,68 @@
     }
   }
 
+  .lang {
+     position: relative;
+    z-index: 1001;
+    .slct {
+      display: block;
+      background-position: 290px -145px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 15px;
+      color: @sub-header-color;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+
+      a {
+        font-size: 15px;
+        color: @sub-header-color;
+      }
+    }
+    .slct.active {
+      border-bottom: none;
+    }
+    .drop {
+      margin: 0;
+      padding: 0;
+      width: 99%;
+      border-top: none;
+      display: none;
+      position: absolute;
+      background: @sub-header-bg;
+      overflow: hidden;
+      z-index: 999;
+    }
+    .drop {
+
+      li {
+        list-style: none;
+        cursor: pointer;
+        display: block;
+        color: #444;
+        background-color: ;
+        background-position: 10px -119px;
+        margin-bottom: 0;
+        a {
+          font-size: 15px;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: @sub-header-color;
+        }
+
+        &:hover {
+          background-color: @home-navbar-link-hover-color;
+          //color: #222;
+        }
+        &:last-child {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .social {
     background: url('../img/share.jpg') no-repeat 0 0;
     position: relative;
@@ -738,10 +800,42 @@
       display: table;
     }
 
+    .owl-carousel {
+      overflow: hidden;
+       .owl-controls {
+         position: absolute;
+         left: 50%;
+         margin-left: -61px;
+         bottom: 25px;
+         .owl-dots {
+           .owl-dot {
+             float: left;
+             margin-left: 30px;
+             &:first-child {
+               margin: 0;
+             }
+           }
+           span {
+             background: #fff;
+             display: block;
+             border-radius: 100%;
+             border: 2px solid #fff;
+             width: 21px;
+             height: 21px;
+           }
+           .active {
+             span {
+               background: transparent;
+             }
+           }
+         }
+       }
+    }
+
     .counter {
       border-right: 1px solid @pave1-border;
       padding: 65px 0 60px 0;
-
+      width: 100%;
       span {
         display: block;
         text-align: center;
@@ -1088,6 +1182,7 @@
     #sub-header {
       display: none;
     }
+
     .content {
       display: block;
       height: ~'calc(100vh -200px)';

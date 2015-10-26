@@ -600,8 +600,8 @@
     }
     .description {
       position: relative;
-      //top: 10%;
-      //opacity: 0;
+      top: 10%;
+      opacity: 0;
       transition: all 0.2s ease 0s;
     }
   }
@@ -666,7 +666,7 @@
 #camera {
   z-index: 6;
   position: relative;
-  height: 100vh;
+  height: ~"calc(100vh - 60px)";
   background-color: @camera-bg;
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -719,7 +719,7 @@
       .price {
         font-weight: 100;
         font-family: "Zona-Light", sans-serif;
-        font-size: 24px;
+        font-size: 22px;
       }
     }
     .cameraSlider {
@@ -797,7 +797,6 @@
           border-color: @point-border1;
           position: relative;
           width: 17px;
-          //top: -2px;
           height: 17px;
           margin: 0 3px;
           z-index: 3;
@@ -843,7 +842,7 @@
         .price {
           font-weight: 100;
           font-family: "Zona-Light", sans-serif;
-          font-size: 24px;
+          font-size: 22px;
         }
       }
       .subtitle {

@@ -5,7 +5,6 @@
   z-index: 6;
   .slide-function {
     height: 100vh;
-    //height: 100%;
     overflow: hidden;
     &> div {
       height: 100%;
@@ -24,6 +23,82 @@
         vertical-align: middle;
         display: inline-block;
       }
+      .scrolling {
+        height: 38px;
+        max-width: 620px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        position: relative;
+        img {
+          display: none;
+          width: 38px;
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          z-index: 500;
+        }
+        .nav {
+          height: inherit;
+          width: inherit;
+          position: absolute;
+          overflow: hidden;
+          &.activate {
+            position: absolute;
+            display: none;
+            top: 0;
+            &:after, &:before {
+              content: '';
+              width: 7px;
+              height: 7px;
+              border: 1px solid @function-span;
+              border-radius: 50%;
+              background-color: @function-span;
+              position: absolute;
+              top: ~"calc(50% - 3px)";
+            }
+            &:after {
+              right: 0;
+            }
+            &:before {
+              left: 0;
+            }
+          }
+          .left{
+            float: left;
+            .line {
+              right: 0;
+            }
+          }
+          .right {
+            float: right !important;
+            .line {
+              left: 0;
+            }
+          }
+          .left, .right {
+            position: relative;
+            height: inherit;
+            width: 50%;
+            top: 0;
+            .line {
+              position: absolute;
+              top: ~"calc(50% - 1px)";
+              background-color: @function-span;
+              transition: all 2s;
+              width: 0;
+              height: 2px;
+              &.lineActive {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
     }
     .content {
       .title {
@@ -32,6 +107,10 @@
         margin-bottom: 50px;
         color: @function-title;
         line-height: 1.389;
+        margin-top: 1000px;
+        -webkit-transition: all 2s ease-in;
+        -moz-transition: all 2s ease-in;
+        transition: all 2s ease-in;
       }
       h5 {
         font-family: "Zona Pro", sans-serif;
@@ -83,9 +162,6 @@
          background: url('../img/function-bg2.jpg');
          background-size: cover;
        }
-      .image {
-        vertical-align: bottom;
-      }
     }
     &:nth-child(3) {
       &> div:first-child {
@@ -110,6 +186,24 @@
         }
       }
     }
+
+  }
+  .slide-function {
+    .subImg {
+      position: absolute;
+      bottom: ;
+    }
+      .image {
+        .nonActive {
+          display: none;
+        }
+        .active {
+          position: absolute;
+          bottom: 65px;
+          left: 0;
+          width: 35%;
+        }
+      }
   }
 }
 
@@ -179,7 +273,9 @@
       }
       .content {
         text-align: center;
+
         .title {
+          margin-top: 0;
           margin-bottom: 35px;
         }
         .properties {

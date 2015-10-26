@@ -84,21 +84,33 @@ $(document).ready(function() {
         },
         loop: true
     });
+    $('#pave1 .counters .owl-carousel').owlCarousel({
+        items: 3,
+        dots:true,
+        responsiveClass:true,
+        responsive:{
+            0:{items:1},
+            750:{items:1},
+            768:{items:3, dots:false},
+            1024:{items:3, dots:false},
+            1680:{items:3, dots:false}
+        }
+    })
 });
 // --- Application Section
-$('#app .row').click(function(){
-    $(".phone-style").addClass('down');
-    setTimeout(function(){
-        $('.animate').animate(3000, function(){
-            $('.animate').addClass('scale');
-        });
-    }, 3000);
-    setTimeout(function(){
-        $('.circle').animate(3000, function(){
-            $('.circle').addClass('scale');
-        });
-    }, 3000);
-});
+//$('#app .row').click(function(){
+//    $(".phone-style").addClass('down');
+//    setTimeout(function(){
+//        $('.animate').animate(3000, function(){
+//            $('.animate').addClass('scale');
+//        });
+//    }, 3000);
+//    setTimeout(function(){
+//        $('.circle').animate(3000, function(){
+//            $('.circle').addClass('scale');
+//        });
+//    }, 3000);
+//});
 
 // --- Patchwork Section
 $('#patchwork').click(function(){
@@ -142,15 +154,15 @@ $('#sendAppBtn').click(function(){
     });
 });
 
-$('#speTech').click(function(){
-    $('.speTech .icons').addClass('iconsClick');
-    setTimeout(function(){
-        $('.speTech .description').animate({
-            top: "0",
-            opacity: "1"
-        }, 200);
-    }, 800);
-});
+//$('#speTech').click(function(){
+//    $('.speTech .icons').addClass('iconsClick');
+//    setTimeout(function(){
+//        $('.speTech .description').animate({
+//            top: "0",
+//            opacity: "1"
+//        }, 200);
+//    }, 800);
+//});
 
 myParaxify = paraxify('.paraxify');
 $('#inBoxToggle').click(function(){
