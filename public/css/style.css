@@ -726,6 +726,7 @@ button {
   height: 60px;
   border-top: 1px solid;
   border-color: #ffffff;
+  margin-top: 0;
 }
 #header #navbar {
   margin: 0;
@@ -1158,7 +1159,6 @@ button {
   cursor: pointer;
   display: block;
   color: #444;
-  background-color: ;
   background-position: 10px -119px;
   margin-bottom: 0;
 }

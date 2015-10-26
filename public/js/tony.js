@@ -71,6 +71,8 @@ $('.slct').click(function(){
 });
 
 
+
+
 // Founction Section
 $(window).on('load', function() {
 
@@ -154,7 +156,6 @@ var activateScrolling = function(elem) {
     }
 };
 
-
 $('.giropticFirst').on('click', fuctionGiroptic);
 
 //--Scrolling Events
@@ -180,8 +181,6 @@ function videoAnimate() {
         });
     });
 };
-
-
 
 function appPhoneAnimate(){
     $(".phone-style").addClass('down');

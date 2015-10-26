@@ -1,0 +1,564 @@
+//------- GENERAL -------//
+@import "_normalize";
+@import "_vendors";
+@import "_functions";
+@import "_fonts";
+@import "_colors";
+@import "_base";
+@import "_typography";
+
+/**/
+@media(min-width: 1200px) {
+  .container {
+    width: 1280px;
+  }
+}
+#wrap {
+  background-color: @tunel-bg;
+  font-family: "Zona Pro", sans-serif;
+}
+
+p {
+  font-family: "Zona Pro", sans-serif;
+}
+
+/*= Begin header ========*/
+header {
+  margin-top: 40px;
+  .clearfix;
+  .logo  {
+    a {
+      display: block;
+      font-family: "Zona Pro SemiBold", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      .pxToEm(22);
+      color: @home-navbar-text2;
+    }
+
+    .imgSecondLogo {
+      position: relative;
+      color:@home-navbar-text1;
+      margin-left: 25px;
+      &:before {
+        content: '';
+        width: 33px;
+        height: 31px;
+        background-image: url('../img/home/sprite-logo.png');
+        background-position: 32px 0;
+        position: absolute;
+        top: -2px;
+        left: -40px;
+      }
+    }
+  }
+  .logo-caption {
+    position: relative;
+    float: right;
+    p {
+      text-transform: uppercase;
+      font-family: "Zona Pro SemiBold", sans-serif;
+      .pxToEm(16);
+    }
+    &:before {
+      content: '';
+      width: 11px;
+      height: 17px;
+      background-image: url('../img/tunnel/lock.png');
+      position: absolute;
+      left: -24px;
+      top: 0;
+    }
+  }
+}
+/*= End header ========*/
+
+/*= Begin content ========*/
+.content {
+  margin-top: 58px;
+
+  section {
+    margin-top: 45px;
+    background-color: @tunel-section-bg;  
+    .caption {
+      background-color: @tunel-section-caption-bg;
+      .clearfix;
+
+      .state {
+        position: relative;
+        height: 72px;
+        padding-left: 1px;
+        .ico {
+          background-image: url('../img/tunnel/state.png');
+          background-repeat: no-repeat;
+          height: 32px;
+          width: 32px;
+          position: absolute;
+          top: ~'calc(50% - 16px)';
+          left: ~'calc(50% - 26px)';
+          &.done {
+            background-position: -64px 0;
+          }
+          &.cancel {
+            background-position: -32px 0;
+          }
+          &.nonActive {
+            background-position: 0 0;
+          }
+        }
+
+      }
+
+      h2 {
+        text-transform: uppercase;
+        color: @tunel-caption-text;
+        .pxToEm(22);
+      }
+
+      #modif {
+        cursor: pointer;
+        text-align: center;
+        p {
+          .pxToEm(10);
+          color: @tunel-sub-text;
+          line-height: 72px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .cart {
+      overflow: hidden;
+      border-bottom: 1px solid @tunel-bg;
+      .mt {
+        margin-top: 30px;
+      }
+      .product-img {
+        padding-left: 1px;
+        img {
+          width: 100%;
+        }
+      }
+      .product-caption {
+        .mt;
+        p {
+          text-transform: uppercase;
+          color: @tunel-caption-text;
+          .pxToEm(22);
+          margin-bottom: 0;
+          &:last-child {
+            color: @tunel-sub-text;
+            text-transform: capitalize;
+            .pxToEm(12);
+          }
+        }
+      }
+      .count {
+        .mt;
+        background-color: @tunel-section-caption-bg;
+        width: 42px;
+        height: 42px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        p {
+          .pxToEm(18);
+          color: @tunel-caption-text;
+          line-height: 42px;
+        }
+      }
+      .price {
+        text-align: right;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        border-bottom: 2px solid @tunel-price-border;
+        p {
+          .pxToEm(20);
+          margin-bottom: 0;
+          color: @tunel-sub-text;
+          line-height: 108px;
+        }
+      }
+    }
+    form {
+      fieldset {
+        border: none;
+        padding: 0;
+        input{
+          font-family: "Zona Pro", sans-serif;
+          -webkit-border-radius: 15px;
+          -moz-border-radius: 15px;
+          border-radius: 15px;
+          padding: 0 10px;
+          color: @tunel-sub-text;
+          .pxToEm(12);
+          line-height: 28px;
+          height: 28px;
+          border: 1px solid @tunel-noncheked-border;
+          background-color: @tunel-section-caption-bg;
+          &:focus, &:active {
+            outline: none !important;
+            border-color: @tunel-price-border;
+            background-color: @tunel-section-caption-bg;
+            -moz-user-select: -moz-none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            color: @tunel-caption-text;
+          }
+        }
+      }
+    }
+  }
+
+  #informationForm {
+    padding-left: 0;
+    margin-top: 38px;
+    input[name='sex'] {
+      display: none;
+      &+label {
+        .pxToEm(12);
+        cursor: pointer;
+        padding: 5px;
+        margin: 5px;
+        line-height: 20px;
+        color: @tunel-sub-text;
+        border: 1px solid @tunel-noncheked-border;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        min-width: 55px;
+        text-align: center;
+      }
+      &:checked {
+        &+label {
+          color: @tunel-caption-text;
+          border-color: @tunel-price-border;
+        }
+      }
+    }
+    fieldset {
+   input{
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+    .news {
+      margin: 80px 0 25px;
+      .radio;
+    }
+  }
+
+  .continue {
+    margin-bottom: 40px;
+    .buttons;
+  }
+
+  .delivery {
+    border-bottom: 1px solid @tunel-bg;
+    .clearfix;
+    .service {
+      text-align: center;
+      p {
+        font-family: 'Zona Pro SemiBold', sans-serif;
+        .pxToEm(16);
+        color: @tunel-button-text;
+        line-height: 110px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+      }
+      &.standart-bg {
+        background-color: @tunel-standart-bg;
+      }
+      &.collissimo-bg {
+        background-color: @tunel-callissimo-bg;
+      }
+      &.point-bg {
+        background-color: @tunel-point-bg;
+      }
+    }
+    .service-desc {
+      margin-top: 30px;
+      p {
+        .pxToEm(14);
+        color: @tunel-sub-text;
+      }
+    }
+    .price {
+      text-align: center;
+      p {
+        .pxToEm(18);
+        color: @tunel-price-border;
+        line-height: 110px;
+        margin-bottom: 0;
+      }
+    }
+    .checker {
+      text-align: left;
+      line-height: 110px;
+      .radio;
+      label {
+        padding: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  #information-payment {
+    margin-bottom: 55px;
+    .credits {
+      margin: 40px 0 25px;
+      .credit {
+        display: inline-block;
+        width: 53px;
+        text-align: center;
+        margin-right: 10px;
+        .radio;
+        .card {
+          cursor: pointer;
+          width: 53px;
+          height: 35px;
+          background-image: url('../img/tunnel/credits.jpg');
+          margin-bottom: 5px;
+
+          &:before {
+            display: none;
+          }
+          &.visa {
+            background-position: 0 0;
+          }
+          &.masterCard {
+            background-position: -53px 0;
+          }
+          &.payPal {
+            background-position: -106px 0;
+          }
+          &.americExp {
+            background-position: -159px 0;
+          }
+          &.electron {
+            background-position: -212px 0;
+          }
+          &.delta {
+            background-position: -265px 0;
+          }
+          &.blueVisa {
+            background-position: -318px 0;
+          }
+        }
+      }
+
+    }
+
+    fieldset {
+      .block {
+        height: 28px;
+        margin-bottom: 16px;
+        label {
+          margin-top: 5px;
+          .pxToEm(12);
+        }
+
+        .card-month, .card-years {
+          border: 1px solid @tunel-noncheked-border;
+          -webkit-border-radius: 15px;
+          -moz-border-radius: 15px;
+          border-radius: 15px;
+          background-color: @tunel-section-caption-bg;
+          position: relative;
+          .slct-month, .slct-years {
+            display: block;
+            width: 88%;
+            padding-left: 20px;
+            color: @tunel-caption-text;
+            background-position: 290px -145px;
+            text-decoration: none;
+            text-transform: uppercase;
+            .pxToEm(12);
+            line-height: 28px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            a {
+              color: @tunel-caption-text;
+              .pxToEm(12);
+            }
+          }
+          .slct.active {
+            border-bottom: none;
+          }
+          .drop, .droped {
+            margin: 0;
+            padding: 0;
+            width: 50%;
+            border: 1px solid @tunel-noncheked-border;
+            border-top: none;
+            display: none;
+            position: absolute;
+            background: #fff;
+            overflow: hidden;
+            z-index: 999;
+          }
+          .drop, .droped {
+
+            li {
+              list-style: none;
+              cursor: pointer;
+              display: block;
+              color: @tunel-caption-text;
+              padding: 0 15px;
+              background-position: 10px -119px;
+              margin-bottom: 0;
+              a {
+                .pxToEm(12);
+                text-transform: uppercase;
+                line-height: 28px;
+                text-decoration: none;
+                color: @tunel-caption-text;
+              }
+
+              &:hover {
+                background-color: #e8e8e8;
+                color: @tunel-caption-text;
+              }
+            }
+          }
+          &:after {
+            content: '';
+            width: 28px;
+            height: 28px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 1px solid @tunel-noncheked-border;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background: url("../img/tunnel/arr_down.png") no-repeat;
+            background-position: 50% 50%;
+            cursor: pointer;
+            pointer-events: all;
+          }
+        }
+      }
+    }
+  }
+
+  .congratulation {
+    margin: 30px 0 50px;
+    p {
+      .pxToEm(16);
+      color: @tunel-sub-text;
+      font-family: "Zona-Light", sans-serif;
+      &:first-child {
+        .pxToEm(18);
+        color: @tunel-caption-text;
+      }
+    }
+  }
+  .delivery {
+    border-top: 1px solid @tunel-bg;
+    height: 80px;
+    width: 100%;
+    p {
+      margin: 0;
+    }
+    .left {
+      text-align: center;
+      padding: 0;
+      p {
+        line-height: 80px;
+        color: @tunel-caption-text;
+        .pxToEm(18);
+      }
+    }
+    .right {
+      text-align: center;
+      background-color: @tunel-price-border;
+      padding: 0;
+      p {
+        font-family: "Zona Pro Bold", sans-serif;
+        line-height: 80px;
+        .pxToEm(32);
+        color: @tunel-button-text;
+      }
+    }
+  }
+}
+/*= End content ========*/
+
+.radio {
+  input[type='radio'] {
+    display: none;
+    &:checked {
+
+      &+label {
+        &:before {
+          content: '\2022';
+          color: @tunel-price-border;
+          .pxToEm(30);
+          line-height: 13px;
+        }
+      }
+    }
+  }
+  label {
+    .pxToEm(10);
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 25px;
+    &:before {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      border: 1px solid @tunel-noncheked-border;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+    }
+  }
+}
+
+.buttons {
+    button {
+      .pxToEm(18);
+      font-family: 'Zona Pro SemiBold', sans-serif;
+      color: @tunel-button-text;
+      min-width: 260px;
+      text-align: center;
+      line-height: 48px;
+      background-color: @tunel-price-border;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      position: relative;
+      &:after {
+        content: '';
+        width: 21px;
+        height: 21px;
+        background-image: url('../img/tunnel/arrows.png');
+        top: ~'calc(50% - 10px)';
+        right: 23px;
+        position: absolute;
+      }
+    }
+  }
