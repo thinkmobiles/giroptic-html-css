@@ -3113,7 +3113,7 @@ button {
   height: 700px;
 }
 #main.product-page #header {
-  bottom: 290px;
+  top: 700px;
 }
 #home.product-page {
   background: url("../img/product-page/home-bgr.png") no-repeat left top #ffffff;
