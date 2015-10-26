@@ -1088,3 +1088,479 @@
     }
   }
 }
+#main.product-page{
+  padding-top: 700px;
+  #home {
+    height: 700px;
+  }
+  #header{
+    bottom: 290px;
+  }
+}
+#home{
+  &.product-page{
+    background: url("../img/product-page/home-bgr.png") no-repeat left top #fff;
+    background-size: cover;
+    height: 700px;
+    #sliderTop{
+      max-width: 1210px;
+      margin: 0 auto;
+      .slider{
+        width: 620px;
+        float: left;
+      }
+      .header-right-block{
+        overflow: hidden;
+        float: right;
+      }
+      .bx-wrapper{
+        float: left;
+        width: 300px;
+        padding-top: 130px;
+      }
+      #bx-pager{
+        float: left;
+        padding-top: 150px;
+        width: 80px;
+        a{
+          display: block;
+          width: 78px;
+          height: 49px;
+          border: 1px solid #eee;
+          text-align: center;
+          margin-bottom: 7px;
+          &:hover,
+          &.active{
+            border-color: #4bf;
+          }
+          img{
+            height: 49px;
+            width: auto;
+          }
+        }
+      }
+      .add-to-cart-block{
+        float: left;
+        width: 500px;
+        padding-left: 37px;
+        h1{
+          color: #4b4b4b;
+          font-size: 54pt;
+          font-family: "Zona Pro SemiBold";
+          text-transform: uppercase;
+          margin-bottom: 30px;
+          border-bottom: 1px solid #eeeeee;
+        }
+        p.info{
+          font: 9pt/19px "Zona-Light";
+          border-bottom: 1px solid #eeeeee;
+          padding-bottom: 20px;
+        }
+        p.price-stock{
+          overflow: hidden;
+          border-bottom: 1px solid #eeeeee;
+          .price{
+            display: block;
+            float: left;
+            font: 16pt/50px "Zona Pro SemiBold";
+            color: #4b4b4b;
+          }
+          .stock{
+            display: block;
+            float: right;
+            font: 12pt/50px "Zona Pro";
+            color: #55b534;
+          }
+        }
+        .buy-form{
+          ul{
+            list-style-type: none;
+            width: 100%;
+            height: 50px;
+            overflow: hidden;
+            li{
+              display: block;
+              float: left;
+              a{
+                -webkit-transition: all 0.2s;
+                -moz-transition: all 0.2s;
+                transition: all 0.2s;
+                &.more,
+                &.less{
+                  border-radius: 50%;
+                  height: 30px;
+                  width: 30px;
+                  line-height: 30px;
+                  background: #4b4b4b;
+                  color: #fff;
+                  display: block;
+                  text-align: center;
+                  font-size: 30px;
+                  margin-top: 10px;
+                }
+                &.add-to-cart{
+                  background: url("../img/product-page/shipping-cart.png") no-repeat 32px 16px #4b4b4b;
+                  border: none;
+                  border-radius: 25px;
+                  width: 240px;
+                  height: 50px;
+                  line-height: 50px;
+                  padding-left: 80px;
+                  color: #fff;
+                  margin-left: 13px;
+                  display: block;
+                  text-align: center;
+                }
+                &:hover{
+                  background-color: #4bf;
+                }
+              }
+              input{
+                background: #eeeeee;
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+                line-height: 30px;
+                color: #5b5b5b;
+                display: block;
+                text-align: center;
+                font-size: 22px;
+                border: none;
+                margin: 5px 10px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#sidebar{
+  z-index: 10;
+  position: absolute;
+  bottom: -100%;
+  right: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+  width: 350px;
+  display: none;
+}
+.inside-tab {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.tab-content{
+  display: none;
+}
+.tab-content.current{
+  display: block;
+}
+#header{
+  #navbar{
+    li.current{
+      a{
+        div{
+          &.active {
+            color: @header-link-h !important;
+          }
+        }
+        div {
+          top: -60px !important;
+        }
+      }
+    }
+  }
+}
+#first-tab {
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  padding: 70px 0;
+  overflow: hidden;
+  background: #f7f7f7;
+  .inside-tab {
+    .products-gallery{
+      overflow: hidden;
+      &> div{
+        width: 190px;
+        height: 190px;
+        float: left;
+        background: #fff;
+        margin: 5px;
+        position: relative;
+        .image{
+          position: relative;
+          min-height: 160px;
+          img{
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
+          }
+        }
+        span{
+          display: block;
+          text-align: center;
+          width: 100%;
+          position: absolute;
+          bottom: 15px;
+          font: 8pt/15px "Zona-Light";
+          color: #959595;
+        }
+      }
+      .big-image{
+        width: 590px;
+        height: 390px;
+        .image{
+          min-height: 355px;
+        }
+      }
+    }
+  }
+}
+#second-tab{
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  padding: 70px 0;
+  overflow: hidden;
+  background: #f7f7f7;
+  .inside-tab{
+    h2{
+      font: 22px "Zona Pro SemiBold";
+      color: #4b4b4b;
+      margin-bottom: 20px;
+    }
+    p{
+      font: 8pt/15px "Zona-Light";
+      color: #959595;
+      margin-bottom: 30px;
+    }
+    ul{
+      list-style-type: none;
+      li{
+        padding-left: 110px;
+        min-height: 115px;
+        font: 8pt/15px "Zona-Light";
+        color: #959595;
+        position: relative;
+        &:before{
+          content: "";
+          height: 76px;
+          width: 76px;
+          background: #a0a0a0;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+}
+#spe-tech{
+  z-index: 6;
+  position: relative;
+  height: 100vh;
+  padding: 70px 0;
+  overflow: hidden;
+  background: #f7f7f7;
+  .inside-tab{
+    .table-box{
+      h2{
+        color: #44bbff;
+        font: 18pt "Zona Pro SemiBold";
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      table{
+        width: 100%;
+        tr{
+          background: #fff;
+          border-bottom: 12px solid #f7f7f7;
+          th{
+            width: 33%;
+            height: 40px;
+            padding-left: 20px;
+            font: 10pt/40px "Zona Pro SemiBold", sans-serif;
+            color: #4b4b4b;
+          }
+          td{
+            width: 33%;
+            height: 40px;
+            font: 10pt/40px "Zona-Light", sans-serif;
+            color: #959595;
+          }
+        }
+      }
+    }
+  }
+}
+
+#recommended-products{
+  z-index: 6;
+  position: relative;
+  height: 700px;
+  padding: 70px 0;
+  overflow: hidden;
+  background: #fff;
+  .inside-recommendation{
+    width: 1210px;
+    margin: 0 auto;
+    h2{
+      font: 22pt/30px "Zona Pro SemiBold", sans-serif;
+      text-align: center;
+      margin-bottom: 70px;
+    }
+    .recommended-block{
+      position: relative;
+      overflow: hidden;
+      .recommended-box{
+        background: #eeeeee;
+        width: 280px;
+        height: 395px;
+        float: left;
+        position: relative;
+        margin: 0 10px;
+        padding: 20px;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+        &:before{
+          content: '+';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-right: -50%;
+          transform: translate(-50%, -50%);
+          width: 70px;
+          height: 70px;
+          text-align: center;
+          line-height: 70px;
+          border-radius: 50%;
+          background: #fff;
+          z-index: 10;
+          opacity: 0;
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          transition: all 0.2s;
+          border: 10px solid rgba(0,0,0,0);
+          -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+          -webkit-box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+          -moz-box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+          box-shadow: 0 0 0 2px rgba(255,255,255,0.5);
+          color: #4bf;
+          font: 58px/51px "Zona-Light";
+          cursor: pointer;
+        }
+        &> span{
+          display: block;
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          width: 242px;
+          border-radius: 15px;
+          height: 33px;
+          font: 9pt/33px "Zona Pro SemiBold";
+          text-align: center;
+          text-transform: uppercase;
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          transition: all 0.2s;
+          opacity: 1;
+          &.new{
+            background: #44bbff;
+            color: #fff;
+          }
+          &.best{
+            border: 1px solid #ff6d00;
+            color: #ff6d00;
+          }
+        }
+        .image{
+          position: relative;
+          text-align: center;
+          min-height: 270px;
+          vertical-align: bottom;
+          padding-top: 70px;
+          -webkit-transition: all 0.2s;
+          -moz-transition: all 0.2s;
+          transition: all 0.2s;
+        }
+        .product-info-box{
+          position: absolute;
+          bottom: -40px;
+          width: ~'calc(100% - 40px)';
+          -webkit-transition: bottom 0.2s;
+          -moz-transition: bottom 0.2s;
+          transition: bottom 0.2s;
+          h3{
+            font: 12pt/33px "Zona Pro SemiBold";
+            margin-bottom: 0px;
+          }
+          .price-info{
+            overflow: hidden;
+            margin-bottom: 18px;
+            -webkit-transition: all 0.2s;
+            -moz-transition: all 0.2s;
+            transition: all 0.2s;
+            .price{
+              font: 10pt/22px "Zona Pro SemiBold";
+              color: #4bf;
+              border: 1px solid #4bf;
+              border-radius: 13px;
+              float: left;
+              display: block;
+              height: 25px;
+              width: 87px;
+              text-align: center;
+            }
+            .info{
+              font: 10pt/22px "Zona-Light";
+              color: #a0a0a0;
+              display: block;
+              float: right;
+            }
+          }
+          a{
+            border: none;
+            border-radius: 25px;
+            width: 100%;
+            height: 38px;
+            font: 10pt/38px "Zona Pro SemiBold";
+            color: #fff;
+            background: #4bf;
+            display: block;
+            text-align: center;
+          }
+        }
+        &:hover{
+          background: #dedede;
+          &:before{
+            opacity: 1;
+          }
+          &> span{
+            opacity: 0;
+          }
+          .image{
+            min-height: 250px;
+            padding-top: 50px;
+          }
+          .product-info-box{
+            bottom: 15px;
+            .price-info{
+              margin-bottom: 13px;
+            }
+          }
+        }
+        &.hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
