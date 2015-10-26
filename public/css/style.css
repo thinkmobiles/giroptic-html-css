@@ -3136,6 +3136,7 @@ button {
   float: left;
   width: 300px;
   padding-top: 130px;
+  margin-left: 110px;
 }
 #home.product-page #sliderTop #bx-pager {
   float: left;
